@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://bm3duwca17ehv"]
+[gd_scene load_steps=2 format=3 uid="uid://bm3duwca17ehv"]
+
+[ext_resource type="Script" path="res://Scripts/Pieces/cable.gd" id="1_rh22k"]
 
 [node name="cable" type="Node2D"]
+script = ExtResource("1_rh22k")
