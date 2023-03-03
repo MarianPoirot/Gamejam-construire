@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0hsgta2a74nt"]
+
+[ext_resource type="Script" path="res://Scripts/Pieces/entonnoir.gd" id="1_xy6pr"]
+
+[node name="Entonnoir" type="Node2D"]
+script = ExtResource("1_xy6pr")

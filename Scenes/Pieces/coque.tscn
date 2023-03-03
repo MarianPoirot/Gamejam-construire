@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://8tro0ldmitxa"]
+
+[ext_resource type="Script" path="res://Scripts/Pieces/coque.gd" id="1_3c8rf"]
+
+[node name="coque" type="Node2D"]
+script = ExtResource("1_3c8rf")
