@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://djsno5f3jy6pp"]
+
+[ext_resource type="Script" path="res://Scripts/World/Ending.gd" id="1_0ockr"]
+
+[node name="Ending" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0ockr")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

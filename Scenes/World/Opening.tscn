@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbpsa8oktf42v"]
+
+[ext_resource type="Script" path="res://Scripts/World/Opening.gd" id="1_palwy"]
+[ext_resource type="FontFile" uid="uid://bjk0jgcytsd3c" path="res://Assets/Fonts/plastic.ttf" id="2_d0fo1"]
+
+[node name="Opening" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_palwy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 464.0
+offset_top = 320.0
+offset_right = 566.0
+offset_bottom = 383.0
+theme_override_font_sizes/font_size = 35
+keep_pressed_outside = true
+text = "Start"
+flat = true
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 80.0
+offset_top = 128.0
+offset_right = 944.0
+offset_bottom = 206.0
+theme_override_fonts/font = ExtResource("2_d0fo1")
+theme_override_font_sizes/font_size = 50
+text = "Keep Bombing and Nobody Talks"
+
+[connection signal="button_down" from="CanvasLayer/Button" to="." method="_on_button_button_down"]
