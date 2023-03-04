@@ -23,5 +23,5 @@ position = Vector2(0, 26)
 id = 5
 
 [node name="ancreCable" parent="recepteurAncre" index="1" instance=ExtResource("2_bidjm")]
-position = Vector2(14, 7)
+position = Vector2(16, 11)
 id = 2

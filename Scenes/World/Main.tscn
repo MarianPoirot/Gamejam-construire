@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b3wbxtbbacebh"]
+[gd_scene load_steps=12 format=3 uid="uid://b3wbxtbbacebh"]
 
 [ext_resource type="Script" path="res://Scripts/World/Main.gd" id="1_vn17v"]
 [ext_resource type="Texture2D" uid="uid://s8t8nfhx3gns" path="res://Assets/Sprites/Background.png" id="2_kno67"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" path="res://Scenes/Pieces/reservoir.tscn" id="6_g1jcb"]
 [ext_resource type="PackedScene" uid="uid://b2dfvrvgwbnae" path="res://Scenes/Pieces/chaudiere.tscn" id="6_ncykg"]
 [ext_resource type="PackedScene" uid="uid://dx4bvefdrh8sf" path="res://Scenes/Pieces/turbine.tscn" id="7_pxymf"]
+[ext_resource type="PackedScene" uid="uid://bm3duwca17ehv" path="res://Scenes/Pieces/cable.tscn" id="10_scpqc"]
+[ext_resource type="PackedScene" uid="uid://c01csw6ryydmw" path="res://Scenes/Pieces/moteur.tscn" id="11_mkq26"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_vn17v")
@@ -46,4 +48,11 @@ scale = Vector2(3, 3)
 
 [node name="Turbine" parent="." instance=ExtResource("7_pxymf")]
 position = Vector2(141, 53)
+scale = Vector2(3, 3)
+
+[node name="Cable" parent="." instance=ExtResource("10_scpqc")]
+position = Vector2(26.0001, 575)
+scale = Vector2(3, 3)
+
+[node name="Moteur" parent="." instance=ExtResource("11_mkq26")]
 scale = Vector2(3, 3)
