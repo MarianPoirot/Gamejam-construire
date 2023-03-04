@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bl7mre7gm07oi"]
+[gd_scene load_steps=3 format=3 uid="uid://btk2v1ol807w7"]
 
 [ext_resource type="PackedScene" uid="uid://i5pnksdpe1cm" path="res://Scenes/liquide/liquide.tscn" id="1_jptgn"]
 [ext_resource type="Texture2D" uid="uid://bdumuji0t582t" path="res://Assets/Sprites/Water.png" id="2_7801j"]
 
 [node name="Eau" instance=ExtResource("1_jptgn")]
+texture_filter = 1
 id = 9
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="1"]

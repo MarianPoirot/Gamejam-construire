@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpw714oplylju"]
+
+[ext_resource type="Script" path="res://Scripts/World/tapis_roulant.gd" id="1_iqpv5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1a4p2"]
+size = Vector2(100, 1000)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vhmi8"]
+size = Vector2(100, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4v7ht"]
+size = Vector2(100, 20)
+
+[node name="tapis_roulant" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_iqpv5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1a4p2")
+
+[node name="Bas" type="Area2D" parent="."]
+position = Vector2(0, 520)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bas"]
+shape = SubResource("RectangleShape2D_vhmi8")
+debug_color = Color(0.796078, 0.0627451, 1, 0.419608)
+
+[node name="Haut" type="Area2D" parent="."]
+position = Vector2(0, -512)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Haut"]
+shape = SubResource("RectangleShape2D_4v7ht")
+debug_color = Color(0.72549, 0.282353, 0.945098, 0.419608)
+
+[connection signal="area_entered" from="Bas" to="." method="_on_bas_area_entered"]
+[connection signal="area_entered" from="Haut" to="." method="_on_haut_area_entered"]

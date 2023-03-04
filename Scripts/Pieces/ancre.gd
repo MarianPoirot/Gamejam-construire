@@ -8,3 +8,6 @@ func _ready():
 
 func activate():
 	$CollisionShape2D.disabled=false
+
+func desactivate():
+	$CollisionShape2D.disabled=true
