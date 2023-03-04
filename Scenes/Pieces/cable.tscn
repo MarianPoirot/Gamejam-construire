@@ -7,7 +7,7 @@
 height = 298.0
 
 [node name="Cable" instance=ExtResource("1_fd202")]
-id = 3
+id = 2
 
 [node name="DragDropCollision" parent="." index="0"]
 shape = SubResource("CapsuleShape2D_uyquj")
