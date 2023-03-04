@@ -53,3 +53,4 @@ scale = Vector2(0.5, 0.5)
 id = 15
 
 [node name="ZoneAsouder" parent="." index="5" instance=ExtResource("4_erv1l")]
+position = Vector2(-141, 121)

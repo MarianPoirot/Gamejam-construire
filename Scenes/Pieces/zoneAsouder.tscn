@@ -10,7 +10,7 @@ collision_mask = 2
 script = ExtResource("1_byli2")
 
 [node name="zone" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-6, -3, 6, -9, 17, 3, 4, 14, 1, 11, 12, 3, 6, -5, -3, 0)
+polygon = PackedVector2Array(1.6, -10.5, 6, -9, 17, 3, 20.1, 5.1, 17, 7.1, 12, 3, 6, -5, 0.199999, -7.8)
 metadata/_edit_lock_ = true
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
