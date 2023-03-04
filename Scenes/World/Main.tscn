@@ -28,7 +28,7 @@ position = Vector2(512, 300)
 texture = ExtResource("2_kno67")
 
 [node name="Coque_inf" parent="." instance=ExtResource("3_k3jia")]
-position = Vector2(844, 456)
+position = Vector2(974, 322)
 scale = Vector2(3, 3)
 
 [node name="Coque_sup" parent="." instance=ExtResource("4_ccyxp")]
@@ -38,64 +38,66 @@ scale = Vector2(3, 3)
 
 [node name="Chaudiere" parent="." instance=ExtResource("6_ncykg")]
 texture_filter = 1
-position = Vector2(159, 479)
+position = Vector2(963, -522)
 scale = Vector2(3, 3)
 
 [node name="Cable" parent="." instance=ExtResource("10_scpqc")]
 texture_filter = 1
-position = Vector2(32, 550)
-scale = Vector2(3, 3)
-
-[node name="Turbine" parent="." instance=ExtResource("7_pxymf")]
-position = Vector2(141, 53)
-scale = Vector2(3, 3)
-
-[node name="Moteur" parent="." instance=ExtResource("11_mkq26")]
-texture_filter = 1
-position = Vector2(479, 554)
-scale = Vector2(3, 3)
-
-[node name="goupille" parent="." instance=ExtResource("16_vplyf")]
-texture_filter = 1
-position = Vector2(256, 552)
-scale = Vector2(3, 3)
-
-[node name="ballon" parent="." instance=ExtResource("2_y7w6m")]
-position = Vector2(912, 536)
+position = Vector2(958, 1165)
 scale = Vector2(3, 3)
 
 [node name="reservoir" parent="." instance=ExtResource("6_g1jcb")]
 texture_filter = 1
-position = Vector2(154, 242)
+position = Vector2(962, 943)
 scale = Vector2(3, 3)
 
 [node name="ConduitVapeur" parent="." instance=ExtResource("6_bnl4o")]
 position = Vector2(951, 43)
 scale = Vector2(3, 3)
 
+[node name="Turbine" parent="." instance=ExtResource("7_pxymf")]
+position = Vector2(960, 740)
+scale = Vector2(3, 3)
+
+[node name="Moteur" parent="." instance=ExtResource("11_mkq26")]
+texture_filter = 1
+position = Vector2(955, -100)
+scale = Vector2(3, 3)
+
+[node name="goupille" parent="." instance=ExtResource("16_vplyf")]
+texture_filter = 1
+position = Vector2(961, -313)
+scale = Vector2(3, 3)
+
+[node name="ballon" parent="." instance=ExtResource("2_y7w6m")]
+position = Vector2(958, 572)
+scale = Vector2(3, 3)
+
 [node name="bouchon" parent="." instance=ExtResource("12_6p58o")]
 texture_filter = 1
-position = Vector2(81, 322)
+position = Vector2(958, 1273)
 scale = Vector2(3, 3)
 
 [node name="Area2D" parent="." instance=ExtResource("13_nxo70")]
 texture_filter = 1
-position = Vector2(466, 423)
+position = Vector2(241, 524)
+rotation = 0.719196
 
 [node name="Eau" parent="." instance=ExtResource("15_dup0a")]
-position = Vector2(968, 152)
+position = Vector2(135, 188)
 scale = Vector2(3, 3)
 
 [node name="Sodium" parent="." instance=ExtResource("16_2xrmh")]
 texture_filter = 1
-position = Vector2(726, 39)
+position = Vector2(118, 77)
 scale = Vector2(3, 3)
 
 [node name="tapis_roulant" parent="." instance=ExtResource("17_hyrnp")]
 position = Vector2(961, 314)
+metadata/_edit_lock_ = true
 
 [node name="ferAsouder" parent="." instance=ExtResource("16_mju8g")]
-position = Vector2(615, 406)
+position = Vector2(100, 298)
 scale = Vector2(3, 3)
 
 [node name="combustible" parent="." instance=ExtResource("5_6g2yp")]
