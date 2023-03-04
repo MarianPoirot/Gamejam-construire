@@ -16,6 +16,7 @@ script = ExtResource("1_4b251")
 shape = SubResource("CircleShape2D_78j7b")
 
 [node name="Ancre" type="Area2D" parent="."]
+collision_layer = 0
 
 [node name="AncrageCollision" type="CollisionShape2D" parent="Ancre"]
 shape = SubResource("CircleShape2D_fw7gl")

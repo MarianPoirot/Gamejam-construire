@@ -22,6 +22,7 @@ func try_snap():
 		return
 	
 	for area in $Ancre.get_overlapping_areas():
+		print(area)
 		if area.id==self.id:
 			snap(area)
 
