@@ -6,6 +6,7 @@
 radius = 15.0
 
 [node name="Liquide" type="Area2D"]
+collision_layer = 2
 collision_mask = 8
 script = ExtResource("1_yuyap")
 
