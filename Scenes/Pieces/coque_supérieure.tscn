@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ksyhx6uwk1rr"]
 
 [ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_dfl72"]
-[ext_resource type="Texture2D" uid="uid://cfrnvm6vm7q10" path="res://Assets/Sprites/Coque_arrière_haut.png" id="2_mr4iu"]
+[ext_resource type="Texture2D" uid="uid://b1rp4n1trjxlh" path="res://Assets/Sprites/Coque_arrière_haut.png" id="2_mr4iu"]
 [ext_resource type="PackedScene" uid="uid://dgicsyqpftdlt" path="res://Scenes/Pieces/ancre.tscn" id="3_msov2"]
 
 [node name="Coque_sup" instance=ExtResource("1_dfl72")]

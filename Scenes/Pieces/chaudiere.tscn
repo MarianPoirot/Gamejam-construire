@@ -8,7 +8,7 @@ radius = 50.0
 height = 124.0
 
 [node name="Chaudiere" instance=ExtResource("1_g7h2y")]
-id = 4
+id = 3
 
 [node name="DragDropCollision" parent="." index="0"]
 shape = SubResource("CapsuleShape2D_p42fv")
