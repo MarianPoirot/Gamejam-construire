@@ -27,7 +27,6 @@ texture = ExtResource("2_sygsr")
 
 [node name="ancre_pique1" parent="recepteurAncre" index="0" instance=ExtResource("3_bm6tj")]
 position = Vector2(72, 16)
-rotation = 0.617902
 id = 14
 
 [node name="ancre_pique2" parent="recepteurAncre" index="1" instance=ExtResource("3_bm6tj")]
@@ -36,7 +35,6 @@ id = 14
 
 [node name="ancre_pique3" parent="recepteurAncre" index="2" instance=ExtResource("3_bm6tj")]
 position = Vector2(-72, 16)
-rotation = 0.958403
 id = 14
 
 [node name="ancre_ballon" parent="recepteurAncre" index="3" instance=ExtResource("3_bm6tj")]

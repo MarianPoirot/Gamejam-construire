@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7g4do0pyfl23"]
+
+[ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_02ays"]
+[ext_resource type="Texture2D" uid="uid://cw23xaqsogulk" path="res://Assets/Sprites/Ballon.png" id="2_hlpvk"]
+[ext_resource type="PackedScene" uid="uid://dgicsyqpftdlt" path="res://Scenes/Pieces/ancre.tscn" id="3_gsslw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_03mvg"]
+size = Vector2(22, 46)
+
+[node name="reservoir" instance=ExtResource("1_02ays")]
+id = 15
+
+[node name="DragDropCollision" parent="." index="0"]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_03mvg")
+
+[node name="Ancre" parent="." index="1"]
+position = Vector2(0, 14)
+
+[node name="ancreConduitVapeur" parent="recepteurAncre" index="0" instance=ExtResource("3_gsslw")]
+position = Vector2(0, -19)
+id = 5
+
+[node name="Spirte2D" type="Sprite2D" parent="." index="3"]
+texture_filter = 1
+position = Vector2(0, -2)
+texture = ExtResource("2_hlpvk")
