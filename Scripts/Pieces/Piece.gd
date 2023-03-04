@@ -14,16 +14,27 @@ func _on_input_event(_viewport, event, _shape_idx):
 		grabbed_offset = position - get_global_mouse_position()
 	if event.is_action_released("pick"):
 		grabbed = false
-		snap()
+		try_snap()
 
 func _process(_delta):
 	if Input.is_action_pressed("pick") and grabbed:
 		position = get_global_mouse_position() + grabbed_offset
 
-func snap():
+func try_snap():
+	if not depandancies_metted():
+		return
+	
 	for area in $Ancre.get_overlapping_areas():
 		if area.id==self.id:
-			can_grab = false
-			self.position=area.position-$Ancre.position
-			for ancre in $recepteurAncre.get_children():
-				ancre.activate()
+			snap(area)
+
+func depandancies_metted():
+	return Id_pieces.dependancies[id].all(func (dep): return Id_pieces.state_dependencies[id])
+
+func snap(area):
+	can_grab = false
+	self.position=area.position-$Ancre.position
+	for ancre in $recepteurAncre.get_children():
+		ancre.activate()
+	
+	Id_pieces.state_dependencies[id] = true
