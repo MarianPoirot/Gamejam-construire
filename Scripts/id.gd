@@ -68,3 +68,5 @@ var state_dependencies = {
 	id_pieces.sodium3: false,
 	id_pieces.turbine: false
 }
+
+var drag_and_drop_taken := false
