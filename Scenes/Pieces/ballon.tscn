@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bdjiu0hjvnp10"]
 
 [ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_o23yy"]
-[ext_resource type="Texture2D" uid="uid://cv5kt8cq3nd4w" path="res://Assets/Sprites/Réservoir.png" id="2_7xcas"]
+[ext_resource type="Texture2D" uid="uid://cvdl5jsftke6c" path="res://Assets/Sprites/Réservoir.png" id="2_7xcas"]
 [ext_resource type="PackedScene" uid="uid://dgicsyqpftdlt" path="res://Scenes/Pieces/ancre.tscn" id="2_airq1"]
 
 [node name="ballon" instance=ExtResource("1_o23yy")]
@@ -14,6 +14,8 @@ metadata/_edit_group_ = true
 [node name="Sprite2D" type="Sprite2D" parent="." index="2"]
 texture_filter = 1
 texture = ExtResource("2_7xcas")
+region_enabled = true
+region_rect = Rect2(0, 0, 52, 44)
 
 [node name="ancre-bouchon" parent="recepteurAncre" index="0" instance=ExtResource("2_airq1")]
 position = Vector2(13, -16)
