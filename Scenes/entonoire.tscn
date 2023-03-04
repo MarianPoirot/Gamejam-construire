@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv1dso1cy3a1p"]
+
+[ext_resource type="Script" path="res://Scripts/entonoire.gd" id="1_buqvk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ow6lo"]
+size = Vector2(200, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tgmtl"]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_buqvk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ow6lo")
+
+[node name="Sortie" type="Area2D" parent="."]
+position = Vector2(104, 0)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sortie"]
+shape = SubResource("CircleShape2D_tgmtl")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

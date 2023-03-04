@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdjiu0hjvnp10"]
+[gd_scene load_steps=5 format=3 uid="uid://bdjiu0hjvnp10"]
 
 [ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_o23yy"]
-[ext_resource type="Texture2D" uid="uid://cv5kt8cq3nd4w" path="res://Assets/Sprites/Réservoir.png" id="2_7xcas"]
+[ext_resource type="Texture2D" uid="uid://cvdl5jsftke6c" path="res://Assets/Sprites/Réservoir.png" id="2_7xcas"]
 [ext_resource type="PackedScene" uid="uid://dgicsyqpftdlt" path="res://Scenes/Pieces/ancre.tscn" id="2_airq1"]
+[ext_resource type="PackedScene" uid="uid://u6rwihexgowl" path="res://Scenes/hook_liquide.tscn" id="4_6opw1"]
 
 [node name="ballon" instance=ExtResource("1_o23yy")]
 texture_filter = 1
@@ -20,3 +21,9 @@ texture = ExtResource("2_7xcas")
 position = Vector2(15, -18)
 scale = Vector2(0.8, 0.8)
 id = 9
+
+[node name="HookLiquide" parent="." index="4" instance=ExtResource("4_6opw1")]
+id_liquide1 = 17
+id_liquide2 = 18
+id_liquide3 = 19
+sprites_remplissage = Array[Texture2D]([null, null, null])
