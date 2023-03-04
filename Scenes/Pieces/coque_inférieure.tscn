@@ -10,6 +10,7 @@
 [node name="Coque_inf" instance=ExtResource("1_u3wiq")]
 texture_filter = 1
 id = 7
+can_activate_ancre = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="0"]
 scale = Vector2(5, 5)
