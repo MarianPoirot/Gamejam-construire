@@ -1,10 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2dfvrvgwbnae"]
+[gd_scene load_steps=4 format=3 uid="uid://b2dfvrvgwbnae"]
 
 [ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_g7h2y"]
 [ext_resource type="PackedScene" uid="uid://dgicsyqpftdlt" path="res://Scenes/Pieces/ancre.tscn" id="2_1yoif"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p42fv"]
+radius = 50.0
+height = 124.0
+
 [node name="Chaudiere" instance=ExtResource("1_g7h2y")]
 id = 4
+
+[node name="DragDropCollision" parent="." index="0"]
+shape = SubResource("CapsuleShape2D_p42fv")
 
 [node name="ancreReservoir" parent="recepteurAncre" index="0" instance=ExtResource("2_1yoif")]
 position = Vector2(0, -53)
