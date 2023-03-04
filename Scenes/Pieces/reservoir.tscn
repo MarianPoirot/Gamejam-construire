@@ -1,14 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://b7g4do0pyfl23"]
+[gd_scene load_steps=6 format=3 uid="uid://b7g4do0pyfl23"]
 
 [ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_02ays"]
 [ext_resource type="Texture2D" uid="uid://cw23xaqsogulk" path="res://Assets/Sprites/Ballon.png" id="2_hlpvk"]
 [ext_resource type="PackedScene" uid="uid://dgicsyqpftdlt" path="res://Scenes/Pieces/ancre.tscn" id="3_gsslw"]
+[ext_resource type="PackedScene" uid="uid://u6rwihexgowl" path="res://Scenes/liquide/hook_liquide.tscn" id="4_8evcd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_03mvg"]
 size = Vector2(22, 46)
 
 [node name="reservoir" instance=ExtResource("1_02ays")]
-id = 15
+id = 17
 
 [node name="DragDropCollision" parent="." index="0"]
 position = Vector2(0, -2)
@@ -25,3 +26,10 @@ id = 5
 texture_filter = 1
 position = Vector2(0, -2)
 texture = ExtResource("2_hlpvk")
+hframes = 4
+region_rect = Rect2(0, 0, 21, 45)
+
+[node name="HookLiquide" parent="." index="4" instance=ExtResource("4_8evcd")]
+position = Vector2(0, -19)
+id_liquides = Array[int]([9, 10, 11])
+sprite_path = NodePath("../Spirte2D")

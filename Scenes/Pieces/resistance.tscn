@@ -6,7 +6,7 @@
 size = Vector2(55, 89)
 
 [node name="resistance" instance=ExtResource("1_c2oc6")]
-id = 16
+id = 18
 
 [node name="DragDropCollision" parent="." index="0"]
 shape = SubResource("RectangleShape2D_dvryh")

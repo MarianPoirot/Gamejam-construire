@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://i5pnksdpe1cm"]
+
+[ext_resource type="Script" path="res://Scripts/liquide.gd" id="1_yuyap"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p6rrs"]
+radius = 15.0
+
+[node name="Liquide" type="Area2D"]
+collision_mask = 8
+script = ExtResource("1_yuyap")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_p6rrs")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

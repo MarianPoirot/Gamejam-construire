@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdjiu0hjvnp10"]
+[gd_scene load_steps=5 format=3 uid="uid://cdhyln0aitcji"]
 
 [ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_o23yy"]
 [ext_resource type="Texture2D" uid="uid://cvdl5jsftke6c" path="res://Assets/Sprites/Réservoir.png" id="2_7xcas"]
 [ext_resource type="PackedScene" uid="uid://dgicsyqpftdlt" path="res://Scenes/Pieces/ancre.tscn" id="2_airq1"]
+[ext_resource type="PackedScene" uid="uid://u6rwihexgowl" path="res://Scenes/liquide/hook_liquide.tscn" id="4_6opw1"]
 
 [node name="ballon" instance=ExtResource("1_o23yy")]
 texture_filter = 1
@@ -11,13 +12,18 @@ texture_filter = 1
 position = Vector2(0, 14)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="." index="2"]
-texture_filter = 1
-texture = ExtResource("2_7xcas")
-region_enabled = true
-region_rect = Rect2(0, 0, 52, 44)
-
 [node name="ancre-bouchon" parent="recepteurAncre" index="0" instance=ExtResource("2_airq1")]
 position = Vector2(13, -16)
 scale = Vector2(0.8, 0.8)
 id = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="3"]
+texture_filter = 1
+texture = ExtResource("2_7xcas")
+hframes = 4
+region_rect = Rect2(0, 0, 51.7001, 43.3088)
+
+[node name="HookLiquide" parent="." index="4" instance=ExtResource("4_6opw1")]
+position = Vector2(13, -16)
+id_liquides = Array[int]([17, 18, 19])
+sprite_path = NodePath("../Sprite2D")

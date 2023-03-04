@@ -24,7 +24,7 @@ position = Vector2(-24, -44)
 [node name="ancreResistance" parent="recepteurAncre" index="0" instance=ExtResource("2_rixay")]
 position = Vector2(16, 0)
 scale = Vector2(2, 2)
-id = 16
+id = 18
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="4"]
 texture = ExtResource("3_amcr0")
