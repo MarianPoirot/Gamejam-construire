@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://be0d3psb00c0b"]
+
+[ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_b8hjk"]
+[ext_resource type="Texture2D" uid="uid://ctocn6d0satat" path="res://Assets/Sprites/Coque_sépérieur_gauche.png" id="3_wrij4"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_pjbpw"]
+
+[node name="Coque_inf_avant_l" instance=ExtResource("1_b8hjk")]
+texture_filter = 1
+id = 24
+can_activate_ancre = false
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." index="0"]
+position = Vector2(-42, 0)
+polygon = PackedVector2Array(70, -56.9, 70, -43.5, 84, -40.5, 84, 57.5, 45, 57.5, 10, 47, 10, 45.4, -2, 32.3, -2, 28.5, -4.3, 12.5, -2.5, 12.5, 3.5, -10.5, 4.9, -10.5, 15.8, -29.5, 17.2, -29.5, 37.2, -48.5, 39.7, -48.5, 60.3, -57.5, 68.5, -57.5)
+
+[node name="DragDropCollision" parent="." index="1"]
+visible = false
+scale = Vector2(5, 5)
+shape = SubResource("ConvexPolygonShape2D_pjbpw")
+
+[node name="Ancre" parent="." index="2"]
+position = Vector2(10, -20)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="3"]
+texture = ExtResource("3_wrij4")
+hframes = 2
+frame = 1

@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddce3absi6w14"]
+[gd_scene load_steps=4 format=3 uid="uid://ddce3absi6w14"]
 
 [ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_qlej6"]
 [ext_resource type="Texture2D" uid="uid://b2lox0ij2ywif" path="res://Assets/Sprites/Coque_avant_inférieur_droit.png" id="2_apml3"]
-[ext_resource type="PackedScene" uid="uid://nulgtes263rk" path="res://Scenes/Pieces/coque_inférieure.tscn" id="2_w1s20"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_pjbpw"]
 
@@ -11,21 +10,18 @@ texture_filter = 1
 id = 27
 can_activate_ancre = false
 
-[node name="Coque_inf" parent="." index="0" instance=ExtResource("2_w1s20")]
-position = Vector2(-42, -14)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="0"]
 scale = Vector2(5, 5)
 polygon = PackedVector2Array(-6.8, 7.8, -8.6, 8.8, -3.8, 8.2, 0.8, 6, 4.8, 2.2, 6.6, -0.6, 7.6, -2.6, 8, -4.8, 8.4, -6.8, 8.4, -7.4, 8.4, -8, 8.4, -8.4, 8.4, -8.8, 7.4, -8.6, 6.2, -6.2, 1, -4, -2.4, -3.4, -4, 3.6)
 
-[node name="DragDropCollision" parent="." index="2"]
+[node name="DragDropCollision" parent="." index="1"]
 visible = false
 scale = Vector2(5, 5)
 shape = SubResource("ConvexPolygonShape2D_pjbpw")
 
-[node name="Ancre" parent="." index="3"]
+[node name="Ancre" parent="." index="2"]
 position = Vector2(-2, -21)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="." index="4"]
+[node name="Sprite2D" type="Sprite2D" parent="." index="3"]
 texture = ExtResource("2_apml3")
