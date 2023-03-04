@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b3wbxtbbacebh"]
+[gd_scene load_steps=19 format=3 uid="uid://b3wbxtbbacebh"]
 
 [ext_resource type="Script" path="res://Scripts/World/Main.gd" id="1_vn17v"]
 [ext_resource type="Texture2D" uid="uid://s8t8nfhx3gns" path="res://Assets/Sprites/Background.png" id="2_kno67"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://r65bwof7ejvk" path="res://Scenes/liquide/sodium.tscn" id="16_2xrmh"]
 [ext_resource type="PackedScene" uid="uid://bprpu8fe22nhe" path="res://Scenes/Pieces/ferAsouder.tscn" id="16_mju8g"]
 [ext_resource type="PackedScene" uid="uid://bvmk1lo1hl4ea" path="res://Scenes/Pieces/goupille.tscn" id="16_vplyf"]
+[ext_resource type="PackedScene" uid="uid://dpw714oplylju" path="res://Scenes/World/tapis_roulant.tscn" id="17_hyrnp"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_vn17v")
@@ -89,6 +90,9 @@ scale = Vector2(3, 3)
 texture_filter = 1
 position = Vector2(726, 39)
 scale = Vector2(3, 3)
+
+[node name="tapis_roulant" parent="." instance=ExtResource("17_hyrnp")]
+position = Vector2(961, 314)
 
 [node name="ferAsouder" parent="." instance=ExtResource("16_mju8g")]
 position = Vector2(615, 406)

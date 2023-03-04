@@ -13,7 +13,6 @@ scale = Vector2(0.33, 0.33)
 
 [node name="Ancre" parent="." index="1"]
 position = Vector2(0, 14)
-collision_layer = 0
 metadata/_edit_group_ = true
 
 [node name="ancre-bouchon" parent="recepteurAncre" index="0" instance=ExtResource("2_airq1")]
