@@ -54,3 +54,4 @@ id = 15
 
 [node name="ZoneAsouder" parent="." index="5" instance=ExtResource("4_erv1l")]
 position = Vector2(-141, 121)
+maxSoudures = 50

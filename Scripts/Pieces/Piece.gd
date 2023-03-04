@@ -32,3 +32,7 @@ func snap(area):
 		ancre.activate()
 	
 	Id_pieces.state_dependencies[id] = true
+
+
+func _on_zone_asouder_c_est_bon_c_est_soude():
+	pass # Replace with function body.

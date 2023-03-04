@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b3wbxtbbacebh"]
+[gd_scene load_steps=18 format=3 uid="uid://b3wbxtbbacebh"]
 
 [ext_resource type="Script" path="res://Scripts/World/Main.gd" id="1_vn17v"]
 [ext_resource type="Texture2D" uid="uid://b5vd0wq6m3rpi" path="res://Assets/Sprites/Background.png" id="2_kno67"]
@@ -15,8 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://cv1dso1cy3a1p" path="res://Scenes/liquide/entonoire.tscn" id="13_nxo70"]
 [ext_resource type="PackedScene" path="res://Scenes/liquide/eau.tscn" id="15_dup0a"]
 [ext_resource type="PackedScene" path="res://Scenes/liquide/sodium.tscn" id="16_2xrmh"]
-[ext_resource type="PackedScene" uid="uid://bvmk1lo1hl4ea" path="res://Scenes/Pieces/goupille.tscn" id="16_vplyf"]
 [ext_resource type="PackedScene" uid="uid://bprpu8fe22nhe" path="res://Scenes/Pieces/ferAsouder.tscn" id="16_mju8g"]
+[ext_resource type="PackedScene" uid="uid://bvmk1lo1hl4ea" path="res://Scenes/Pieces/goupille.tscn" id="16_vplyf"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_vn17v")
@@ -88,4 +88,8 @@ scale = Vector2(3, 3)
 [node name="Sodium" parent="." instance=ExtResource("16_2xrmh")]
 texture_filter = 1
 position = Vector2(726, 39)
+scale = Vector2(3, 3)
+
+[node name="ferAsouder" parent="." instance=ExtResource("16_mju8g")]
+position = Vector2(615, 406)
 scale = Vector2(3, 3)

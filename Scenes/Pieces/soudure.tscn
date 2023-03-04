@@ -4,4 +4,5 @@
 
 [node name="Sprite2D" type="Sprite2D"]
 texture_filter = 1
+scale = Vector2(0.05, 0.05)
 texture = ExtResource("1_6rv5b")
