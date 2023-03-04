@@ -1,21 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://dx4bvefdrh8sf"]
+[gd_scene load_steps=5 format=3 uid="uid://dx4bvefdrh8sf"]
 
 [ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_sr1o7"]
 [ext_resource type="PackedScene" uid="uid://dgicsyqpftdlt" path="res://Scenes/Pieces/ancre.tscn" id="2_bidjm"]
+[ext_resource type="Texture2D" uid="uid://ctruq4al13l4n" path="res://Assets/Sprites/Turbine.png" id="2_qrs14"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1tck8"]
-size = Vector2(123.25, 123)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pct4w"]
+radius = 19.0
+height = 54.0
 
 [node name="Turbine" instance=ExtResource("1_sr1o7")]
 id = 20
 
 [node name="DragDropCollision" parent="." index="0"]
-shape = SubResource("RectangleShape2D_1tck8")
+shape = SubResource("CapsuleShape2D_pct4w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="2"]
+texture = ExtResource("2_qrs14")
 
 [node name="ancreConduit" parent="recepteurAncre" index="0" instance=ExtResource("2_bidjm")]
-position = Vector2(-52, -46)
+position = Vector2(0, 26)
 id = 5
 
 [node name="ancreCable" parent="recepteurAncre" index="1" instance=ExtResource("2_bidjm")]
-position = Vector2(1, 54)
-id = 3
+position = Vector2(14, 7)
+id = 2
