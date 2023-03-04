@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dclay0npnkh8j"]
-
-[ext_resource type="Script" path="res://Scripts/Pieces/bombe.gd" id="1_g2arx"]
-
-[node name="bombe" type="Node2D"]
-script = ExtResource("1_g2arx")

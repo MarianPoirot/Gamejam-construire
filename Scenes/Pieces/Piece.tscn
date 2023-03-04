@@ -21,4 +21,6 @@ shape = SubResource("CircleShape2D_78j7b")
 shape = SubResource("CircleShape2D_fw7gl")
 debug_color = Color(0.992157, 0, 0.27451, 0.419608)
 
+[node name="recepteurAncre" type="Node2D" parent="."]
+
 [connection signal="input_event" from="." to="." method="_on_input_event"]

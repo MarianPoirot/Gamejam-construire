@@ -22,8 +22,8 @@ func _process(_delta):
 
 func snap():
 	for area in $Ancre.get_overlapping_areas():
-		print(area)
-		print(area.id==self.id)
 		if area.id==self.id:
 			can_grab = false
-			self.position=area.position
+			self.position=area.position-$Ancre.position
+			for ancre in $recepteurAncre.get_children():
+				ancre.activate()

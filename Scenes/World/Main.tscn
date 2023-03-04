@@ -14,3 +14,4 @@ position = Vector2(504, 279)
 position = Vector2(502, 137)
 scale = Vector2(3, 3)
 id = 1
+disable = false
