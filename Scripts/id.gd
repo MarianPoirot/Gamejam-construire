@@ -52,7 +52,7 @@ var dependancies = {
 	id_pieces.sodium2: [id_pieces.sodium],
 	id_pieces.sodium3: [id_pieces.sodium2],
 	id_pieces.turbine: [id_pieces.coque_inf],
-	id_pieces.coque_avant_sup_l: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.resistance,id_pieces.combustible],
+	id_pieces.coque_avant_sup_l: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.combustible],
 	id_pieces.coque_avant_sup_r: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.resistance,id_pieces.combustible],
 	id_pieces.coque_avant_inf_l: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.resistance,id_pieces.combustible],
 	id_pieces.coque_avant_inf_r: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.resistance,id_pieces.combustible]
