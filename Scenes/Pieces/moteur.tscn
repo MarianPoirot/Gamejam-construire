@@ -1,6 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://c01csw6ryydmw"]
+[gd_scene load_steps=4 format=3 uid="uid://c01csw6ryydmw"]
 
-[ext_resource type="Script" path="res://Scripts/Pieces/moteur.gd" id="1_x6cd8"]
+[ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_qdyk7"]
+[ext_resource type="PackedScene" uid="uid://dgicsyqpftdlt" path="res://Scenes/Pieces/ancre.tscn" id="2_8rpkq"]
 
-[node name="moteur" type="Node2D"]
-script = ExtResource("1_x6cd8")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qe8ub"]
+size = Vector2(149, 72)
+
+[node name="Moteur" instance=ExtResource("1_qdyk7")]
+id = 12
+
+[node name="DragDropCollision" parent="." index="0"]
+position = Vector2(-0.5, -5)
+shape = SubResource("RectangleShape2D_qe8ub")
+
+[node name="ancreCable" parent="recepteurAncre" index="0" instance=ExtResource("2_8rpkq")]
+position = Vector2(58, 3)
+id = 3
+
+[node name="ancreGoupille" parent="recepteurAncre" index="1" instance=ExtResource("2_8rpkq")]
+position = Vector2(-76, -1)
+id = 11
