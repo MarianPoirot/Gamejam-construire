@@ -11,10 +11,12 @@ radius = 8.0
 id = 1
 
 [node name="DragDropCollision" parent="." index="0"]
+texture_filter = 1
 shape = SubResource("CircleShape2D_5wlq3")
 
 [node name="ancreGoupille" parent="recepteurAncre" index="0" instance=ExtResource("2_nhvv8")]
 id = 14
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="3"]
+texture_filter = 1
 texture = ExtResource("3_umwne")
