@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://7q30rptn3s8w"]
+[gd_scene load_steps=3 format=3 uid="uid://r65bwof7ejvk"]
 
 [ext_resource type="PackedScene" uid="uid://i5pnksdpe1cm" path="res://Scenes/liquide/liquide.tscn" id="1_j3bsv"]
 [ext_resource type="Texture2D" uid="uid://ckx865rqjb801" path="res://Assets/Sprites/Silice.png" id="2_timsw"]
