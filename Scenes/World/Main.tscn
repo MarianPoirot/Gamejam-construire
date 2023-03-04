@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3wbxtbbacebh"]
+[gd_scene load_steps=7 format=3 uid="uid://b3wbxtbbacebh"]
 
 [ext_resource type="Script" path="res://Scripts/World/Main.gd" id="1_vn17v"]
 [ext_resource type="PackedScene" uid="uid://bdjiu0hjvnp10" path="res://Scenes/Pieces/ballon.tscn" id="2_y7w6m"]
 [ext_resource type="PackedScene" uid="uid://nulgtes263rk" path="res://Scenes/Pieces/coque_inférieure.tscn" id="3_k3jia"]
 [ext_resource type="PackedScene" uid="uid://ksyhx6uwk1rr" path="res://Scenes/Pieces/coque_supérieure.tscn" id="4_ccyxp"]
+[ext_resource type="PackedScene" uid="uid://b7g4do0pyfl23" path="res://Scenes/Pieces/reservoir.tscn" id="6_g1jcb"]
 [ext_resource type="PackedScene" uid="uid://b2dfvrvgwbnae" path="res://Scenes/Pieces/chaudiere.tscn" id="6_ncykg"]
 
 [node name="Main" type="Node2D"]
@@ -26,4 +27,9 @@ id = 0
 
 [node name="Chaudiere" parent="." instance=ExtResource("6_ncykg")]
 position = Vector2(159, 479)
+scale = Vector2(3, 3)
+
+[node name="reservoir" parent="." instance=ExtResource("6_g1jcb")]
+texture_filter = 1
+position = Vector2(154, 242)
 scale = Vector2(3, 3)
