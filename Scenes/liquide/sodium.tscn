@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://r65bwof7ejvk"]
+
+[ext_resource type="PackedScene" uid="uid://i5pnksdpe1cm" path="res://Scenes/liquide/liquide.tscn" id="1_j3bsv"]
+[ext_resource type="Texture2D" uid="uid://ckx865rqjb801" path="res://Assets/Sprites/Silice.png" id="2_timsw"]
+
+[node name="Sodium" instance=ExtResource("1_j3bsv")]
+id = 19
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_timsw")

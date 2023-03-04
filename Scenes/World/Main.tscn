@@ -13,8 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://c01csw6ryydmw" path="res://Scenes/Pieces/moteur.tscn" id="11_mkq26"]
 [ext_resource type="PackedScene" uid="uid://dnhgpm6x2k2c2" path="res://Scenes/Pieces/bouchon.tscn" id="12_6p58o"]
 [ext_resource type="PackedScene" uid="uid://cv1dso1cy3a1p" path="res://Scenes/liquide/entonoire.tscn" id="13_nxo70"]
-[ext_resource type="PackedScene" uid="uid://i5pnksdpe1cm" path="res://Scenes/liquide/liquide.tscn" id="14_ug5mp"]
-[ext_resource type="Texture2D" uid="uid://dfdr853dc81db" path="res://icon.svg" id="15_dk3cs"]
+[ext_resource type="PackedScene" path="res://Scenes/liquide/eau.tscn" id="15_dup0a"]
+[ext_resource type="PackedScene" path="res://Scenes/liquide/sodium.tscn" id="16_2xrmh"]
+[ext_resource type="PackedScene" uid="uid://bvmk1lo1hl4ea" path="res://Scenes/Pieces/goupille.tscn" id="16_vplyf"]
 [ext_resource type="PackedScene" uid="uid://bprpu8fe22nhe" path="res://Scenes/Pieces/ferAsouder.tscn" id="16_mju8g"]
 
 [node name="Main" type="Node2D"]
@@ -34,7 +35,27 @@ position = Vector2(512, 176)
 scale = Vector2(3, 3)
 
 [node name="Chaudiere" parent="." instance=ExtResource("6_ncykg")]
+texture_filter = 1
 position = Vector2(159, 479)
+scale = Vector2(3, 3)
+
+[node name="Cable" parent="." instance=ExtResource("10_scpqc")]
+texture_filter = 1
+position = Vector2(32, 550)
+scale = Vector2(3, 3)
+
+[node name="Turbine" parent="." instance=ExtResource("7_pxymf")]
+position = Vector2(141, 53)
+scale = Vector2(3, 3)
+
+[node name="Moteur" parent="." instance=ExtResource("11_mkq26")]
+texture_filter = 1
+position = Vector2(479, 554)
+scale = Vector2(3, 3)
+
+[node name="goupille" parent="." instance=ExtResource("16_vplyf")]
+texture_filter = 1
+position = Vector2(256, 552)
 scale = Vector2(3, 3)
 
 [node name="ballon" parent="." instance=ExtResource("2_y7w6m")]
@@ -50,38 +71,21 @@ scale = Vector2(3, 3)
 position = Vector2(951, 43)
 scale = Vector2(3, 3)
 
-[node name="Turbine" parent="." instance=ExtResource("7_pxymf")]
-position = Vector2(141, 53)
-scale = Vector2(3, 3)
-
-[node name="Cable" parent="." instance=ExtResource("10_scpqc")]
-position = Vector2(26.0001, 575)
-scale = Vector2(3, 3)
-
-[node name="Moteur" parent="." instance=ExtResource("11_mkq26")]
-position = Vector2(921, 193)
-scale = Vector2(3, 3)
-
 [node name="bouchon" parent="." instance=ExtResource("12_6p58o")]
+texture_filter = 1
 position = Vector2(81, 322)
 scale = Vector2(3, 3)
 
 [node name="Area2D" parent="." instance=ExtResource("13_nxo70")]
+texture_filter = 1
 position = Vector2(466, 423)
 
-[node name="Eau" parent="." instance=ExtResource("14_ug5mp")]
-position = Vector2(726, 546)
-id = 9
+[node name="Eau" parent="." instance=ExtResource("15_dup0a")]
+texture_filter = 1
+position = Vector2(968, 152)
+scale = Vector2(3, 3)
 
-[node name="Sodium" parent="." instance=ExtResource("14_ug5mp")]
-position = Vector2(551, 521)
-id = 19
-
-[node name="Icon" type="Sprite2D" parent="Sodium"]
-position = Vector2(1, 0)
-scale = Vector2(0.28125, 0.304688)
-texture = ExtResource("15_dk3cs")
-
-[node name="ferAsouder" parent="." instance=ExtResource("16_mju8g")]
-position = Vector2(352, 328)
+[node name="Sodium" parent="." instance=ExtResource("16_2xrmh")]
+texture_filter = 1
+position = Vector2(726, 39)
 scale = Vector2(3, 3)
