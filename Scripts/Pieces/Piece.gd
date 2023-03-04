@@ -26,8 +26,9 @@ func try_snap():
 	
 	print("Self: ", self)
 	for area in $Ancre.get_overlapping_areas():
-		if area is Ancre and area.id==self.id and abs(fmod(area.rotation, 2*PI) - fmod(rotation, 2*PI))<PI/6.0:
+		if area is Ancre and area.id==self.id and abs(angle_difference(area.rotation, rotation))<PI/6.0:
 			snap(area)
+			
 
 func depandancies_metted():
 	return Id_pieces.dependancies[id].all(func (dep): return Id_pieces.state_dependencies[dep])
@@ -59,3 +60,8 @@ func _on_ancre_combustible_input_event(_viewport, event, _shape_idx):
 				$"Chaudière".frame = 0
 				Id_pieces.state_dependencies[Id_pieces.id_pieces.chaudiere_ouverte]=false
 			2: $"Chaudière".frame = 3
+
+
+func angle_difference(angle1, angle2):
+	var diff = angle2 - angle1
+	return diff if abs(diff) < PI else diff + (2*PI * -sign(diff))
