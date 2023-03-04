@@ -7,6 +7,7 @@ a = Vector2(-16, 8)
 b = Vector2(-16, 16)
 
 [node name="Piques" instance=ExtResource("1_osey7")]
+id = 16
 
 [node name="DragDropCollision2" type="CollisionPolygon2D" parent="." index="0"]
 position = Vector2(1.19209e-07, 3.2)

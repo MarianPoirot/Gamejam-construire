@@ -14,7 +14,7 @@ id = 1
 shape = SubResource("CircleShape2D_5wlq3")
 
 [node name="ancreGoupille" parent="recepteurAncre" index="0" instance=ExtResource("2_nhvv8")]
-id = 11
+id = 14
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="3"]
 texture = ExtResource("3_umwne")

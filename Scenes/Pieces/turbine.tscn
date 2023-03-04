@@ -10,7 +10,7 @@ height = 54.0
 
 [node name="Turbine" instance=ExtResource("1_sr1o7")]
 texture_filter = 1
-id = 20
+id = 22
 
 [node name="DragDropCollision" parent="." index="0"]
 shape = SubResource("CapsuleShape2D_pct4w")
@@ -23,5 +23,5 @@ position = Vector2(0, 26)
 id = 5
 
 [node name="ancreCable" parent="recepteurAncre" index="1" instance=ExtResource("2_bidjm")]
-position = Vector2(18, 10)
+position = Vector2(16, 11)
 id = 2

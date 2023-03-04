@@ -1,10 +1,14 @@
-extends CollisionPolygon2D
+extends Area2D
 
-signal soude
+signal c_est_bon_c_est_soude
 
-@export var maxSoudures : int
+@export var maxSoudures := 10
+var weldCounter :=0
+@export var weldSpeed := 0.1
 var nbSoudures : int
+var completed := false
 var texture = load("res://Assets/Sprites/Soudure.png")
+var Soudure = load("res://Scenes/Pieces/soudure.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,17 +18,26 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-	
+		
+
+func _on_input_event(viewport, event, shape_idx):
+	if Input.is_action_pressed("secondary_action") && ! completed:
+		weldCounter += 1
+		if weldCounter >= 1/weldSpeed:
+			createSoudure(get_global_mouse_position())
+			weldCounter = 0
 
 
 func createSoudure(pos):
-	var newSoudure = Sprite2D.new()
-	newSoudure.texture = texture
-	newSoudure.position = pos
+	var newSoudure = Soudure.instantiate()
 	nbSoudures += 1
+	self.add_child(newSoudure)
+	newSoudure.global_position = pos
 	if nbSoudures >= maxSoudures :
-		emit_signal("soude")
+		emit_signal("c_est_bon_c_est_soude")
+		completed = true
+		print("ok")
 
 
-func _on_input_event(_viewport, event, _shape_idx):
-	pass # Replace with function body.
+
+

@@ -3,6 +3,8 @@
 [ext_resource type="Script" path="res://Scripts/Pieces/zoneAsouder.gd" id="1_byli2"]
 
 [node name="ZoneAsouder" type="Area2D"]
+position = Vector2(232, 176)
+scale = Vector2(10, 10)
 script = ExtResource("1_byli2")
 
 [node name="zone" type="CollisionPolygon2D" parent="."]
