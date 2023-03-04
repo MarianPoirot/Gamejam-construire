@@ -1,5 +1,6 @@
 extends Node
 
+
 enum id_pieces{
 	ballon=0,
 	bouchon=1,
@@ -74,3 +75,6 @@ var state_dependencies = {
 }
 
 var drag_and_drop_taken := false
+
+signal tapis_roulant_descendre
+signal tapis_roulant_monter
