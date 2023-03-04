@@ -41,7 +41,7 @@ var dependancies = {
 	id_pieces.chaudiere: [id_pieces.coque_inf],
 	id_pieces.combustible: [id_pieces.chaudiere_ouverte],
 	id_pieces.conduitVapeur: [id_pieces.eau3,id_pieces.turbine],
-	id_pieces.coque_avant: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.resistance,id_pieces.combustible],
+	id_pieces.coque_avant: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.combustible],
 	id_pieces.eau: [id_pieces.reservoir],
 	id_pieces.goupille: [id_pieces.bouchon],
 	id_pieces.moteur: [id_pieces.coque_inf],
@@ -53,9 +53,9 @@ var dependancies = {
 	id_pieces.sodium3: [id_pieces.sodium2],
 	id_pieces.turbine: [id_pieces.coque_inf],
 	id_pieces.coque_avant_sup_l: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.combustible],
-	id_pieces.coque_avant_sup_r: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.resistance,id_pieces.combustible],
-	id_pieces.coque_avant_inf_l: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.resistance,id_pieces.combustible],
-	id_pieces.coque_avant_inf_r: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.resistance,id_pieces.combustible]
+	id_pieces.coque_avant_sup_r: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.combustible],
+	id_pieces.coque_avant_inf_l: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.combustible],
+	id_pieces.coque_avant_inf_r: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.combustible]
 }
 
 var state_dependencies = {

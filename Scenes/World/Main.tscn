@@ -1,11 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://b3wbxtbbacebh"]
+[gd_scene load_steps=25 format=3 uid="uid://b3wbxtbbacebh"]
 
 [ext_resource type="Script" path="res://Scripts/World/Main.gd" id="1_vn17v"]
 [ext_resource type="Texture2D" uid="uid://s8t8nfhx3gns" path="res://Assets/Sprites/Background.png" id="2_kno67"]
 [ext_resource type="PackedScene" uid="uid://cdhyln0aitcji" path="res://Scenes/Pieces/ballon.tscn" id="2_y7w6m"]
 [ext_resource type="PackedScene" uid="uid://nulgtes263rk" path="res://Scenes/Pieces/coque_inférieure.tscn" id="3_k3jia"]
 [ext_resource type="PackedScene" uid="uid://ksyhx6uwk1rr" path="res://Scenes/Pieces/coque_supérieure.tscn" id="4_ccyxp"]
-[ext_resource type="PackedScene" path="res://Scenes/Pieces/combustible.tscn" id="5_6g2yp"]
+[ext_resource type="PackedScene" uid="uid://cs5t8deef2iua" path="res://Scenes/Pieces/combustible.tscn" id="5_6g2yp"]
 [ext_resource type="PackedScene" uid="uid://buyqii003lxp7" path="res://Scenes/Pieces/conduit-vapeur.tscn" id="6_bnl4o"]
 [ext_resource type="PackedScene" uid="uid://b7g4do0pyfl23" path="res://Scenes/Pieces/reservoir.tscn" id="6_g1jcb"]
 [ext_resource type="PackedScene" uid="uid://b2dfvrvgwbnae" path="res://Scenes/Pieces/chaudiere.tscn" id="6_ncykg"]
@@ -20,6 +20,10 @@
 [ext_resource type="PackedScene" uid="uid://bvmk1lo1hl4ea" path="res://Scenes/Pieces/goupille.tscn" id="16_vplyf"]
 [ext_resource type="PackedScene" uid="uid://dpw714oplylju" path="res://Scenes/World/tapis_roulant.tscn" id="17_hyrnp"]
 [ext_resource type="PackedScene" uid="uid://5n2yjrnh0lvi" path="res://Scenes/Pieces/coque_avant_inf_L.tscn" id="20_nb4rh"]
+[ext_resource type="PackedScene" uid="uid://dobe78ei8mmn1" path="res://Scenes/Pieces/coque_avant_inf.tscn" id="21_gvekx"]
+[ext_resource type="PackedScene" uid="uid://ddce3absi6w14" path="res://Scenes/Pieces/coque_avant_inf_R.tscn" id="22_t6vc2"]
+[ext_resource type="PackedScene" uid="uid://be0d3psb00c0b" path="res://Scenes/Pieces/coque_avant_sup_L.tscn" id="23_4volp"]
+[ext_resource type="PackedScene" uid="uid://dqxfa0eotji3k" path="res://Scenes/Pieces/coque_avant_sup_R.tscn" id="24_my6qh"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_vn17v")
@@ -107,4 +111,20 @@ scale = Vector2(3, 3)
 
 [node name="Coque_inf_avant_l" parent="." instance=ExtResource("20_nb4rh")]
 position = Vector2(98, 524)
+scale = Vector2(3, 3)
+
+[node name="Coque_inf_avant_l2" parent="." instance=ExtResource("21_gvekx")]
+position = Vector2(255, 23)
+scale = Vector2(3, 3)
+
+[node name="Coque_inf_avant_l3" parent="." instance=ExtResource("22_t6vc2")]
+position = Vector2(702, 536)
+scale = Vector2(3, 3)
+
+[node name="Coque_inf_avant_l4" parent="." instance=ExtResource("23_4volp")]
+position = Vector2(262, 517)
+scale = Vector2(3, 3)
+
+[node name="Coque_inf_avant_l5" parent="." instance=ExtResource("24_my6qh")]
+position = Vector2(495, 543)
 scale = Vector2(3, 3)
