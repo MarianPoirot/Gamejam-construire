@@ -2,6 +2,10 @@ extends Dragable
 
 @export var id:Id_pieces.id_pieces
 
+func _ready():
+	if not Id_pieces.state_dependencies[id]:
+		rotation = randf_range(0, 2*PI)
+
 func release():
 	super.release()
 	try_snap()

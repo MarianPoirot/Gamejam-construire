@@ -32,12 +32,12 @@ texture_filter = 1
 position = Vector2(512, 176)
 scale = Vector2(3, 3)
 
-[node name="ballon" parent="." instance=ExtResource("2_y7w6m")]
-position = Vector2(960, 512)
-scale = Vector2(3, 3)
-
 [node name="Chaudiere" parent="." instance=ExtResource("6_ncykg")]
 position = Vector2(159, 479)
+scale = Vector2(3, 3)
+
+[node name="ballon" parent="." instance=ExtResource("2_y7w6m")]
+position = Vector2(912, 536)
 scale = Vector2(3, 3)
 
 [node name="reservoir" parent="." instance=ExtResource("6_g1jcb")]
