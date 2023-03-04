@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b7g4do0pyfl23"]
+[gd_scene load_steps=5 format=3 uid="uid://h0wvnevpk6ae"]
 
 [ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_02ays"]
 [ext_resource type="Texture2D" uid="uid://cw23xaqsogulk" path="res://Assets/Sprites/Ballon.png" id="2_hlpvk"]
@@ -18,7 +18,7 @@ shape = SubResource("RectangleShape2D_03mvg")
 position = Vector2(0, 14)
 
 [node name="ancreConduitVapeur" parent="recepteurAncre" index="0" instance=ExtResource("3_gsslw")]
-position = Vector2(0, -19)
+position = Vector2(1, -19)
 id = 5
 
 [node name="Spirte2D" type="Sprite2D" parent="." index="3"]
