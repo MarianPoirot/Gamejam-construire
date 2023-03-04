@@ -37,3 +37,7 @@ id = 14
 [node name="ancre_pique3" parent="recepteurAncre" index="2" instance=ExtResource("3_bm6tj")]
 position = Vector2(-72, 16)
 id = 14
+
+[node name="ancreChaudiere" parent="recepteurAncre" index="3" instance=ExtResource("3_bm6tj")]
+position = Vector2(-41, -5)
+id = 3
