@@ -1,7 +1,7 @@
 extends Dragable
 
 
-var conteneur_liquide:Node2D=null
+var conteneur_liquide:Hook=null
 
 func grab():
 	super.grab()
@@ -19,3 +19,6 @@ func snap(hook):
 	self.global_position=hook.global_position-$Sortie.position*scale.x
 	conteneur_liquide = hook
 
+func send_liquide(id_liquide):
+	if conteneur_liquide:
+		conteneur_liquide.add_liquide(id_liquide)
