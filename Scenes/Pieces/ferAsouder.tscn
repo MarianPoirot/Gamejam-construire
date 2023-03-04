@@ -1,12 +1,40 @@
-[gd_scene load_steps=5 format=3 uid="uid://bprpu8fe22nhe"]
+[gd_scene load_steps=8 format=3 uid="uid://bprpu8fe22nhe"]
 
 [ext_resource type="Script" path="res://Assets/Sprites/ferAsouder.gd" id="1_djsn8"]
-[ext_resource type="Texture2D" uid="uid://dfdr853dc81db" path="res://icon.svg" id="2_4w18d"]
+[ext_resource type="Texture2D" uid="uid://bm7cybr5k1s2b" path="res://Assets/Sprites/Chalumeau.png" id="2_v2rcb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n1q0n"]
+size = Vector2(21, 52)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p7t5b"]
 radius = 4.12311
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xiy2"]
+atlas = ExtResource("2_v2rcb")
+region = Rect2(0, 0, 23, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1m54"]
+atlas = ExtResource("2_v2rcb")
+region = Rect2(23, 0, 23, 52)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x8obw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xiy2")
+}],
+"loop": true,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1m54")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}]
 
 [node name="ferAsouder" type="Area2D"]
 collision_layer = 16
@@ -14,6 +42,7 @@ collision_mask = 16
 script = ExtResource("1_djsn8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_n1q0n")
 
 [node name="WeldingArea" type="Area2D" parent="."]
@@ -21,13 +50,17 @@ collision_layer = 16
 collision_mask = 16
 
 [node name="WeldingCollision" type="CollisionShape2D" parent="WeldingArea"]
-position = Vector2(-10, -10)
+position = Vector2(-10, -18)
 shape = SubResource("CircleShape2D_p7t5b")
 debug_color = Color(0.741176, 0, 0.462745, 0.419608)
 
-[node name="Icon" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.270588)
-scale = Vector2(0.144531, 0.144531)
-texture = ExtResource("2_4w18d")
+[node name="Chalumeau" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_x8obw")
+animation = &"on"
+
+[node name="cable" type="Line2D" parent="."]
+points = PackedVector2Array(5, 26, 39, 56)
+width = 1.0
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
