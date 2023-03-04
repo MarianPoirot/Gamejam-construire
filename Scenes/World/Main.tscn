@@ -13,8 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://c01csw6ryydmw" path="res://Scenes/Pieces/moteur.tscn" id="11_mkq26"]
 [ext_resource type="PackedScene" uid="uid://dnhgpm6x2k2c2" path="res://Scenes/Pieces/bouchon.tscn" id="12_6p58o"]
 [ext_resource type="PackedScene" uid="uid://cv1dso1cy3a1p" path="res://Scenes/liquide/entonoire.tscn" id="13_nxo70"]
-[ext_resource type="PackedScene" uid="uid://bl7mre7gm07oi" path="res://Scenes/liquide/eau.tscn" id="15_dup0a"]
-[ext_resource type="PackedScene" uid="uid://r65bwof7ejvk" path="res://Scenes/liquide/sodium.tscn" id="16_2xrmh"]
+[ext_resource type="PackedScene" path="res://Scenes/liquide/eau.tscn" id="15_dup0a"]
+[ext_resource type="PackedScene" path="res://Scenes/liquide/sodium.tscn" id="16_2xrmh"]
 [ext_resource type="PackedScene" uid="uid://bvmk1lo1hl4ea" path="res://Scenes/Pieces/goupille.tscn" id="16_vplyf"]
 
 [node name="Main" type="Node2D"]
@@ -40,7 +40,7 @@ scale = Vector2(3, 3)
 
 [node name="Cable" parent="." instance=ExtResource("10_scpqc")]
 texture_filter = 1
-position = Vector2(26.0001, 575)
+position = Vector2(32, 550)
 scale = Vector2(3, 3)
 
 [node name="Turbine" parent="." instance=ExtResource("7_pxymf")]
@@ -49,7 +49,7 @@ scale = Vector2(3, 3)
 
 [node name="Moteur" parent="." instance=ExtResource("11_mkq26")]
 texture_filter = 1
-position = Vector2(921, 193)
+position = Vector2(479, 554)
 scale = Vector2(3, 3)
 
 [node name="goupille" parent="." instance=ExtResource("16_vplyf")]
@@ -80,7 +80,11 @@ texture_filter = 1
 position = Vector2(466, 423)
 
 [node name="Eau" parent="." instance=ExtResource("15_dup0a")]
-position = Vector2(32, 56)
+texture_filter = 1
+position = Vector2(968, 152)
+scale = Vector2(3, 3)
 
 [node name="Sodium" parent="." instance=ExtResource("16_2xrmh")]
-position = Vector2(32, 184)
+texture_filter = 1
+position = Vector2(726, 39)
+scale = Vector2(3, 3)
