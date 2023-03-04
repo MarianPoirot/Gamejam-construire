@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/World/tapis_roulant.gd" id="1_iqpv5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1a4p2"]
-size = Vector2(100, 1000)
+size = Vector2(100, 2000)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhmi8"]
 size = Vector2(100, 20)
@@ -20,7 +20,7 @@ script = ExtResource("1_iqpv5")
 shape = SubResource("RectangleShape2D_1a4p2")
 
 [node name="Bas" type="Area2D" parent="."]
-position = Vector2(0, 520)
+position = Vector2(0, 1016)
 collision_layer = 0
 collision_mask = 2
 
@@ -29,7 +29,7 @@ shape = SubResource("RectangleShape2D_vhmi8")
 debug_color = Color(0.796078, 0.0627451, 1, 0.419608)
 
 [node name="Haut" type="Area2D" parent="."]
-position = Vector2(0, -512)
+position = Vector2(0, -1016)
 collision_layer = 0
 collision_mask = 2
 

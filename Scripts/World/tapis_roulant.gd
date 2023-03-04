@@ -13,7 +13,6 @@ func _process(_delta):
 		monter()
 
 func deplacer(sens:int):
-	print("auie")
 	for c in get_overlapping_areas():
 		c.position.y += sens * vitesse
 
@@ -25,8 +24,8 @@ func descendre():
 
 
 func _on_haut_area_entered(area):
-	area.position.y+=($CollisionShape2D.shape.size.y-50)*scale.y
+	area.position.y+=($CollisionShape2D.shape.size.y)*scale.y
 
 
 func _on_bas_area_entered(area):
-	area.position.y-=($CollisionShape2D.shape.size.y-50)*scale.y
+	area.position.y-=($CollisionShape2D.shape.size.y)*scale.y

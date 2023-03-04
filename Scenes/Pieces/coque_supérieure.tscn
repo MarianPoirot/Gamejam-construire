@@ -40,3 +40,11 @@ texture_filter = 1
 position = Vector2(-1, -26)
 id = 22
 disable = false
+
+[node name="ancreCoqueSupL" parent="recepteurAncre" index="4" instance=ExtResource("3_msov2")]
+position = Vector2(-32, 0)
+id = 24
+
+[node name="ancreCoqueSupR" parent="recepteurAncre" index="5" instance=ExtResource("3_msov2")]
+position = Vector2(32, 0)
+id = 25

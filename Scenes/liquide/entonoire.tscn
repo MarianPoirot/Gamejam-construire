@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cv1dso1cy3a1p"]
+[gd_scene load_steps=6 format=3 uid="uid://cv1dso1cy3a1p"]
 
 [ext_resource type="Script" path="res://Scripts/entonoire.gd" id="1_buqvk"]
+[ext_resource type="Texture2D" uid="uid://ck5ml3d85agkc" path="res://Assets/Sprites/Fiole.png" id="2_lnncv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ow6lo"]
-size = Vector2(200, 20)
+size = Vector2(184, 34)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tgmtl"]
 
@@ -14,8 +15,16 @@ collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_buqvk")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-83, 0)
+rotation = 0.785397
+scale = Vector2(2, 2)
+texture = ExtResource("2_lnncv")
+hframes = 2
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-104, 0)
+position = Vector2(-83, 0)
 shape = SubResource("RectangleShape2D_ow6lo")
 
 [node name="Sortie" type="Area2D" parent="."]
@@ -26,7 +35,7 @@ collision_mask = 4
 shape = SubResource("CircleShape2D_tgmtl")
 
 [node name="Entree" type="Area2D" parent="."]
-position = Vector2(-208, 0)
+position = Vector2(-163, 0)
 collision_layer = 8
 collision_mask = 0
 
