@@ -27,16 +27,16 @@ disable = false
 
 [node name="ancre_pique1" parent="recepteurAncre" index="1" instance=ExtResource("3_msov2")]
 position = Vector2(64, -16)
-id = 14
+id = 16
 disable = false
 
 [node name="ancre_pique2" parent="recepteurAncre" index="2" instance=ExtResource("3_msov2")]
 position = Vector2(-64, -16)
-id = 14
+id = 16
 disable = false
 
 [node name="ancre_turbine" parent="recepteurAncre" index="3" instance=ExtResource("3_msov2")]
 texture_filter = 1
 position = Vector2(-1, -26)
-id = 20
+id = 22
 disable = false
