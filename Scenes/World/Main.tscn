@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3wbxtbbacebh"]
+[gd_scene load_steps=4 format=3 uid="uid://b3wbxtbbacebh"]
 
 [ext_resource type="Script" path="res://Scripts/World/Main.gd" id="1_vn17v"]
+[ext_resource type="PackedScene" uid="uid://bdjiu0hjvnp10" path="res://Scenes/Pieces/ballon.tscn" id="2_y7w6m"]
+[ext_resource type="PackedScene" uid="uid://dgicsyqpftdlt" path="res://Scenes/Pieces/ancre.tscn" id="3_uptiu"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_vn17v")
+
+[node name="ballon" parent="." instance=ExtResource("2_y7w6m")]
+position = Vector2(504, 279)
+
+[node name="ancre" parent="." instance=ExtResource("3_uptiu")]
+position = Vector2(502, 137)
+scale = Vector2(3, 3)
+id = 1
