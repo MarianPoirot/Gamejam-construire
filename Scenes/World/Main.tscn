@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://b3wbxtbbacebh"]
+[gd_scene load_steps=9 format=3 uid="uid://b3wbxtbbacebh"]
 
 [ext_resource type="Script" path="res://Scripts/World/Main.gd" id="1_vn17v"]
 [ext_resource type="PackedScene" uid="uid://bdjiu0hjvnp10" path="res://Scenes/Pieces/ballon.tscn" id="2_y7w6m"]
 [ext_resource type="PackedScene" uid="uid://nulgtes263rk" path="res://Scenes/Pieces/coque_inférieure.tscn" id="3_k3jia"]
 [ext_resource type="PackedScene" uid="uid://ksyhx6uwk1rr" path="res://Scenes/Pieces/coque_supérieure.tscn" id="4_ccyxp"]
-[ext_resource type="PackedScene" uid="uid://b7g4do0pyfl23" path="res://Scenes/Pieces/reservoir.tscn" id="6_g1jcb"]
+[ext_resource type="PackedScene" uid="uid://buyqii003lxp7" path="res://Scenes/Pieces/conduit-vapeur.tscn" id="6_bnl4o"]
+[ext_resource type="PackedScene" path="res://Scenes/Pieces/reservoir.tscn" id="6_g1jcb"]
 [ext_resource type="PackedScene" uid="uid://b2dfvrvgwbnae" path="res://Scenes/Pieces/chaudiere.tscn" id="6_ncykg"]
+[ext_resource type="PackedScene" uid="uid://dx4bvefdrh8sf" path="res://Scenes/Pieces/turbine.tscn" id="7_pxymf"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_vn17v")
@@ -32,4 +34,12 @@ scale = Vector2(3, 3)
 [node name="reservoir" parent="." instance=ExtResource("6_g1jcb")]
 texture_filter = 1
 position = Vector2(154, 242)
+scale = Vector2(3, 3)
+
+[node name="Turbine" parent="." instance=ExtResource("7_pxymf")]
+position = Vector2(141, 53)
+scale = Vector2(3, 3)
+
+[node name="ConduitVapeur" parent="." instance=ExtResource("6_bnl4o")]
+position = Vector2(951, 43)
 scale = Vector2(3, 3)

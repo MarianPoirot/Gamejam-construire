@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bdjiu0hjvnp10"]
 
 [ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_o23yy"]
-[ext_resource type="Texture2D" uid="uid://dqx1q4rt8rqea" path="res://Assets/Sprites/Réservoir.png" id="2_7xcas"]
+[ext_resource type="Texture2D" uid="uid://cv5kt8cq3nd4w" path="res://Assets/Sprites/Réservoir.png" id="2_7xcas"]
 [ext_resource type="PackedScene" uid="uid://dgicsyqpftdlt" path="res://Scenes/Pieces/ancre.tscn" id="2_airq1"]
 
 [node name="ballon" instance=ExtResource("1_o23yy")]
