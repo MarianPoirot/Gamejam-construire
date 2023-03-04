@@ -13,8 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://c01csw6ryydmw" path="res://Scenes/Pieces/moteur.tscn" id="11_mkq26"]
 [ext_resource type="PackedScene" uid="uid://dnhgpm6x2k2c2" path="res://Scenes/Pieces/bouchon.tscn" id="12_6p58o"]
 [ext_resource type="PackedScene" uid="uid://cv1dso1cy3a1p" path="res://Scenes/liquide/entonoire.tscn" id="13_nxo70"]
-[ext_resource type="PackedScene" uid="uid://i5pnksdpe1cm" path="res://Scenes/liquide/liquide.tscn" id="14_ug5mp"]
-[ext_resource type="Texture2D" uid="uid://dfdr853dc81db" path="res://icon.svg" id="15_dk3cs"]
+[ext_resource type="PackedScene" uid="uid://bl7mre7gm07oi" path="res://Scenes/liquide/eau.tscn" id="15_dup0a"]
+[ext_resource type="PackedScene" uid="uid://r65bwof7ejvk" path="res://Scenes/liquide/sodium.tscn" id="16_2xrmh"]
 [ext_resource type="PackedScene" uid="uid://bvmk1lo1hl4ea" path="res://Scenes/Pieces/goupille.tscn" id="16_vplyf"]
 
 [node name="Main" type="Node2D"]
@@ -79,17 +79,8 @@ scale = Vector2(3, 3)
 texture_filter = 1
 position = Vector2(466, 423)
 
-[node name="Eau" parent="." instance=ExtResource("14_ug5mp")]
-texture_filter = 1
-position = Vector2(726, 546)
-id = 9
+[node name="Eau" parent="." instance=ExtResource("15_dup0a")]
+position = Vector2(32, 56)
 
-[node name="Sodium" parent="." instance=ExtResource("14_ug5mp")]
-texture_filter = 1
-position = Vector2(551, 521)
-id = 19
-
-[node name="Icon" type="Sprite2D" parent="Sodium"]
-position = Vector2(1, 0)
-scale = Vector2(0.28125, 0.304688)
-texture = ExtResource("15_dk3cs")
+[node name="Sodium" parent="." instance=ExtResource("16_2xrmh")]
+position = Vector2(32, 184)
