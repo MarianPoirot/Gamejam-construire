@@ -1,15 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://djsno5f3jy6pp"]
+[gd_scene load_steps=3 format=3 uid="uid://djsno5f3jy6pp"]
 
 [ext_resource type="Script" path="res://Scripts/World/Ending.gd" id="1_0ockr"]
+[ext_resource type="Texture2D" uid="uid://d02ch4b2og3a1" path="res://Assets/Sprites/Terrorists win.png" id="2_85mv2"]
 
 [node name="Ending" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_0ockr")
 
+[node name="Background_layer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background_layer"]
+offset_right = 1024.0
+offset_bottom = 599.0
+color = Color(0.247059, 0.215686, 0.141176, 1)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(512, 284.5)
+scale = Vector2(1.08475, 1.075)
+texture = ExtResource("2_85mv2")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
