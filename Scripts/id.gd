@@ -25,7 +25,11 @@ enum id_pieces{
 	sodium2=20,
 	sodium3=21,
 	turbine=22,
-	chaudiere_ouverte=23
+	chaudiere_ouverte=23,
+	coque_avant_sup_l=24,
+	coque_avant_sup_r=25,
+	coque_avant_inf_l=26,
+	coque_avant_inf_r=27
 }
 
 var dependancies = {
@@ -47,7 +51,11 @@ var dependancies = {
 	id_pieces.sodium: [id_pieces.entonnoir],
 	id_pieces.sodium2: [id_pieces.sodium],
 	id_pieces.sodium3: [id_pieces.sodium2],
-	id_pieces.turbine: [id_pieces.coque_inf]
+	id_pieces.turbine: [id_pieces.coque_inf],
+	id_pieces.coque_avant_sup_l: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.resistance,id_pieces.combustible],
+	id_pieces.coque_avant_sup_r: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.resistance,id_pieces.combustible],
+	id_pieces.coque_avant_inf_l: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.resistance,id_pieces.combustible],
+	id_pieces.coque_avant_inf_r: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.resistance,id_pieces.combustible]
 }
 
 var state_dependencies = {
@@ -73,7 +81,11 @@ var state_dependencies = {
 	id_pieces.sodium2: false,
 	id_pieces.sodium3: false,
 	id_pieces.turbine: false,
-	id_pieces.chaudiere_ouverte: false
+	id_pieces.chaudiere_ouverte: false,
+	id_pieces.coque_avant_sup_l: false,
+	id_pieces.coque_avant_sup_r: false,
+	id_pieces.coque_avant_inf_l: false,
+	id_pieces.coque_avant_inf_r: false
 }
 
 var drag_and_drop_taken := false
