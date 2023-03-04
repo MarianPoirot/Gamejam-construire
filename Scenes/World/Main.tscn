@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://nulgtes263rk" path="res://Scenes/Pieces/coque_inférieure.tscn" id="3_k3jia"]
 [ext_resource type="PackedScene" uid="uid://ksyhx6uwk1rr" path="res://Scenes/Pieces/coque_supérieure.tscn" id="4_ccyxp"]
 [ext_resource type="PackedScene" uid="uid://buyqii003lxp7" path="res://Scenes/Pieces/conduit-vapeur.tscn" id="6_bnl4o"]
-[ext_resource type="PackedScene" path="res://Scenes/Pieces/reservoir.tscn" id="6_g1jcb"]
+[ext_resource type="PackedScene" uid="uid://b7g4do0pyfl23" path="res://Scenes/Pieces/reservoir.tscn" id="6_g1jcb"]
 [ext_resource type="PackedScene" uid="uid://b2dfvrvgwbnae" path="res://Scenes/Pieces/chaudiere.tscn" id="6_ncykg"]
 [ext_resource type="PackedScene" uid="uid://dx4bvefdrh8sf" path="res://Scenes/Pieces/turbine.tscn" id="7_pxymf"]
 
@@ -13,7 +13,6 @@
 script = ExtResource("1_vn17v")
 
 [node name="Coque_inf" parent="." instance=ExtResource("3_k3jia")]
-texture_filter = 1
 position = Vector2(1064, 464)
 scale = Vector2(3, 3)
 
@@ -37,9 +36,11 @@ position = Vector2(154, 242)
 scale = Vector2(3, 3)
 
 [node name="ConduitVapeur" parent="." instance=ExtResource("6_bnl4o")]
+texture_filter = 1
 position = Vector2(951, 43)
 scale = Vector2(3, 3)
 
 [node name="Turbine" parent="." instance=ExtResource("7_pxymf")]
+texture_filter = 1
 position = Vector2(141, 53)
 scale = Vector2(3, 3)
