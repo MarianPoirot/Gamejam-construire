@@ -10,7 +10,9 @@ func _ready():
 func _on_input_event(_viewport, event, _shape_idx):
 	super._on_input_event(_viewport, event, _shape_idx)
 	if Input.is_action_pressed("secondary_action"):
-		print("ok")
 		for area in $WeldingArea.get_overlapping_areas():
-			print(area)
-		#get_global_mouse_position()
+			if area.has_method("souder"):
+				if area.get_parent().snapped:
+					area.souder(get_global_mouse_position())
+				
+		

@@ -17,6 +17,8 @@ script = ExtResource("1_djsn8")
 shape = SubResource("RectangleShape2D_n1q0n")
 
 [node name="WeldingArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
 
 [node name="WeldingCollision" type="CollisionShape2D" parent="WeldingArea"]
 position = Vector2(-10, -10)
