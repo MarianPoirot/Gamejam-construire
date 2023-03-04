@@ -9,9 +9,9 @@ script = ExtResource("1_vn17v")
 
 [node name="ballon" parent="." instance=ExtResource("2_y7w6m")]
 position = Vector2(504, 279)
+id = 0
 
 [node name="ancre" parent="." instance=ExtResource("3_uptiu")]
 position = Vector2(502, 137)
 scale = Vector2(3, 3)
-id = 1
 disable = false
