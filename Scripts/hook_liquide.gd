@@ -12,4 +12,5 @@ var niveau:=0
 func add_liquide(id_liquide:Id_pieces.id_pieces):
 	if id_liquides.has(id_liquide) and niveau < niveauMax:
 		sprite.frame += 1
+		Id_pieces.state_dependencies[id_liquides[niveau]] = true
 		niveau += 1
