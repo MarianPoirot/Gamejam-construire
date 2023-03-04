@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://ddyiv2m7fiv5o"]
+[gd_scene load_steps=3 format=3 uid="uid://ddyiv2m7fiv5o"]
 
-[ext_resource type="Script" path="res://Scripts/Pieces/fer-a-souder.gd" id="1_mskjy"]
+[ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_xa6rc"]
+[ext_resource type="Texture2D" uid="uid://dfdr853dc81db" path="res://icon.svg" id="2_qv3el"]
 
-[node name="fer-a-souder" type="Node2D"]
-script = ExtResource("1_mskjy")
+[node name="ferAsouder" instance=ExtResource("1_xa6rc")]
+
+[node name="Icon" type="Sprite2D" parent="." index="3"]
+texture = ExtResource("2_qv3el")
