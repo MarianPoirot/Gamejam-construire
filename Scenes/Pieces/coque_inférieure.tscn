@@ -7,6 +7,7 @@
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_pjbpw"]
 
 [node name="Coque_inf" instance=ExtResource("1_u3wiq")]
+texture_filter = 1
 id = 7
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="0"]

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dgicsyqpftdlt" path="res://Scenes/Pieces/ancre.tscn" id="2_airq1"]
 
 [node name="ballon" instance=ExtResource("1_o23yy")]
+texture_filter = 1
 id = 1
 
 [node name="Ancre" parent="." index="1"]

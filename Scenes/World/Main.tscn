@@ -36,10 +36,10 @@ texture_filter = 1
 position = Vector2(154, 242)
 scale = Vector2(3, 3)
 
-[node name="Turbine" parent="." instance=ExtResource("7_pxymf")]
-position = Vector2(141, 53)
-scale = Vector2(3, 3)
-
 [node name="ConduitVapeur" parent="." instance=ExtResource("6_bnl4o")]
 position = Vector2(951, 43)
+scale = Vector2(3, 3)
+
+[node name="Turbine" parent="." instance=ExtResource("7_pxymf")]
+position = Vector2(141, 53)
 scale = Vector2(3, 3)
