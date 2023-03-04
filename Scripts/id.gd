@@ -7,13 +7,18 @@ enum id_pieces{
 	cable,
 	chaudiere,
 	conduitVapeur,
+	combustible,
 	coque,
-	diode,
 	eau,
 	entonnoir,
 	ferAsouder,
+	goupille,
 	moteur,
 	piques,
+	reservoir,
+	resistance,
 	sodium,
 	turbine
 }
+
+

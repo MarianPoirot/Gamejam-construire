@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2dfvrvgwbnae"]
+[gd_scene load_steps=3 format=3 uid="uid://b2dfvrvgwbnae"]
 
-[ext_resource type="Script" path="res://Scripts/Pieces/chaudiere.gd" id="1_5eiap"]
+[ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_g7h2y"]
+[ext_resource type="PackedScene" uid="uid://dgicsyqpftdlt" path="res://Scenes/Pieces/ancre.tscn" id="2_1yoif"]
 
-[node name="chaudiere" type="Node2D"]
-script = ExtResource("1_5eiap")
+[node name="Chaudiere" instance=ExtResource("1_g7h2y")]
+id = 4
+
+[node name="ancreReservoir" parent="recepteurAncre" index="0" instance=ExtResource("2_1yoif")]
+
+[node name="ancreCombustible" parent="recepteurAncre" index="1" instance=ExtResource("2_1yoif")]
