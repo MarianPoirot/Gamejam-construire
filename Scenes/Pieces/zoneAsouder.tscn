@@ -1,16 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://bna53aaw6urio"]
+[gd_scene load_steps=3 format=3 uid="uid://bna53aaw6urio"]
 
 [ext_resource type="Script" path="res://Scripts/Pieces/zoneAsouder.gd" id="1_byli2"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vhnqk"]
+resource_local_to_scene = true
+size = Vector2(13.75, 1.75)
+
 [node name="ZoneAsouder" type="Area2D"]
-position = Vector2(232, 176)
 scale = Vector2(10, 10)
-collision_layer = 2
-collision_mask = 2
+collision_layer = 16
+collision_mask = 16
 script = ExtResource("1_byli2")
 
-[node name="zone" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(1.6, -10.5, 6, -9, 17, 3, 20.1, 5.1, 17, 7.1, 12, 3, 6, -5, 0.199999, -7.8)
-metadata/_edit_lock_ = true
-
-[connection signal="input_event" from="." to="." method="_on_input_event"]
+[node name="zone" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1.77636e-15)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_vhnqk")

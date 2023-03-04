@@ -54,7 +54,7 @@ scale = Vector2(0.5, 0.5)
 id = 15
 
 [node name="ZoneAsouder" parent="." index="5" instance=ExtResource("4_erv1l")]
-position = Vector2(-141, 121)
+position = Vector2(-2.38419e-07, -42)
 maxSoudures = 50
 
 [connection signal="c_est_bon_c_est_soude" from="ZoneAsouder" to="." method="_on_zone_asouder_c_est_bon_c_est_soude"]

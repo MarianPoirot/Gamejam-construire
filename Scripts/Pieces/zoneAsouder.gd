@@ -4,6 +4,7 @@ signal c_est_bon_c_est_soude
 
 @export var maxSoudures := 10
 var weldCounter :=0
+
 @export var weldSpeed := 0.5
 var nbSoudures : int
 var completed := false
@@ -36,7 +37,3 @@ func createSoudure(pos):
 	if nbSoudures >= maxSoudures :
 		emit_signal("c_est_bon_c_est_soude")
 		completed = true
-
-
-func _on_input_event(viewport, event, shape_idx):
-	pass # Replace with function body.

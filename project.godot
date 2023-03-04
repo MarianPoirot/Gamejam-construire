@@ -64,3 +64,4 @@ secondary_action={
 2d_physics/layer_2="drag&drop"
 2d_physics/layer_3="entonoire"
 2d_physics/layer_4="liquides"
+2d_physics/layer_5="soudure"
