@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b3wbxtbbacebh"]
+[gd_scene load_steps=13 format=3 uid="uid://b3wbxtbbacebh"]
 
 [ext_resource type="Script" path="res://Scripts/World/Main.gd" id="1_vn17v"]
 [ext_resource type="Texture2D" uid="uid://s8t8nfhx3gns" path="res://Assets/Sprites/Background.png" id="2_kno67"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dx4bvefdrh8sf" path="res://Scenes/Pieces/turbine.tscn" id="7_pxymf"]
 [ext_resource type="PackedScene" uid="uid://bm3duwca17ehv" path="res://Scenes/Pieces/cable.tscn" id="10_scpqc"]
 [ext_resource type="PackedScene" uid="uid://c01csw6ryydmw" path="res://Scenes/Pieces/moteur.tscn" id="11_mkq26"]
+[ext_resource type="PackedScene" uid="uid://dnhgpm6x2k2c2" path="res://Scenes/Pieces/bouchon.tscn" id="12_6p58o"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_vn17v")
@@ -31,7 +32,6 @@ scale = Vector2(3, 3)
 [node name="ballon" parent="." instance=ExtResource("2_y7w6m")]
 position = Vector2(960, 512)
 scale = Vector2(3, 3)
-id = 0
 
 [node name="Chaudiere" parent="." instance=ExtResource("6_ncykg")]
 position = Vector2(159, 479)
@@ -55,4 +55,9 @@ position = Vector2(26.0001, 575)
 scale = Vector2(3, 3)
 
 [node name="Moteur" parent="." instance=ExtResource("11_mkq26")]
+position = Vector2(921, 193)
+scale = Vector2(3, 3)
+
+[node name="bouchon" parent="." instance=ExtResource("12_6p58o")]
+position = Vector2(81, 322)
 scale = Vector2(3, 3)
