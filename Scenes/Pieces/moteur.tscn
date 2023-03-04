@@ -7,7 +7,7 @@
 size = Vector2(149, 72)
 
 [node name="Moteur" instance=ExtResource("1_qdyk7")]
-id = 12
+id = 13
 
 [node name="DragDropCollision" parent="." index="0"]
 position = Vector2(-0.5, -5)

@@ -1,11 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2dfvrvgwbnae"]
+[gd_scene load_steps=5 format=3 uid="uid://b2dfvrvgwbnae"]
 
 [ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_g7h2y"]
 [ext_resource type="PackedScene" uid="uid://dgicsyqpftdlt" path="res://Scenes/Pieces/ancre.tscn" id="2_1yoif"]
+[ext_resource type="Texture2D" uid="uid://gjnw3rw06esg" path="res://Assets/Sprites/Chaudière.png" id="2_waueg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p42fv"]
-radius = 50.0
-height = 124.0
+radius = 13.0
+height = 42.0
 
 [node name="Chaudiere" instance=ExtResource("1_g7h2y")]
 id = 3
@@ -13,10 +14,14 @@ id = 3
 [node name="DragDropCollision" parent="." index="0"]
 shape = SubResource("CapsuleShape2D_p42fv")
 
+[node name="Chaudière" type="Sprite2D" parent="." index="2"]
+texture_filter = 1
+texture = ExtResource("2_waueg")
+
 [node name="ancreReservoir" parent="recepteurAncre" index="0" instance=ExtResource("2_1yoif")]
-position = Vector2(0, -53)
-id = 14
+position = Vector2(0, -14)
+id = 15
 
 [node name="ancreCombustible" parent="recepteurAncre" index="1" instance=ExtResource("2_1yoif")]
-position = Vector2(0, 47)
-id = 6
+position = Vector2(0, 5)
+id = 4
