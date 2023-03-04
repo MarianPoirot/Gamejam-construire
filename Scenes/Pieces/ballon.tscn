@@ -8,6 +8,7 @@
 id = 1
 
 [node name="Ancre" parent="." index="1"]
+position = Vector2(0, 14)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="2"]

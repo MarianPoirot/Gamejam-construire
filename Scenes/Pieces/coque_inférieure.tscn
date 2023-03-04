@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://nulgtes263rk"]
 
 [ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_u3wiq"]
-[ext_resource type="Texture2D" uid="uid://c2dnh7tyjtfu8" path="res://Assets/Sprites/Coque_arrière_inférieur.png" id="2_sygsr"]
+[ext_resource type="Texture2D" uid="uid://cdb4jpmdwbv3s" path="res://Assets/Sprites/Coque_arrière_inférieur.png" id="2_sygsr"]
 [ext_resource type="PackedScene" uid="uid://dgicsyqpftdlt" path="res://Scenes/Pieces/ancre.tscn" id="3_bm6tj"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_pjbpw"]
@@ -38,5 +38,5 @@ position = Vector2(-72, 16)
 id = 14
 
 [node name="ancre_ballon" parent="recepteurAncre" index="3" instance=ExtResource("3_bm6tj")]
-position = Vector2(0, -24)
+position = Vector2(0, -7)
 scale = Vector2(0.5, 0.5)
