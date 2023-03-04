@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1tck8"]
 size = Vector2(123.25, 123)
 
-[node name="Piece" instance=ExtResource("1_sr1o7")]
+[node name="Turbine" instance=ExtResource("1_sr1o7")]
 id = 15
 
 [node name="DragDropCollision" parent="." index="0"]
