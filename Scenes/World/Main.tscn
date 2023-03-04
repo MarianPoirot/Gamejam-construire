@@ -1,8 +1,8 @@
 [gd_scene load_steps=16 format=3 uid="uid://b3wbxtbbacebh"]
 
 [ext_resource type="Script" path="res://Scripts/World/Main.gd" id="1_vn17v"]
-[ext_resource type="Texture2D" uid="uid://s8t8nfhx3gns" path="res://Assets/Sprites/Background.png" id="2_kno67"]
-[ext_resource type="PackedScene" uid="uid://cdhyln0aitcji" path="res://Scenes/Pieces/ballon.tscn" id="2_y7w6m"]
+[ext_resource type="Texture2D" uid="uid://b5vd0wq6m3rpi" path="res://Assets/Sprites/Background.png" id="2_kno67"]
+[ext_resource type="PackedScene" uid="uid://bdjiu0hjvnp10" path="res://Scenes/Pieces/ballon.tscn" id="2_y7w6m"]
 [ext_resource type="PackedScene" uid="uid://nulgtes263rk" path="res://Scenes/Pieces/coque_inférieure.tscn" id="3_k3jia"]
 [ext_resource type="PackedScene" uid="uid://ksyhx6uwk1rr" path="res://Scenes/Pieces/coque_supérieure.tscn" id="4_ccyxp"]
 [ext_resource type="PackedScene" uid="uid://buyqii003lxp7" path="res://Scenes/Pieces/conduit-vapeur.tscn" id="6_bnl4o"]
