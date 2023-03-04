@@ -44,7 +44,7 @@ position = Vector2(0, -7)
 scale = Vector2(0.5, 0.5)
 
 [node name="ancreChaudiere" parent="recepteurAncre" index="4" instance=ExtResource("3_bm6tj")]
-position = Vector2(-40, 4)
+position = Vector2(-39, 5)
 id = 3
 
 [node name="ancreMoteur" parent="recepteurAncre" index="5" instance=ExtResource("3_bm6tj")]
