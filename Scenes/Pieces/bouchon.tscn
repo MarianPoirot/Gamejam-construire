@@ -1,6 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnhgpm6x2k2c2"]
+[gd_scene load_steps=4 format=3 uid="uid://dnhgpm6x2k2c2"]
 
-[ext_resource type="Script" path="res://Scripts/Pieces/bouchon.gd" id="1_qcuff"]
+[ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_014yb"]
+[ext_resource type="PackedScene" uid="uid://dgicsyqpftdlt" path="res://Scenes/Pieces/ancre.tscn" id="2_nhvv8"]
 
-[node name="bouchon" type="Node2D"]
-script = ExtResource("1_qcuff")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2a1o5"]
+size = Vector2(83, 76)
+
+[node name="bouchon" instance=ExtResource("1_014yb")]
+id = 1
+
+[node name="DragDropCollision" parent="." index="0"]
+shape = SubResource("RectangleShape2D_2a1o5")
+
+[node name="ancreGoupille" parent="recepteurAncre" index="0" instance=ExtResource("2_nhvv8")]
+position = Vector2(0, -38)
+id = 11
