@@ -1,5 +1,6 @@
 extends Node2D
 
+@export var id:Id_pieces.id_pieces
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
