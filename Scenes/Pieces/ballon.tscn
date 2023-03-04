@@ -7,7 +7,6 @@
 
 [node name="ballon" instance=ExtResource("1_o23yy")]
 texture_filter = 1
-id = 1
 
 [node name="Ancre" parent="." index="1"]
 position = Vector2(0, 14)
@@ -17,13 +16,7 @@ metadata/_edit_group_ = true
 texture_filter = 1
 texture = ExtResource("2_7xcas")
 
-[node name="ancre" parent="recepteurAncre" index="0" instance=ExtResource("2_airq1")]
-position = Vector2(15, -18)
+[node name="ancre-bouchon" parent="recepteurAncre" index="0" instance=ExtResource("2_airq1")]
+position = Vector2(13, -16)
 scale = Vector2(0.8, 0.8)
-id = 9
-
-[node name="HookLiquide" parent="." index="4" instance=ExtResource("4_6opw1")]
-id_liquide1 = 17
-id_liquide2 = 18
-id_liquide3 = 19
-sprites_remplissage = Array[Texture2D]([null, null, null])
+id = 1

@@ -15,6 +15,8 @@ disabled = true
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="2"]
+texture_filter = 1
+position = Vector2(0, 1)
 texture = ExtResource("2_mr4iu")
 
 [node name="ancre_coque_inf" parent="recepteurAncre" index="0" instance=ExtResource("3_msov2")]
@@ -35,6 +37,6 @@ disable = false
 
 [node name="ancre_turbine" parent="recepteurAncre" index="3" instance=ExtResource("3_msov2")]
 texture_filter = 1
-position = Vector2(0, -26)
+position = Vector2(-1, -26)
 id = 20
 disable = false
