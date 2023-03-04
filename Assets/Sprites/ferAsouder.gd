@@ -13,6 +13,7 @@ func _on_input_event(_viewport, event, _shape_idx):
 		for area in $WeldingArea.get_overlapping_areas():
 			if area.has_method("souder"):
 				if area.get_parent().is_snapped:
-					area.souder(get_global_mouse_position())
+					area.souder($WeldingArea/WeldingCollision.global_position)
+					
 				
 		
