@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctvan47x6weub"
-path="res://.godot/imported/Title Screen.png-d2e94b23ec643dc666a527280404c1f3.ctex"
+uid="uid://ckugacys0fv5e"
+path="res://.godot/imported/T_Tetromino0.webp-b90e6170f896c2592e164e3d08d07258.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Title Screen.png"
-dest_files=["res://.godot/imported/Title Screen.png-d2e94b23ec643dc666a527280404c1f3.ctex"]
+source_file="res://Assets/Sprites/T_Tetromino0.webp"
+dest_files=["res://.godot/imported/T_Tetromino0.webp-b90e6170f896c2592e164e3d08d07258.ctex"]
 
 [params]
 
