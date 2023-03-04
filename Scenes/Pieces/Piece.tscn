@@ -12,6 +12,8 @@ radius = 7.0
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_4b251")
+id = null
+can_activate_ancre = null
 
 [node name="DragDropCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_78j7b")
