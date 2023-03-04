@@ -18,6 +18,17 @@ color = Color(0.247059, 0.215686, 0.141176, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 384.0
+offset_top = 448.0
+offset_right = 696.0
+offset_bottom = 568.0
+text = "		Graphistes : Maxime et 
+ Développeurs : Martin, Martin, Felarof
+   A fait des trucs vaguement : Esteban
+		Est fiché par la CIA désormais : 
+						toute l'équipe"
+
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(512, 284.5)
 scale = Vector2(1.08475, 1.075)
