@@ -5,6 +5,8 @@
 [node name="ZoneAsouder" type="Area2D"]
 position = Vector2(232, 176)
 scale = Vector2(10, 10)
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_byli2")
 
 [node name="zone" type="CollisionPolygon2D" parent="."]

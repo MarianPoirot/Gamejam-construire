@@ -20,11 +20,11 @@ func _process(delta):
 	pass
 		
 
-func _on_input_event(viewport, event, shape_idx):
-	if Input.is_action_pressed("secondary_action") && ! completed:
+func souder(pos):
+	if !completed:
 		weldCounter += 1
 		if weldCounter >= 1/weldSpeed:
-			createSoudure(get_global_mouse_position())
+			createSoudure(pos)
 			weldCounter = 0
 
 
