@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwlh1yt6bjb7t"]
+
+[ext_resource type="Texture2D" uid="uid://t1t3oq1ia017" path="res://Assets/Sprites/Soudure.png" id="1_6rv5b"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_6rv5b")

@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://Scripts/Pieces/Piece.gd" id="1_4b251"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_78j7b"]
-radius = 24.0
+radius = 69.0072
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fw7gl"]
-radius = 8.0
+radius = 7.0
 
 [node name="Piece" type="Area2D"]
 collision_layer = 2
@@ -17,7 +17,6 @@ script = ExtResource("1_4b251")
 shape = SubResource("CircleShape2D_78j7b")
 
 [node name="Ancre" type="Area2D" parent="."]
-collision_layer = 0
 
 [node name="AncrageCollision" type="CollisionShape2D" parent="Ancre"]
 shape = SubResource("CircleShape2D_fw7gl")

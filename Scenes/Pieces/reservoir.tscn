@@ -25,5 +25,3 @@ id = 5
 texture_filter = 1
 position = Vector2(0, -2)
 texture = ExtResource("2_hlpvk")
-region_enabled = true
-region_rect = Rect2(0, 0, 21, 45)
