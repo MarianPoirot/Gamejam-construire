@@ -1,12 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbpsa8oktf42v"]
+[gd_scene load_steps=4 format=3 uid="uid://dbpsa8oktf42v"]
 
 [ext_resource type="Script" path="res://Scripts/World/Opening.gd" id="1_palwy"]
 [ext_resource type="FontFile" uid="uid://bjk0jgcytsd3c" path="res://Assets/Fonts/plastic.ttf" id="2_d0fo1"]
+[ext_resource type="Material" uid="uid://3vptwkedlhtj" path="res://Shader/Material/CRT_shader_material.tres" id="2_nukkw"]
 
 [node name="Opening" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_palwy")
+
+[node name="CRTLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="ColorRect" type="ColorRect" parent="CRTLayer"]
+material = ExtResource("2_nukkw")
+offset_right = 1024.0
+offset_bottom = 599.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
