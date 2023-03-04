@@ -11,3 +11,5 @@ script = ExtResource("1_yuyap")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_p6rrs")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

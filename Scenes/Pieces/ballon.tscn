@@ -1,12 +1,9 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://cdhyln0aitcji"]
 
 [ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_o23yy"]
 [ext_resource type="Texture2D" uid="uid://cvdl5jsftke6c" path="res://Assets/Sprites/Réservoir.png" id="2_7xcas"]
 [ext_resource type="PackedScene" uid="uid://dgicsyqpftdlt" path="res://Scenes/Pieces/ancre.tscn" id="2_airq1"]
 [ext_resource type="PackedScene" uid="uid://u6rwihexgowl" path="res://Scenes/liquide/hook_liquide.tscn" id="4_6opw1"]
-[ext_resource type="Texture2D" uid="uid://ctruq4al13l4n" path="res://Assets/Sprites/Turbine.png" id="5_bhapp"]
-[ext_resource type="Texture2D" uid="uid://dfdr853dc81db" path="res://icon.svg" id="6_om0ir"]
-[ext_resource type="Texture2D" uid="uid://gjnw3rw06esg" path="res://Assets/Sprites/Chaudière.png" id="7_a87c0"]
 
 [node name="ballon" instance=ExtResource("1_o23yy")]
 texture_filter = 1
@@ -20,10 +17,12 @@ position = Vector2(13, -16)
 scale = Vector2(0.8, 0.8)
 id = 1
 
-[node name="HookLiquide" parent="." index="3" instance=ExtResource("4_6opw1")]
-id_liquides = Array[int]([17, 18, 19])
-sprites_remplissage = Array[Texture2D]([ExtResource("5_bhapp"), ExtResource("6_om0ir"), ExtResource("7_a87c0")])
-
-[node name="Sprite2D" type="Sprite2D" parent="HookLiquide" index="1"]
+[node name="Sprite2D" type="Sprite2D" parent="." index="3"]
 texture_filter = 1
 texture = ExtResource("2_7xcas")
+hframes = 4
+region_rect = Rect2(0, 0, 51.7001, 43.3088)
+
+[node name="HookLiquide" parent="." index="4" instance=ExtResource("4_6opw1")]
+id_liquides = Array[int]([17, 18, 19])
+sprite_path = NodePath("../Sprite2D")
