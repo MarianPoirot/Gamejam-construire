@@ -24,8 +24,8 @@ func descendre():
 
 
 func _on_haut_area_entered(area):
-	area.position.y+=($CollisionShape2D.shape.size.y-200)*scale.y
+	area.position.y+=($CollisionShape2D.shape.size.y)*scale.y
 
 
 func _on_bas_area_entered(area):
-	area.position.y-=($CollisionShape2D.shape.size.y+200)*scale.y
+	area.position.y-=($CollisionShape2D.shape.size.y)*scale.y

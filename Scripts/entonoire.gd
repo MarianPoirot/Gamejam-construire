@@ -18,6 +18,7 @@ func try_snap():
 func snap(hook):
 	self.global_position=hook.global_position-$Sortie.position*scale.x
 	conteneur_liquide = hook
+	global_rotation = hook.global_rotation
 
 func send_liquide(id_liquide):
 	if conteneur_liquide:
