@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvdl5jsftke6c"
-path="res://.godot/imported/Réservoir.png-4cf2a468d54b0a987ccec31c6ea0f6f0.ctex"
+uid="uid://cdb4jpmdwbv3s"
+path="res://.godot/imported/Coque_arrière_inférieur.png-53fff07a21989be49cccf4f49948ef1a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Réservoir.png"
-dest_files=["res://.godot/imported/Réservoir.png-4cf2a468d54b0a987ccec31c6ea0f6f0.ctex"]
+source_file="res://Assets/Sprites/Coque_arrière_inférieur.png"
+dest_files=["res://.godot/imported/Coque_arrière_inférieur.png-53fff07a21989be49cccf4f49948ef1a.ctex"]
 
 [params]
 
