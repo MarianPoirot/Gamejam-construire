@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://nulgtes263rk"]
+[gd_scene load_steps=6 format=3 uid="uid://nulgtes263rk"]
 
 [ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_u3wiq"]
 [ext_resource type="Texture2D" uid="uid://cdb4jpmdwbv3s" path="res://Assets/Sprites/Coque_arrière_inférieur.png" id="2_sygsr"]
 [ext_resource type="PackedScene" uid="uid://dgicsyqpftdlt" path="res://Scenes/Pieces/ancre.tscn" id="3_bm6tj"]
+[ext_resource type="PackedScene" uid="uid://bna53aaw6urio" path="res://Scenes/Pieces/zoneAsouder.tscn" id="4_erv1l"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_pjbpw"]
 
@@ -50,3 +51,5 @@ id = 3
 position = Vector2(39.5, 11.5)
 scale = Vector2(0.5, 0.5)
 id = 15
+
+[node name="ZoneAsouder" parent="." index="5" instance=ExtResource("4_erv1l")]
