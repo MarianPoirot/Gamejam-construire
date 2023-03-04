@@ -1,14 +1,14 @@
 extends Dragable
 
 @export var id:Id_pieces.id_pieces
-
+signal just_snapped
 @export var can_activate_ancre := true : 
 	set(value):
 		can_activate_ancre = value
 		if value:
 			activate_ancre()
 			
-var snapped := false
+var is_snapped := false
 
 func _ready():
 	if not Id_pieces.state_dependencies[id]:
@@ -25,7 +25,6 @@ func try_snap():
 	
 	print("Self: ", self)
 	for area in $Ancre.get_overlapping_areas():
-		print(area)
 		if area.id==self.id and abs(fmod(area.rotation, 2*PI) - fmod(rotation, 2*PI))<PI/6.0:
 			snap(area)
 
@@ -33,7 +32,8 @@ func depandancies_metted():
 	return Id_pieces.dependancies[id].all(func (dep): return Id_pieces.state_dependencies[dep])
 
 func snap(area):
-	snapped = true
+	is_snapped = true
+	emit_signal("just_snapped")
 	can_grab = false
 	self.global_position=area.global_position-$Ancre.position*scale.x
 	self.rotation = area.rotation
@@ -44,6 +44,17 @@ func snap(area):
 func activate_ancre():
 	for ancre in $recepteurAncre.get_children():
 		ancre.activate()
-
+		
 func _on_zone_asouder_c_est_bon_c_est_soude():
 	can_activate_ancre = true
+
+func _on_ancre_combustible_input_event(_viewport, event, _shape_idx):
+	if event.is_action_pressed("pick") and not Id_pieces.drag_and_drop_taken:
+		match $"Chaudière".frame:
+			0: 
+				$"Chaudière".frame = 1
+				Id_pieces.state_dependencies[Id_pieces.id_pieces.chaudiere_ouverte]=true
+			1: 
+				$"Chaudière".frame = 0
+				Id_pieces.state_dependencies[Id_pieces.id_pieces.chaudiere_ouverte]=false
+			2: $"Chaudière".frame = 3

@@ -23,7 +23,8 @@ enum id_pieces{
 	sodium=19,
 	sodium2=20,
 	sodium3=21,
-	turbine=22
+	turbine=22,
+	chaudiere_ouverte=23
 }
 
 var dependancies = {
@@ -33,7 +34,7 @@ var dependancies = {
 	id_pieces.bouchon: [id_pieces.sodium3],
 	id_pieces.cable: [id_pieces.moteur,id_pieces.turbine],
 	id_pieces.chaudiere: [id_pieces.coque_inf],
-	id_pieces.combustible: [id_pieces.chaudiere],
+	id_pieces.combustible: [id_pieces.chaudiere_ouverte],
 	id_pieces.conduitVapeur: [id_pieces.eau3,id_pieces.turbine],
 	id_pieces.coque_avant: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.resistance,id_pieces.combustible],
 	id_pieces.eau: [id_pieces.reservoir],
@@ -70,7 +71,8 @@ var state_dependencies = {
 	id_pieces.sodium: false,
 	id_pieces.sodium2: false,
 	id_pieces.sodium3: false,
-	id_pieces.turbine: false
+	id_pieces.turbine: false,
+	id_pieces.chaudiere_ouverte: false
 }
 
 var drag_and_drop_taken := false

@@ -12,7 +12,6 @@ var just_dropped:= false
 const vitesse_rotation:= 2.0
 
 func _on_input_event(_viewport, event, _shape_idx):
-	var global_mouse_position = get_global_mouse_position()
 	if event.is_action_pressed("pick") and can_grab and not Id_pieces.drag_and_drop_taken and not just_dropped:
 		grab()
 	if event.is_action_released("pick") and release_pick_to_release:

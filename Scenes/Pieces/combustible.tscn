@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cs5t8deef2iua"]
+
+[ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_dlbo4"]
+[ext_resource type="Texture2D" uid="uid://cmhrs35mlgn31" path="res://Assets/Sprites/Charbon.png" id="2_u2a75"]
+[ext_resource type="Script" path="res://Scripts/Pieces/Sprite2DCombustible.gd" id="3_3wfoj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5wlq3"]
+radius = 8.0
+
+[node name="combustible" instance=ExtResource("1_dlbo4")]
+id = 4
+
+[node name="DragDropCollision" parent="." index="0"]
+texture_filter = 1
+shape = SubResource("CircleShape2D_5wlq3")
+
+[node name="Ancre" parent="." index="1"]
+collision_layer = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="3"]
+texture_filter = 1
+texture = ExtResource("2_u2a75")
+script = ExtResource("3_3wfoj")
+
+[connection signal="just_snapped" from="." to="Sprite2D" method="_on_combustible_just_snapped"]
