@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://cedibmcqfyv6m"]
+
+[ext_resource type="Texture2D" uid="uid://dwmcy5c7ou472" path="res://Assets/Sprites/star.png" id="1_7evqu"]
+
+[node name="explosion" type="CPUParticles2D"]
+emitting = false
+amount = 2000
+lifetime = 3.0
+one_shot = true
+preprocess = 1.0
+texture = ExtResource("1_7evqu")
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 150.0
+linear_accel_min = 1.0
+linear_accel_max = 1.0
