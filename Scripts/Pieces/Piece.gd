@@ -1,4 +1,5 @@
 extends Dragable
+class_name Piece
 
 @export var id:Id_pieces.id_pieces
 signal just_snapped
@@ -25,7 +26,7 @@ func try_snap():
 	
 	print("Self: ", self)
 	for area in $Ancre.get_overlapping_areas():
-		if area.id==self.id and abs(fmod(area.rotation, 2*PI) - fmod(rotation, 2*PI))<PI/6.0:
+		if area is Ancre and area.id==self.id and abs(fmod(area.rotation, 2*PI) - fmod(rotation, 2*PI))<PI/6.0:
 			snap(area)
 
 func depandancies_metted():

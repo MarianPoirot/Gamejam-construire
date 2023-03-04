@@ -1,4 +1,5 @@
 extends Area2D
+class_name Ancre
 
 @export var id:Id_pieces.id_pieces
 @export var disable:=true
