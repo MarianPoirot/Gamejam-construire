@@ -12,7 +12,7 @@ func _process(delta):
 		position.y = position.y - 60
 	if Input.is_action_pressed("Flipper_droit"):
 		if rotation_degrees > -30:
-			rotation += -50 * delta
+			rotation += -30 * delta
 	if Input.is_action_just_released("Flipper_droit"):
 		set_rotation_degrees(0)
 		position.y = position.y + 60
