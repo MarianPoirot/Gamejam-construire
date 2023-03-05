@@ -4,7 +4,11 @@ class_name Hook
 
 @export var id_liquides: Array[Id_pieces.id_pieces]
 @export var sprite_path:NodePath
-@onready var sprite := get_node(sprite_path)
+@onready var sprite
+
+func _ready():
+	if sprite_path :
+		sprite = get_node(sprite_path)
 
 var niveau:=0
 @onready var niveauMax = id_liquides.size()

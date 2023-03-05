@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c3f2rfu3sm00d"]
+[gd_scene load_steps=3 format=3 uid="uid://c3f2rfu3sm00d"]
 
 [ext_resource type="Script" path="res://Scripts/World/ui.gd" id="1_nlicb"]
+[ext_resource type="PackedScene" uid="uid://bm4cwm651sx5s" path="res://Scenes/World/Manuel.tscn" id="2_wyy2l"]
 
 [node name="UI" type="CanvasLayer"]
 
@@ -14,6 +15,12 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_nlicb")
 
+[node name="Manuel" parent="UI" instance=ExtResource("2_wyy2l")]
+layout_mode = 1
+offset_top = -519.0
+offset_bottom = -519.0
+focus_mode = 1
+
 [node name="MarginContainer" type="MarginContainer" parent="UI"]
 layout_mode = 1
 anchors_preset = 15
@@ -21,6 +28,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
@@ -32,6 +40,14 @@ size_flags_vertical = 0
 keep_pressed_outside = true
 text = "Up"
 
+[node name="Manuel" type="Button" parent="UI/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+toggle_mode = true
+keep_pressed_outside = true
+text = "Man"
+
 [node name="Down" type="Button" parent="UI/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
@@ -40,5 +56,6 @@ text = "Down"
 
 [connection signal="button_down" from="UI/MarginContainer/Up" to="UI" method="_on_up_button_down"]
 [connection signal="button_up" from="UI/MarginContainer/Up" to="UI" method="_on_move_button_up"]
+[connection signal="toggled" from="UI/MarginContainer/Manuel" to="UI" method="_on_manuel_toggled"]
 [connection signal="button_down" from="UI/MarginContainer/Down" to="UI" method="_on_down_button_down"]
 [connection signal="button_up" from="UI/MarginContainer/Down" to="UI" method="_on_move_button_up"]
