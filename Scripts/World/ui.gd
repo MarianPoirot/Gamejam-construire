@@ -27,4 +27,4 @@ func _on_manuel_toggled(button_pressed):
 		target = Vector2.ZERO
 		$Manuel.call_deferred("grab_focus")
 		$Manuel.call_deferred("grab_click_focus")
-	get_tree().create_tween().tween_property($Manuel, "position", target, 1.0).set_ease(Tween.EASE_IN_OUT)
+	get_tree().create_tween().tween_property($Manuel, "position", target, 0.5).set_ease(Tween.EASE_IN_OUT)
