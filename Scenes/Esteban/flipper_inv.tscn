@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://bhkva6advnfj7"]
+
+[ext_resource type="Texture2D" uid="uid://v2oditflwr4i" path="res://Assets/Sprites/flipper.png" id="1_6kl1p"]
+[ext_resource type="Script" path="res://Scenes/Esteban/flipper_inv_dynamic.gd" id="1_d7f50"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uj0np"]
+radius = 88.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2kwji"]
+radius = 64.4169
+height = 506.867
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_rqoqv"]
+a = Vector2(256, 16)
+b = Vector2(-192, 104)
+
+[node name="flipper_inv" type="Node2D"]
+scale = Vector2(0.8, 0.8)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+scale = Vector2(0.8, 0.8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(176, -16)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("CircleShape2D_uj0np")
+
+[node name="flipper_inv_dynamic" type="CharacterBody2D" parent="."]
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_d7f50")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="flipper_inv_dynamic"]
+rotation = 1.39626
+scale = Vector2(0.8, 0.8)
+shape = SubResource("CapsuleShape2D_2kwji")
+
+[node name="Sprite2D" type="Sprite2D" parent="flipper_inv_dynamic"]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_6kl1p")
+flip_h = true
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+scale = Vector2(0.8, 0.8)
+node_a = NodePath("../flipper_inv_dynamic")
+node_b = NodePath("../StaticBody2D")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+scale = Vector2(0.8, 0.8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+scale = Vector2(0.8, 0.8)
+shape = SubResource("SegmentShape2D_rqoqv")

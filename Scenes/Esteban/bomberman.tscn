@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfnqqbp6b01ds"]
+
+[ext_resource type="Texture2D" uid="uid://blwhygwmyhd4d" path="res://Assets/Sprites/image-1.png.png" id="1_ywsw3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b17jy"]
+radius = 42.4264
+
+[node name="bomberman" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ywsw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6, 33)
+shape = SubResource("CircleShape2D_b17jy")
