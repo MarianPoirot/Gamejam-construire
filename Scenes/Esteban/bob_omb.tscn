@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dowg6m8o7bngc"]
+
+[ext_resource type="Texture2D" uid="uid://dfwoh4lxsp8pl" path="res://Assets/Sprites/Bob-ombMK8.webp" id="1_nynpl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5b0ca"]
+
+[node name="Bob-Omb" type="RigidBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5b0ca")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_nynpl")
