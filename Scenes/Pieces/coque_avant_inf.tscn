@@ -9,7 +9,7 @@
 [node name="Coque_inf_avant_l" instance=ExtResource("1_4plen")]
 texture_filter = 1
 id = 8
-can_activate_ancre = false
+can_activate_ancre = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="0"]
 polygon = PackedVector2Array(35, -12.5, 29.6, 9.5, 28.2, 9.5, 23.2, 19.5, 21.9, 19.5, 10, 30.5, -9, 30.5, -25, 16.4, -25, 13.9, -35, -11.1, -35, -30.5, 35, -30.5)

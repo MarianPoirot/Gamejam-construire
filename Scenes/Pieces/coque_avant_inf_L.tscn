@@ -9,7 +9,7 @@
 [node name="Coque_inf_avant_l" instance=ExtResource("1_qd0qr")]
 texture_filter = 1
 id = 26
-can_activate_ancre = false
+can_activate_ancre = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="0"]
 scale = Vector2(5, 5)
@@ -29,5 +29,5 @@ texture = ExtResource("2_gqgq5")
 
 [node name="ancre" parent="recepteurAncre" index="0" instance=ExtResource("3_ybxxl")]
 position = Vector2(-12, 16)
-rotation = 0.829877
+rotation = -2.31256
 id = 16

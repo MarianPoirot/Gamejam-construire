@@ -6,10 +6,10 @@
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_pjbpw"]
 
-[node name="Coque_inf_avant_l" instance=ExtResource("1_qlej6")]
+[node name="Coque_inf_avant_r" instance=ExtResource("1_qlej6")]
 texture_filter = 1
 id = 27
-can_activate_ancre = false
+can_activate_ancre = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="0"]
 scale = Vector2(5, 5)
