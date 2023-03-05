@@ -25,7 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://ddce3absi6w14" path="res://Scenes/Pieces/coque_avant_inf_R.tscn" id="22_t6vc2"]
 [ext_resource type="PackedScene" uid="uid://be0d3psb00c0b" path="res://Scenes/Pieces/coque_avant_sup_L.tscn" id="23_4volp"]
 [ext_resource type="PackedScene" uid="uid://dqxfa0eotji3k" path="res://Scenes/Pieces/coque_avant_sup_R.tscn" id="24_my6qh"]
-[ext_resource type="PackedScene" path="res://Scenes/Pieces/pique.tscn" id="26_8ndhy"]
+[ext_resource type="PackedScene" uid="uid://crhpxe1wia0ow" path="res://Scenes/Pieces/pique.tscn" id="26_8ndhy"]
 [ext_resource type="AudioStream" uid="uid://6xo8b5qcmskn" path="res://Assets/Musics/bomb csgo.ogg" id="27_535mk"]
 [ext_resource type="PackedScene" uid="uid://d1b8hvnywnb72" path="res://Scenes/World/on_snapped_audio_player.tscn" id="28_kifyh"]
 [ext_resource type="PackedScene" uid="uid://cedibmcqfyv6m" path="res://Scenes/Explosion/explosion.tscn" id="28_n3qye"]
