@@ -19,10 +19,11 @@ shape = SubResource("RectangleShape2D_03mvg")
 position = Vector2(0, 14)
 
 [node name="ancreConduitVapeur" parent="recepteurAncre" index="0" instance=ExtResource("3_gsslw")]
-position = Vector2(1, -19)
+position = Vector2(0.5, -19)
 id = 5
 
 [node name="Spirte2D" type="Sprite2D" parent="." index="3"]
+z_index = 30
 texture_filter = 1
 position = Vector2(0, -2)
 texture = ExtResource("2_hlpvk")

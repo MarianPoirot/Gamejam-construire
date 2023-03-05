@@ -24,6 +24,7 @@ position = Vector2(0, -4)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="3"]
+z_index = 70
 texture = ExtResource("3_kqclg")
 
 [node name="recepteurAncre" parent="." index="4"]

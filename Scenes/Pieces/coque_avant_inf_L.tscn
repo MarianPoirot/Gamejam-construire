@@ -25,6 +25,7 @@ position = Vector2(5, -9)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="3"]
+z_index = 60
 texture = ExtResource("2_gqgq5")
 
 [node name="ancre" parent="recepteurAncre" index="0" instance=ExtResource("3_ybxxl")]

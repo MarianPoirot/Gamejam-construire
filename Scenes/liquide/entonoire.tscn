@@ -16,6 +16,7 @@ collision_mask = 2
 script = ExtResource("1_buqvk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 40
 texture_filter = 1
 position = Vector2(-83, 0)
 rotation = 0.785397

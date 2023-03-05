@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bprpu8fe22nhe"]
 
 [ext_resource type="Script" path="res://Assets/Sprites/ferAsouder.gd" id="1_djsn8"]
-[ext_resource type="Texture2D" uid="uid://bm7cybr5k1s2b" path="res://Assets/Sprites/Chalumeau.png" id="2_v2rcb"]
+[ext_resource type="Texture2D" uid="uid://ccfdq12qkgsg1" path="res://Assets/Sprites/Chalumeau.png" id="2_v2rcb"]
 [ext_resource type="Texture2D" uid="uid://di83c1oemblwe" path="res://Assets/Sprites/cableChalumeau.png" id="3_xhrot"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n1q0n"]
@@ -56,6 +56,7 @@ shape = SubResource("CircleShape2D_p7t5b")
 debug_color = Color(0.741176, 0, 0.462745, 0.419608)
 
 [node name="Chalumeau" type="AnimatedSprite2D" parent="."]
+z_index = 150
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_x8obw")
 animation = &"on"
