@@ -16,6 +16,9 @@ disabled = true
 scale = Vector2(3, 3)
 polygon = PackedVector2Array(15, 9.4, 15, 16, 11.8, 19, -11.2, 19, -15, 16.4, -15, 6.5, -3, -17.5, -3, -19, 1.2, -19)
 
+[node name="Ancre" parent="." index="2"]
+position = Vector2(0, 57)
+
 [node name="Pique" type="Sprite2D" parent="." index="4"]
 texture_filter = 1
 scale = Vector2(3, 3)

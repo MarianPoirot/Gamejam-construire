@@ -28,47 +28,35 @@ metadata/_edit_group_ = true
 [node name="Sprite2D" type="Sprite2D" parent="." index="3"]
 texture = ExtResource("2_sygsr")
 
-[node name="ancre_pique1" parent="recepteurAncre" index="0" instance=ExtResource("3_bm6tj")]
-position = Vector2(72, 16)
-id = 16
-
-[node name="ancre_pique2" parent="recepteurAncre" index="1" instance=ExtResource("3_bm6tj")]
-position = Vector2(0, 59)
-id = 14
-
-[node name="ancre_pique3" parent="recepteurAncre" index="2" instance=ExtResource("3_bm6tj")]
-position = Vector2(-72, 16)
-id = 14
-
-[node name="ancre_ballon" parent="recepteurAncre" index="3" instance=ExtResource("3_bm6tj")]
+[node name="ancre_ballon" parent="recepteurAncre" index="0" instance=ExtResource("3_bm6tj")]
 position = Vector2(0, -7)
 scale = Vector2(0.5, 0.5)
 
-[node name="ancreChaudiere" parent="recepteurAncre" index="4" instance=ExtResource("3_bm6tj")]
+[node name="ancreChaudiere" parent="recepteurAncre" index="1" instance=ExtResource("3_bm6tj")]
 position = Vector2(-37, 5)
 id = 3
 
-[node name="ancreMoteur" parent="recepteurAncre" index="5" instance=ExtResource("3_bm6tj")]
+[node name="ancreMoteur" parent="recepteurAncre" index="2" instance=ExtResource("3_bm6tj")]
 position = Vector2(39.5, 11.5)
 scale = Vector2(0.5, 0.5)
 id = 15
 
-[node name="ancreCoqueAvantL" parent="recepteurAncre" index="6" instance=ExtResource("3_bm6tj")]
+[node name="ancreCoqueAvantL" parent="recepteurAncre" index="3" instance=ExtResource("3_bm6tj")]
 position = Vector2(-37, 3)
 scale = Vector2(2, 2)
 id = 26
 
-[node name="ancreCoqueAvantInfR" parent="recepteurAncre" index="7" instance=ExtResource("3_bm6tj")]
+[node name="ancreCoqueAvantInfR" parent="recepteurAncre" index="4" instance=ExtResource("3_bm6tj")]
 position = Vector2(40, -7)
 scale = Vector2(2, 2)
 id = 27
 
-[node name="ancreCoqueAvantInf" parent="recepteurAncre" index="8" instance=ExtResource("3_bm6tj")]
+[node name="ancreCoqueAvantInf" parent="recepteurAncre" index="5" instance=ExtResource("3_bm6tj")]
 position = Vector2(0, 24)
 scale = Vector2(2, 2)
 id = 8
 
-[node name="ancreMeche" parent="recepteurAncre" index="9" instance=ExtResource("3_bm6tj")]
+[node name="ancreMeche" parent="recepteurAncre" index="6" instance=ExtResource("3_bm6tj")]
 position = Vector2(-40, 26)
 id = 28
 

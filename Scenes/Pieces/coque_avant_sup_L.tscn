@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://be0d3psb00c0b"]
+[gd_scene load_steps=5 format=3 uid="uid://be0d3psb00c0b"]
 
 [ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_b8hjk"]
+[ext_resource type="PackedScene" uid="uid://dgicsyqpftdlt" path="res://Scenes/Pieces/ancre.tscn" id="3_uwidl"]
 [ext_resource type="Texture2D" uid="uid://ctocn6d0satat" path="res://Assets/Sprites/Coque_sépérieur_gauche.png" id="3_wrij4"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_pjbpw"]
@@ -27,3 +28,15 @@ metadata/_edit_group_ = true
 texture = ExtResource("3_wrij4")
 hframes = 2
 frame = 1
+
+[node name="ancre" parent="recepteurAncre" index="0" instance=ExtResource("3_uwidl")]
+position = Vector2(-15, -20)
+rotation = -0.759887
+scale = Vector2(1.5, 1.5)
+id = 16
+
+[node name="ancre2" parent="recepteurAncre" index="1" instance=ExtResource("3_uwidl")]
+position = Vector2(-34, 32)
+rotation = -1.57079
+scale = Vector2(1.5, 1.5)
+id = 16

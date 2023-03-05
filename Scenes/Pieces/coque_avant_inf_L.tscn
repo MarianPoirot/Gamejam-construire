@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://5n2yjrnh0lvi"]
+[gd_scene load_steps=5 format=3 uid="uid://5n2yjrnh0lvi"]
 
 [ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_qd0qr"]
 [ext_resource type="Texture2D" uid="uid://danvq0lx1bjk0" path="res://Assets/Sprites/Coque_avant_inférieur_gauche.png" id="2_gqgq5"]
+[ext_resource type="PackedScene" uid="uid://dgicsyqpftdlt" path="res://Scenes/Pieces/ancre.tscn" id="3_ybxxl"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_pjbpw"]
 
@@ -25,3 +26,8 @@ metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="3"]
 texture = ExtResource("2_gqgq5")
+
+[node name="ancre" parent="recepteurAncre" index="0" instance=ExtResource("3_ybxxl")]
+position = Vector2(-12, 16)
+rotation = 0.829877
+id = 16

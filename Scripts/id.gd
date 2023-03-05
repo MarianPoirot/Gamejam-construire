@@ -46,7 +46,7 @@ var dependancies = {
 	id_pieces.eau: [id_pieces.reservoir],
 	id_pieces.goupille: [id_pieces.bouchon],
 	id_pieces.moteur: [id_pieces.coque_inf],
-	id_pieces.piques: [id_pieces.coque_sup, id_pieces.coque_inf],
+	id_pieces.piques: [id_pieces.coque_avant_sup_l, id_pieces.coque_avant_inf_l,id_pieces.coque_avant_sup_r, id_pieces.coque_avant_inf_r],
 	id_pieces.reservoir: [id_pieces.chaudiere],
 	id_pieces.resistance: [id_pieces.cable],
 	id_pieces.sodium: [id_pieces.entonnoir],
