@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://bvw3bc0ql6jkw" path="res://Scenes/Pieces/pique.tscn" id="26_8ndhy"]
 [ext_resource type="AudioStream" uid="uid://6xo8b5qcmskn" path="res://Assets/Musics/bomb csgo.ogg" id="27_535mk"]
 [ext_resource type="PackedScene" uid="uid://d1b8hvnywnb72" path="res://Scenes/World/on_snapped_audio_player.tscn" id="28_kifyh"]
+[ext_resource type="PackedScene" uid="uid://cedibmcqfyv6m" path="res://Scenes/Explosion/explosion.tscn" id="28_n3qye"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_vn17v")
@@ -125,6 +126,7 @@ scale = Vector2(3, 3)
 can_activate_ancre = true
 
 [node name="Meche" parent="." instance=ExtResource("20_tepf3")]
+position = Vector2(961, -660)
 scale = Vector2(3, 3)
 
 [node name="Coque_inf_avant_l3" parent="." instance=ExtResource("22_t6vc2")]
@@ -169,6 +171,11 @@ position = Vector2(801, 55)
 stream = ExtResource("27_535mk")
 
 [node name="OnSnappedAudioPlayer" parent="." instance=ExtResource("28_kifyh")]
+[node name="explosion" parent="." instance=ExtResource("28_n3qye")]
+position = Vector2(510, 300)
+amount = 20000
+
+[node name="Timer" type="Timer" parent="."]
 
 [connection signal="just_snapped" from="Meche" to="." method="_on_meche_just_snapped"]
 [connection signal="finished" from="Explosion" to="." method="_on_audio_stream_player_finished"]
