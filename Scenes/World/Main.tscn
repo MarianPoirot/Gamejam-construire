@@ -42,48 +42,59 @@ scale = Vector2(3, 3)
 texture_filter = 1
 position = Vector2(512, 176)
 scale = Vector2(3, 3)
+can_activate_ancre = true
 
 [node name="Chaudiere" parent="." instance=ExtResource("6_ncykg")]
 texture_filter = 1
 position = Vector2(963, -522)
 scale = Vector2(3, 3)
+can_activate_ancre = true
 
 [node name="Cable" parent="." instance=ExtResource("10_scpqc")]
 texture_filter = 1
 position = Vector2(958, 1165)
 scale = Vector2(3, 3)
+can_activate_ancre = true
 
 [node name="reservoir" parent="." instance=ExtResource("6_g1jcb")]
 texture_filter = 1
 position = Vector2(962, 943)
 scale = Vector2(3, 3)
+can_activate_ancre = true
 
 [node name="ConduitVapeur" parent="." instance=ExtResource("6_bnl4o")]
 position = Vector2(951, 43)
 scale = Vector2(3, 3)
+can_activate_ancre = true
 
 [node name="Turbine" parent="." instance=ExtResource("7_pxymf")]
 position = Vector2(960, 740)
 scale = Vector2(3, 3)
+can_activate_ancre = true
 
 [node name="Moteur" parent="." instance=ExtResource("11_mkq26")]
 texture_filter = 1
 position = Vector2(955, -100)
 scale = Vector2(3, 3)
+can_activate_ancre = true
 
 [node name="goupille" parent="." instance=ExtResource("16_vplyf")]
 texture_filter = 1
 position = Vector2(961, -313)
 scale = Vector2(3, 3)
+can_activate_ancre = true
 
 [node name="ballon" parent="." instance=ExtResource("2_y7w6m")]
 position = Vector2(958, 572)
 scale = Vector2(3, 3)
+id = 0
+can_activate_ancre = true
 
 [node name="bouchon" parent="." instance=ExtResource("12_6p58o")]
 texture_filter = 1
 position = Vector2(958, 1273)
 scale = Vector2(3, 3)
+can_activate_ancre = true
 
 [node name="Area2D" parent="." instance=ExtResource("13_nxo70")]
 texture_filter = 1
@@ -110,9 +121,11 @@ scale = Vector2(3, 3)
 [node name="combustible" parent="." instance=ExtResource("5_6g2yp")]
 position = Vector2(50, 164)
 scale = Vector2(3, 3)
+can_activate_ancre = true
 
 [node name="Meche" parent="." instance=ExtResource("20_tepf3")]
 scale = Vector2(3, 3)
+can_activate_ancre = true
 
 [node name="Coque_inf_avant_l3" parent="." instance=ExtResource("22_t6vc2")]
 position = Vector2(702, 536)

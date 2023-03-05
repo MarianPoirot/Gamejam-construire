@@ -42,11 +42,12 @@ func snap(area):
 	if can_activate_ancre:
 		activate_ancre()
 	Id_pieces.state_dependencies[id] = true
+	area.desactivate()
 
 func activate_ancre():
 	for ancre in $recepteurAncre.get_children():
 		ancre.activate()
-		
+
 func _on_zone_asouder_c_est_bon_c_est_soude():
 	can_activate_ancre = true
 
