@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnhgpm6x2k2c2"]
+[gd_scene load_steps=6 format=3 uid="uid://dnhgpm6x2k2c2"]
 
 [ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_014yb"]
 [ext_resource type="PackedScene" uid="uid://dgicsyqpftdlt" path="res://Scenes/Pieces/ancre.tscn" id="2_nhvv8"]
 [ext_resource type="Texture2D" uid="uid://dwwwe6smni4n" path="res://Assets/Sprites/Bouchon.png" id="3_umwne"]
+[ext_resource type="PackedScene" uid="uid://u6rwihexgowl" path="res://Scenes/liquide/hook_liquide.tscn" id="4_wb2mj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5wlq3"]
 radius = 8.0
@@ -21,3 +22,7 @@ id = 14
 z_index = 29
 texture_filter = 1
 texture = ExtResource("3_umwne")
+
+[node name="HookLiquide" parent="." index="4" instance=ExtResource("4_wb2mj")]
+position = Vector2(2, -3)
+rotation = 2.32129
