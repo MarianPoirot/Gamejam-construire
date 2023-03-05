@@ -36,6 +36,6 @@ texture = ExtResource("3_qs6on")
 hframes = 2
 
 [node name="ancre" parent="recepteurAncre" index="0" instance=ExtResource("3_oyx3c")]
-position = Vector2(38, 22)
+position = Vector2(31, 22)
 rotation = 1.5708
 id = 16
