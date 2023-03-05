@@ -31,7 +31,7 @@ hframes = 2
 frame = 1
 
 [node name="Sprite2D2" type="Sprite2D" parent="." index="4"]
-z_index = 49
+z_index = 39
 texture = ExtResource("3_qs6on")
 hframes = 2
 

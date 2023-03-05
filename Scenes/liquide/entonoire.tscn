@@ -11,6 +11,7 @@ size = Vector2(184, 34)
 [sub_resource type="CircleShape2D" id="CircleShape2D_fas5x"]
 
 [node name="Entonoire" type="Area2D"]
+scale = Vector2(1.33, 1.33)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_buqvk")

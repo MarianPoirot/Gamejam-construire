@@ -63,6 +63,7 @@ collision_layer = 16
 collision_mask = 16
 script = ExtResource("4_vl7kn")
 maxSoudures = 50
+soudureZindex = 12
 
 [node name="zone" type="CollisionPolygon2D" parent="ZoneAsouder" index="0"]
 position = Vector2(1.6, 0.2)
