@@ -11,7 +11,6 @@ func _ready():
 func updateCable():
 		var points = $cable.get_points()
 		var ferAsouder = self.global_position
-		print(points[0])
 		var corner = get_window().size
 		$cable.set_point_position(1, Vector2(corner.x - ferAsouder.x - points[0].x,
 											corner.y - ferAsouder.y - points[0].y))
