@@ -9,8 +9,15 @@ func _on_meche_just_snapped():
 	$Timer.start()
 	await $Timer.timeout
 	$explosion.emitting=true
+	disperser_objets()
 
 func _on_audio_stream_player_finished():
 	$explosion.emitting=false
 	if get_tree().change_scene_to_file("res://Scenes/World/Ending.tscn") != OK:
 		print ("Error passing from Opening scene to ending scene")
+
+func disperser_objets():
+	var center := get_window().size / 2
+	var tween = get_tree().create_tween()
+	for c in get_children().filter(func(c):return c is Piece):
+		tween.parallel().tween_property(c, "position", (c.position-center)*100.0, 2.0).set_ease(Tween.EASE_OUT)

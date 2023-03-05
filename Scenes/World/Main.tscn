@@ -171,6 +171,7 @@ stream = ExtResource("27_535mk")
 [node name="OnSnappedAudioPlayer" parent="." instance=ExtResource("28_kifyh")]
 
 [node name="explosion" parent="." instance=ExtResource("28_n3qye")]
+z_index = 1000
 position = Vector2(510, 300)
 amount = 20000
 
