@@ -11,6 +11,7 @@ var nbSoudures : int
 var completed := false
 var texture = load("res://Assets/Sprites/Soudure.png")
 var Soudure = load("res://Scenes/Pieces/soudure.tscn")
+var alpha := Color.WHITE
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -29,6 +30,11 @@ func souder(pos):
 			createSoudure(pos)
 			weldCounter = 0
 
+func fondre_les_soudures():
+	var tween = create_tween()
+	tween.tween_property(self, "modulate", Color(1, 1, 1, 0), 1.6)
+	
+
 
 func createSoudure(pos):
 	var newSoudure = Soudure.instantiate()
@@ -39,3 +45,4 @@ func createSoudure(pos):
 	if nbSoudures >= maxSoudures :
 		emit_signal("c_est_bon_c_est_soude")
 		completed = true
+		fondre_les_soudures()
