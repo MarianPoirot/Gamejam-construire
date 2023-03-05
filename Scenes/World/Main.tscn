@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cdhyln0aitcji" path="res://Scenes/Pieces/ballon.tscn" id="2_y7w6m"]
 [ext_resource type="PackedScene" uid="uid://nulgtes263rk" path="res://Scenes/Pieces/coque_inférieure.tscn" id="3_k3jia"]
 [ext_resource type="PackedScene" uid="uid://ksyhx6uwk1rr" path="res://Scenes/Pieces/coque_supérieure.tscn" id="4_ccyxp"]
-[ext_resource type="PackedScene" uid="uid://cft22sb687osq" path="res://Scenes/Pieces/combustible.tscn" id="5_6g2yp"]
+[ext_resource type="PackedScene" path="res://Scenes/Pieces/combustible.tscn" id="5_6g2yp"]
 [ext_resource type="PackedScene" uid="uid://buyqii003lxp7" path="res://Scenes/Pieces/conduit-vapeur.tscn" id="6_bnl4o"]
 [ext_resource type="PackedScene" uid="uid://b7g4do0pyfl23" path="res://Scenes/Pieces/reservoir.tscn" id="6_g1jcb"]
 [ext_resource type="PackedScene" uid="uid://b2dfvrvgwbnae" path="res://Scenes/Pieces/chaudiere.tscn" id="6_ncykg"]
@@ -15,9 +15,10 @@
 [ext_resource type="PackedScene" uid="uid://dnhgpm6x2k2c2" path="res://Scenes/Pieces/bouchon.tscn" id="12_6p58o"]
 [ext_resource type="PackedScene" uid="uid://cv1dso1cy3a1p" path="res://Scenes/liquide/entonoire.tscn" id="13_nxo70"]
 [ext_resource type="PackedScene" uid="uid://bl7mre7gm07oi" path="res://Scenes/liquide/eau.tscn" id="15_dup0a"]
-[ext_resource type="PackedScene" uid="uid://r65bwof7ejvk" path="res://Scenes/liquide/sodium.tscn" id="16_2xrmh"]
+[ext_resource type="PackedScene" path="res://Scenes/liquide/sodium.tscn" id="16_2xrmh"]
 [ext_resource type="PackedScene" uid="uid://bprpu8fe22nhe" path="res://Scenes/Pieces/ferAsouder.tscn" id="16_mju8g"]
 [ext_resource type="PackedScene" uid="uid://bvmk1lo1hl4ea" path="res://Scenes/Pieces/goupille.tscn" id="16_vplyf"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://dpw714oplylju" path="res://Scenes/World/tapis_roulant.tscn" id="17_hyrnp"]
 [ext_resource type="PackedScene" uid="uid://5n2yjrnh0lvi" path="res://Scenes/Pieces/coque_avant_inf_L.tscn" id="20_nb4rh"]
 [ext_resource type="PackedScene" uid="uid://bo4sdbefqrswu" path="res://Scenes/Pieces/meche.tscn" id="20_tepf3"]
@@ -26,8 +27,18 @@
 [ext_resource type="PackedScene" uid="uid://be0d3psb00c0b" path="res://Scenes/Pieces/coque_avant_sup_L.tscn" id="23_4volp"]
 [ext_resource type="PackedScene" uid="uid://dqxfa0eotji3k" path="res://Scenes/Pieces/coque_avant_sup_R.tscn" id="24_my6qh"]
 [ext_resource type="PackedScene" uid="uid://crhpxe1wia0ow" path="res://Scenes/Pieces/pique.tscn" id="26_8ndhy"]
+=======
+[ext_resource type="PackedScene" path="res://Scenes/World/tapis_roulant.tscn" id="17_hyrnp"]
+[ext_resource type="PackedScene" path="res://Scenes/Pieces/coque_avant_inf_L.tscn" id="20_nb4rh"]
+[ext_resource type="PackedScene" path="res://Scenes/Pieces/meche.tscn" id="20_tepf3"]
+[ext_resource type="PackedScene" path="res://Scenes/Pieces/coque_avant_inf.tscn" id="21_gvekx"]
+[ext_resource type="PackedScene" path="res://Scenes/Pieces/coque_avant_inf_R.tscn" id="22_t6vc2"]
+[ext_resource type="PackedScene" path="res://Scenes/Pieces/coque_avant_sup_L.tscn" id="23_4volp"]
+[ext_resource type="PackedScene" path="res://Scenes/Pieces/coque_avant_sup_R.tscn" id="24_my6qh"]
+[ext_resource type="PackedScene" path="res://Scenes/Pieces/pique.tscn" id="26_8ndhy"]
+>>>>>>> Stashed changes
 [ext_resource type="AudioStream" uid="uid://6xo8b5qcmskn" path="res://Assets/Musics/bomb csgo.ogg" id="27_535mk"]
-[ext_resource type="PackedScene" uid="uid://d1b8hvnywnb72" path="res://Scenes/World/on_snapped_audio_player.tscn" id="28_kifyh"]
+[ext_resource type="PackedScene" path="res://Scenes/World/on_snapped_audio_player.tscn" id="28_kifyh"]
 [ext_resource type="PackedScene" uid="uid://cedibmcqfyv6m" path="res://Scenes/Explosion/explosion.tscn" id="28_n3qye"]
 [ext_resource type="PackedScene" uid="uid://c3f2rfu3sm00d" path="res://Scenes/World/ui.tscn" id="30_glgul"]
 
@@ -179,7 +190,10 @@ amount = 20000
 
 [node name="Timer" type="Timer" parent="."]
 
+<<<<<<< Updated upstream
 [node name="UI" parent="." instance=ExtResource("30_glgul")]
 
 [connection signal="just_snapped" from="Meche" to="." method="_on_meche_just_snapped"]
+=======
+>>>>>>> Stashed changes
 [connection signal="finished" from="Explosion" to="." method="_on_audio_stream_player_finished"]
