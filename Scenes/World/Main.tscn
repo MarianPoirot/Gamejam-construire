@@ -1,7 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://b3wbxtbbacebh"]
+[gd_scene load_steps=28 format=3 uid="uid://b3wbxtbbacebh"]
 
 [ext_resource type="Script" path="res://Scripts/World/Main.gd" id="1_vn17v"]
-[ext_resource type="Texture2D" uid="uid://b5vd0wq6m3rpi" path="res://Assets/Sprites/Background.png" id="2_kno67"]
+[ext_resource type="Texture2D" uid="uid://s8t8nfhx3gns" path="res://Assets/Sprites/Background.png" id="2_kno67"]
 [ext_resource type="PackedScene" uid="uid://cdhyln0aitcji" path="res://Scenes/Pieces/ballon.tscn" id="2_y7w6m"]
 [ext_resource type="PackedScene" uid="uid://nulgtes263rk" path="res://Scenes/Pieces/coque_inférieure.tscn" id="3_k3jia"]
 [ext_resource type="PackedScene" uid="uid://ksyhx6uwk1rr" path="res://Scenes/Pieces/coque_supérieure.tscn" id="4_ccyxp"]
@@ -19,11 +19,14 @@
 [ext_resource type="PackedScene" uid="uid://bprpu8fe22nhe" path="res://Scenes/Pieces/ferAsouder.tscn" id="16_mju8g"]
 [ext_resource type="PackedScene" uid="uid://bvmk1lo1hl4ea" path="res://Scenes/Pieces/goupille.tscn" id="16_vplyf"]
 [ext_resource type="PackedScene" uid="uid://dpw714oplylju" path="res://Scenes/World/tapis_roulant.tscn" id="17_hyrnp"]
-[ext_resource type="PackedScene" path="res://Scenes/Pieces/coque_avant_inf_L.tscn" id="20_nb4rh"]
-[ext_resource type="PackedScene" path="res://Scenes/Pieces/coque_avant_inf.tscn" id="21_gvekx"]
-[ext_resource type="PackedScene" path="res://Scenes/Pieces/coque_avant_inf_R.tscn" id="22_t6vc2"]
-[ext_resource type="PackedScene" path="res://Scenes/Pieces/coque_avant_sup_L.tscn" id="23_4volp"]
-[ext_resource type="PackedScene" path="res://Scenes/Pieces/coque_avant_sup_R.tscn" id="24_my6qh"]
+[ext_resource type="PackedScene" uid="uid://5n2yjrnh0lvi" path="res://Scenes/Pieces/coque_avant_inf_L.tscn" id="20_nb4rh"]
+[ext_resource type="PackedScene" uid="uid://bo4sdbefqrswu" path="res://Scenes/Pieces/meche.tscn" id="20_tepf3"]
+[ext_resource type="PackedScene" uid="uid://dobe78ei8mmn1" path="res://Scenes/Pieces/coque_avant_inf.tscn" id="21_gvekx"]
+[ext_resource type="PackedScene" uid="uid://ddce3absi6w14" path="res://Scenes/Pieces/coque_avant_inf_R.tscn" id="22_t6vc2"]
+[ext_resource type="PackedScene" uid="uid://be0d3psb00c0b" path="res://Scenes/Pieces/coque_avant_sup_L.tscn" id="23_4volp"]
+[ext_resource type="PackedScene" uid="uid://dqxfa0eotji3k" path="res://Scenes/Pieces/coque_avant_sup_R.tscn" id="24_my6qh"]
+[ext_resource type="PackedScene" path="res://Scenes/Pieces/pique.tscn" id="26_8ndhy"]
+[ext_resource type="AudioStream" uid="uid://6xo8b5qcmskn" path="res://Assets/Musics/bomb csgo.ogg" id="27_535mk"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_vn17v")
@@ -109,16 +112,19 @@ scale = Vector2(3, 3)
 position = Vector2(50, 164)
 scale = Vector2(3, 3)
 
+[node name="Meche" parent="." instance=ExtResource("20_tepf3")]
+scale = Vector2(3, 3)
+
+[node name="Coque_inf_avant_l3" parent="." instance=ExtResource("22_t6vc2")]
+position = Vector2(702, 536)
+scale = Vector2(3, 3)
+
 [node name="Coque_inf_avant_l" parent="." instance=ExtResource("20_nb4rh")]
 position = Vector2(98, 524)
 scale = Vector2(3, 3)
 
 [node name="Coque_inf_avant_l2" parent="." instance=ExtResource("21_gvekx")]
 position = Vector2(255, 23)
-scale = Vector2(3, 3)
-
-[node name="Coque_inf_avant_l3" parent="." instance=ExtResource("22_t6vc2")]
-position = Vector2(702, 536)
 scale = Vector2(3, 3)
 
 [node name="Coque_inf_avant_l4" parent="." instance=ExtResource("23_4volp")]
@@ -128,3 +134,27 @@ scale = Vector2(3, 3)
 [node name="Coque_inf_avant_l5" parent="." instance=ExtResource("24_my6qh")]
 position = Vector2(495, 543)
 scale = Vector2(3, 3)
+
+[node name="Pique" parent="." instance=ExtResource("26_8ndhy")]
+position = Vector2(804, 59)
+
+[node name="Pique2" parent="." instance=ExtResource("26_8ndhy")]
+position = Vector2(713, 59)
+
+[node name="Pique3" parent="." instance=ExtResource("26_8ndhy")]
+position = Vector2(620, 55)
+
+[node name="Pique4" parent="." instance=ExtResource("26_8ndhy")]
+position = Vector2(525, 54)
+
+[node name="Pique5" parent="." instance=ExtResource("26_8ndhy")]
+position = Vector2(429, 55)
+
+[node name="Pique6" parent="." instance=ExtResource("26_8ndhy")]
+position = Vector2(801, 55)
+
+[node name="Explosion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("27_535mk")
+
+[connection signal="just_snapped" from="Meche" to="." method="_on_meche_just_snapped"]
+[connection signal="finished" from="Explosion" to="." method="_on_audio_stream_player_finished"]

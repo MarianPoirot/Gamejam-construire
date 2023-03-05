@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvw3bc0ql6jkw"]
+
+[ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_5gx7v"]
+[ext_resource type="Texture2D" uid="uid://bf5bmg2jv1ksp" path="res://Assets/Sprites/Pique.png" id="2_6wggt"]
+
+[node name="Pique" instance=ExtResource("1_5gx7v")]
+id = 16
+
+[node name="DragDropCollision" parent="." index="0"]
+visible = false
+position = Vector2(0, 4.162)
+scale = Vector2(0.789, 0.789)
+disabled = true
+
+[node name="DragDrop" type="CollisionPolygon2D" parent="." index="1"]
+scale = Vector2(3, 3)
+polygon = PackedVector2Array(15, 9.4, 15, 16, 11.8, 19, -11.2, 19, -15, 16.4, -15, 6.5, -3, -17.5, -3, -19, 1.2, -19)
+
+[node name="Ancre" parent="." index="2"]
+position = Vector2(0, 57)
+
+[node name="Pique" type="Sprite2D" parent="." index="4"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("2_6wggt")

@@ -29,7 +29,8 @@ enum id_pieces{
 	coque_avant_sup_l=24,
 	coque_avant_sup_r=25,
 	coque_avant_inf_l=26,
-	coque_avant_inf_r=27
+	coque_avant_inf_r=27,
+	meche=28
 }
 
 var dependancies = {
@@ -45,7 +46,7 @@ var dependancies = {
 	id_pieces.eau: [id_pieces.reservoir],
 	id_pieces.goupille: [id_pieces.bouchon],
 	id_pieces.moteur: [id_pieces.coque_inf],
-	id_pieces.piques: [id_pieces.coque_sup, id_pieces.coque_inf],
+	id_pieces.piques: [id_pieces.coque_avant_sup_l, id_pieces.coque_avant_inf_l,id_pieces.coque_avant_sup_r, id_pieces.coque_avant_inf_r],
 	id_pieces.reservoir: [id_pieces.chaudiere],
 	id_pieces.resistance: [id_pieces.cable],
 	id_pieces.sodium: [id_pieces.entonnoir],
@@ -55,7 +56,8 @@ var dependancies = {
 	id_pieces.coque_avant_sup_l: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.combustible],
 	id_pieces.coque_avant_sup_r: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.combustible],
 	id_pieces.coque_avant_inf_l: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.combustible],
-	id_pieces.coque_avant_inf_r: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.combustible]
+	id_pieces.coque_avant_inf_r: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.combustible],
+	id_pieces.meche: [id_pieces.coque_avant_inf_r,id_pieces.coque_avant_inf_l,id_pieces.coque_avant_sup_r,id_pieces.coque_avant_sup_l]
 }
 
 var state_dependencies = {
@@ -85,7 +87,8 @@ var state_dependencies = {
 	id_pieces.coque_avant_sup_l: false,
 	id_pieces.coque_avant_sup_r: false,
 	id_pieces.coque_avant_inf_l: false,
-	id_pieces.coque_avant_inf_r: false
+	id_pieces.coque_avant_inf_r: false,
+	id_pieces.meche: false
 }
 
 var drag_and_drop_taken := false
