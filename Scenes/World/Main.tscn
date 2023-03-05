@@ -118,7 +118,7 @@ position = Vector2(961, 314)
 metadata/_edit_lock_ = true
 
 [node name="ferAsouder" parent="." instance=ExtResource("16_mju8g")]
-position = Vector2(100, 298)
+position = Vector2(806, 532)
 scale = Vector2(3, 3)
 
 [node name="combustible" parent="." instance=ExtResource("5_6g2yp")]
