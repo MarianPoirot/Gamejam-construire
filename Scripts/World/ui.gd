@@ -19,3 +19,12 @@ func _on_down_button_down():
 
 func _on_move_button_up():
 	sens = 0
+
+
+func _on_manuel_toggled(button_pressed):
+	var target = Vector2(0, -510)
+	if button_pressed:
+		target = Vector2.ZERO
+		$Manuel.call_deferred("grab_focus")
+		$Manuel.call_deferred("grab_click_focus")
+	get_tree().create_tween().tween_property($Manuel, "position", target, 1.0).set_ease(Tween.EASE_IN_OUT)

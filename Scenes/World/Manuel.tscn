@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://bm4cwm651sx5s"]
+
+[ext_resource type="Texture2D" uid="uid://bsqn3froupcug" path="res://Assets/Manual/Page 1.png" id="1_ob361"]
+[ext_resource type="Texture2D" uid="uid://dewbfgrrlu7bs" path="res://Assets/Manual/Page 2.png" id="2_r5j37"]
+[ext_resource type="Texture2D" uid="uid://i4ev3gdtfbg0" path="res://Assets/Manual/Page 3.png" id="3_s0k4s"]
+[ext_resource type="Texture2D" uid="uid://bmraxy8biwkf5" path="res://Assets/Manual/Page 4.png" id="4_eidox"]
+[ext_resource type="Texture2D" uid="uid://dm5qibrr0rija" path="res://Assets/Manual/Page 5.png" id="5_ca0if"]
+[ext_resource type="Texture2D" uid="uid://ccjreirie7iv0" path="res://Assets/Manual/Page 6.png" id="6_y8fw7"]
+
+[node name="Manuel" type="ScrollContainer"]
+clip_contents = false
+custom_minimum_size = Vector2(0, 500)
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 8.0
+grow_horizontal = 2
+size_flags_vertical = 0
+focus_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+focus_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Page1" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(700, 500)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 2
+texture = ExtResource("1_ob361")
+stretch_mode = 2
+
+[node name="Page2" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(700, 500)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 2
+texture = ExtResource("2_r5j37")
+stretch_mode = 2
+
+[node name="Page3" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(700, 500)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 2
+texture = ExtResource("3_s0k4s")
+stretch_mode = 2
+
+[node name="Page4" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(700, 500)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 2
+texture = ExtResource("4_eidox")
+stretch_mode = 2
+
+[node name="Page5" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(700, 500)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 2
+texture = ExtResource("5_ca0if")
+stretch_mode = 2
+
+[node name="Page6" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(700, 500)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 2
+texture = ExtResource("6_y8fw7")
+stretch_mode = 2
