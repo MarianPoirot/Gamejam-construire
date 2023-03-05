@@ -1,15 +1,24 @@
 [gd_scene load_steps=7 format=3 uid="uid://bm4cwm651sx5s"]
 
-[ext_resource type="Texture2D" uid="uid://bpt4iu2qjfeo3" path="res://Assets/Manual/Page 1.png" id="1_ob361"]
-[ext_resource type="Texture2D" uid="uid://br8yj807exw5i" path="res://Assets/Manual/Page 2.png" id="2_r5j37"]
+[ext_resource type="Texture2D" uid="uid://bsqn3froupcug" path="res://Assets/Manual/Page 1.png" id="1_ob361"]
+[ext_resource type="Texture2D" uid="uid://dewbfgrrlu7bs" path="res://Assets/Manual/Page 2.png" id="2_r5j37"]
 [ext_resource type="Texture2D" uid="uid://l136gf80byih" path="res://Assets/Manual/Page 3 modifiée.png" id="3_tray8"]
-[ext_resource type="Texture2D" uid="uid://4kqxug3lpg8u" path="res://Assets/Manual/Page 4.png" id="4_eidox"]
-[ext_resource type="Texture2D" uid="uid://b0wquwbu8tyax" path="res://Assets/Manual/Page 5.png" id="5_ca0if"]
-[ext_resource type="Texture2D" uid="uid://6aoy56mltv3j" path="res://Assets/Manual/Page 6.png" id="6_y8fw7"]
+[ext_resource type="Texture2D" uid="uid://bmraxy8biwkf5" path="res://Assets/Manual/Page 4.png" id="4_eidox"]
+[ext_resource type="Texture2D" uid="uid://dm5qibrr0rija" path="res://Assets/Manual/Page 5.png" id="5_ca0if"]
+[ext_resource type="Texture2D" uid="uid://ccjreirie7iv0" path="res://Assets/Manual/Page 6.png" id="6_y8fw7"]
 
-[node name="Manuel" type="ScrollContainer"]
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Manuel" type="ScrollContainer" parent="."]
 clip_contents = false
 custom_minimum_size = Vector2(0, 500)
+layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 8.0
@@ -17,14 +26,14 @@ grow_horizontal = 2
 size_flags_vertical = 0
 focus_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="Manuel"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 focus_mode = 2
 theme_override_constants/separation = 7
 
-[node name="Page1" type="TextureRect" parent="HBoxContainer"]
+[node name="Page1" type="TextureRect" parent="Manuel/HBoxContainer"]
 custom_minimum_size = Vector2(700, 500)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -32,7 +41,7 @@ focus_mode = 2
 texture = ExtResource("1_ob361")
 stretch_mode = 2
 
-[node name="Page2" type="TextureRect" parent="HBoxContainer"]
+[node name="Page2" type="TextureRect" parent="Manuel/HBoxContainer"]
 custom_minimum_size = Vector2(700, 500)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -40,7 +49,7 @@ focus_mode = 2
 texture = ExtResource("2_r5j37")
 stretch_mode = 2
 
-[node name="Page3" type="TextureRect" parent="HBoxContainer"]
+[node name="Page3" type="TextureRect" parent="Manuel/HBoxContainer"]
 custom_minimum_size = Vector2(700, 500)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -48,7 +57,7 @@ focus_mode = 2
 texture = ExtResource("3_tray8")
 stretch_mode = 2
 
-[node name="Page4" type="TextureRect" parent="HBoxContainer"]
+[node name="Page4" type="TextureRect" parent="Manuel/HBoxContainer"]
 custom_minimum_size = Vector2(700, 500)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -56,7 +65,7 @@ focus_mode = 2
 texture = ExtResource("4_eidox")
 stretch_mode = 2
 
-[node name="Page5" type="TextureRect" parent="HBoxContainer"]
+[node name="Page5" type="TextureRect" parent="Manuel/HBoxContainer"]
 custom_minimum_size = Vector2(700, 500)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -64,10 +73,20 @@ focus_mode = 2
 texture = ExtResource("5_ca0if")
 stretch_mode = 2
 
-[node name="Page6" type="TextureRect" parent="HBoxContainer"]
+[node name="Page6" type="TextureRect" parent="Manuel/HBoxContainer"]
 custom_minimum_size = Vector2(700, 500)
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 2
 texture = ExtResource("6_y8fw7")
 stretch_mode = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 454.0
+offset_right = 311.0
+offset_bottom = 492.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Tourner les objets : E et R"

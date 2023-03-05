@@ -11,10 +11,10 @@ func _process(delta):
 
 
 func _on_up_button_down():
-	sens = -1
+	sens = 1
 
 func _on_down_button_down():
-	sens = 1
+	sens = -1
 
 
 func _on_move_button_up():
