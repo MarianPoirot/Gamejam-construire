@@ -14,7 +14,6 @@ func _on_audio_stream_player_finished():
 		print ("Error passing from Opening scene to ending scene")
 
 func disperser_objets():
-	var center := get_window().size / 2
 	var tween = get_tree().create_tween()
 	for c in get_children().filter(func(c):return c is Piece):
-		tween.parallel().tween_property(c, "position", (c.position-center)*100.0, 2.0).set_ease(Tween.EASE_OUT)
+		tween.parallel().tween_property(c, "position", c.position + (c.position-$Centre.position)*20.0, 2.0).set_ease(Tween.EASE_OUT)

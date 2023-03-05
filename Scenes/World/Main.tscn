@@ -51,7 +51,6 @@ scale = Vector2(3, 3)
 texture_filter = 1
 position = Vector2(973, -543)
 scale = Vector2(3, 3)
-can_activate_ancre = true
 
 [node name="Cable" parent="." instance=ExtResource("10_scpqc")]
 texture_filter = 1
@@ -178,6 +177,9 @@ amount = 20000
 [node name="Timer" type="Timer" parent="."]
 
 [node name="UI" parent="." instance=ExtResource("30_glgul")]
+
+[node name="Centre" type="Marker2D" parent="."]
+position = Vector2(510, 300)
 
 [connection signal="just_snapped" from="Meche" to="." method="_on_meche_just_snapped"]
 [connection signal="just_snapped" from="Coque_inf_avant_l3" to="Coque_inf_avant_l" method="_on_coque_inf_avant_l_3_just_snapped"]

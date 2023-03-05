@@ -16,7 +16,6 @@ var maxSoudure := 4
 func _ready():
 	if not Id_pieces.state_dependencies[id]:
 		rotation = randf_range(0, 2*PI)
-	
 	connect("just_snapped", func(): EventBus.emit_signal("piece_got_snapped", id))
 
 func release():
