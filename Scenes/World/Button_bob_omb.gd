@@ -14,7 +14,7 @@ func spawn():
 	if not flipper_exist:
 		flipper_exist = true
 		var flipper_droit = flipper.instantiate()
-		flipper_droit.position = Vector2(-400, -50)
+		flipper_droit.position = Vector2(-400, 50)
 		self.add_child(flipper_droit)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/World/Ending.gd" id="1_0ockr"]
 [ext_resource type="Texture2D" uid="uid://d02ch4b2og3a1" path="res://Assets/Sprites/Terrorists win.png" id="2_85mv2"]
+[ext_resource type="Texture2D" uid="uid://dcprntdsie4v8" path="res://Assets/Sprites/MGSR_Character_Personalities_-_King_Bob-omb-1.png.png" id="3_2w0pw"]
 [ext_resource type="AudioStream" uid="uid://owf6qxuhdv1j" path="res://Assets/Musics/Musique CS.mp3" id="3_7x12a"]
-[ext_resource type="Texture2D" uid="uid://de5tegdstv87k" path="res://Assets/Sprites/MGSR_Character_Personalities_-_King_Bob-omb.webp" id="3_8dnec"]
 [ext_resource type="Texture2D" uid="uid://bj4qlp5figwdl" path="res://Assets/Sprites/WhiteBomber_Vector01.webp" id="4_revvi"]
 [ext_resource type="Script" path="res://Scenes/World/Button_bob_omb.gd" id="5_06pgw"]
 [ext_resource type="AudioStream" uid="uid://xi6deycvt37h" path="res://Assets/Musics/Terrorists win - CSGO Sound Effect.mp3" id="6_kh6rr"]
@@ -49,8 +49,8 @@ texture = ExtResource("2_85mv2")
 [node name="King Bob-Omb" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(872, 488)
 rotation = -0.760964
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_8dnec")
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("3_2w0pw")
 
 [node name="Bomberman" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(208, 488)
