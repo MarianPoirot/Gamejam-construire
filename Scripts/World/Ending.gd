@@ -13,3 +13,10 @@ func _on_button_button_down():
 
 func _on_win_finished():
 	$Yeay.play()
+	var tween = $CanvasLayer/Gamins.create_tween()
+	tween.tween_property($CanvasLayer/Gamins, "position", Vector2(516, 475), 1)
+
+
+func _on_yeay_finished():
+	var tween = $CanvasLayer/Gamins.create_tween()
+	tween.tween_property($CanvasLayer/Gamins, "position", Vector2(516, 722), 1)

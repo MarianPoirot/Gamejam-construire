@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://djsno5f3jy6pp"]
+[gd_scene load_steps=11 format=3 uid="uid://djsno5f3jy6pp"]
 
 [ext_resource type="Script" path="res://Scripts/World/Ending.gd" id="1_0ockr"]
 [ext_resource type="Texture2D" uid="uid://d02ch4b2og3a1" path="res://Assets/Sprites/Terrorists win.png" id="2_85mv2"]
@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://xi6deycvt37h" path="res://Assets/Musics/Terrorists win - CSGO Sound Effect.mp3" id="6_kh6rr"]
 [ext_resource type="AudioStream" uid="uid://difyqm4expflc" path="res://Assets/Musics/Happy Kids - Sound Effect [Perfect Cut].mp3" id="7_sm6q5"]
 [ext_resource type="AudioStream" uid="uid://6x3h8fi4gx6v" path="res://Assets/Musics/VordtOfTheBorealMeme.ogg" id="9_acu2d"]
+[ext_resource type="Texture2D" uid="uid://ds6n62insvump" path="res://Assets/Sprites/IVDKXH-happy-kids-children-high-quality-png.png" id="10_lx7s4"]
 
 [node name="Ending" type="Control"]
 layout_mode = 3
@@ -66,6 +67,11 @@ offset_right = 1000.0
 offset_bottom = 600.0
 script = ExtResource("5_06pgw")
 
+[node name="Gamins" type="Sprite2D" parent="CanvasLayer"]
+z_index = 4096
+position = Vector2(516, 722)
+texture = ExtResource("10_lx7s4")
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_right = 40.0
@@ -87,3 +93,4 @@ stream = ExtResource("9_acu2d")
 [connection signal="button_down" from="CanvasLayer/Button" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="CanvasLayer/Button_bob_omb" to="CanvasLayer/Button_bob_omb" method="_on_button_down"]
 [connection signal="finished" from="Win" to="." method="_on_win_finished"]
+[connection signal="finished" from="Yeay" to="." method="_on_yeay_finished"]
