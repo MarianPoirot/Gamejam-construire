@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://b3wbxtbbacebh"]
+[gd_scene load_steps=30 format=3 uid="uid://b3wbxtbbacebh"]
 
 [ext_resource type="Script" path="res://Scripts/World/Main.gd" id="1_vn17v"]
 [ext_resource type="Texture2D" uid="uid://s8t8nfhx3gns" path="res://Assets/Sprites/Background.png" id="2_kno67"]
@@ -171,6 +171,7 @@ position = Vector2(801, 55)
 stream = ExtResource("27_535mk")
 
 [node name="OnSnappedAudioPlayer" parent="." instance=ExtResource("28_kifyh")]
+
 [node name="explosion" parent="." instance=ExtResource("28_n3qye")]
 position = Vector2(510, 300)
 amount = 20000
