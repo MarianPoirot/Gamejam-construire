@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://b3wbxtbbacebh"]
+[gd_scene load_steps=29 format=3 uid="uid://b3wbxtbbacebh"]
 
 [ext_resource type="Script" path="res://Scripts/World/Main.gd" id="1_vn17v"]
 [ext_resource type="Texture2D" uid="uid://s8t8nfhx3gns" path="res://Assets/Sprites/Background.png" id="2_kno67"]
@@ -25,8 +25,9 @@
 [ext_resource type="PackedScene" uid="uid://ddce3absi6w14" path="res://Scenes/Pieces/coque_avant_inf_R.tscn" id="22_t6vc2"]
 [ext_resource type="PackedScene" uid="uid://be0d3psb00c0b" path="res://Scenes/Pieces/coque_avant_sup_L.tscn" id="23_4volp"]
 [ext_resource type="PackedScene" uid="uid://dqxfa0eotji3k" path="res://Scenes/Pieces/coque_avant_sup_R.tscn" id="24_my6qh"]
-[ext_resource type="PackedScene" path="res://Scenes/Pieces/pique.tscn" id="26_8ndhy"]
+[ext_resource type="PackedScene" uid="uid://bvw3bc0ql6jkw" path="res://Scenes/Pieces/pique.tscn" id="26_8ndhy"]
 [ext_resource type="AudioStream" uid="uid://6xo8b5qcmskn" path="res://Assets/Musics/bomb csgo.ogg" id="27_535mk"]
+[ext_resource type="PackedScene" uid="uid://d1b8hvnywnb72" path="res://Scenes/World/on_snapped_audio_player.tscn" id="28_kifyh"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_vn17v")
@@ -43,7 +44,6 @@ scale = Vector2(3, 3)
 texture_filter = 1
 position = Vector2(512, 176)
 scale = Vector2(3, 3)
-can_activate_ancre = true
 
 [node name="Chaudiere" parent="." instance=ExtResource("6_ncykg")]
 texture_filter = 1
@@ -126,7 +126,6 @@ can_activate_ancre = true
 
 [node name="Meche" parent="." instance=ExtResource("20_tepf3")]
 scale = Vector2(3, 3)
-can_activate_ancre = true
 
 [node name="Coque_inf_avant_l3" parent="." instance=ExtResource("22_t6vc2")]
 position = Vector2(702, 536)
@@ -168,6 +167,8 @@ position = Vector2(801, 55)
 
 [node name="Explosion" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("27_535mk")
+
+[node name="OnSnappedAudioPlayer" parent="." instance=ExtResource("28_kifyh")]
 
 [connection signal="just_snapped" from="Meche" to="." method="_on_meche_just_snapped"]
 [connection signal="finished" from="Explosion" to="." method="_on_audio_stream_player_finished"]
