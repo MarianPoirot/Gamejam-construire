@@ -20,3 +20,6 @@ func _on_win_finished():
 func _on_yeay_finished():
 	var tween = $CanvasLayer/Gamins.create_tween()
 	tween.tween_property($CanvasLayer/Gamins, "position", Vector2(516, 722), 1)
+
+
+
