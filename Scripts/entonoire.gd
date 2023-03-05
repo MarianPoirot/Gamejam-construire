@@ -16,9 +16,21 @@ func try_snap():
 		snap($Sortie.get_overlapping_areas()[0])
 
 func snap(hook):
-	self.global_position=hook.global_position-$Sortie.position*scale.x
 	conteneur_liquide = hook
-	global_rotation = hook.global_rotation
+	launch_snap_tween(hook)
+
+func launch_snap_tween(area):
+	var tween = create_tween()
+
+	var target_position : Vector2 = area.global_position-$Sortie.position*scale.x
+	tween.tween_property(self , "global_position" , target_position , 0.5).set_trans(Tween.TRANS_CUBIC)
+	
+	var target_rotation = area.rotation
+	
+	if(rotation > PI):
+		target_rotation += 2 * PI
+	
+	tween.parallel().tween_property(self , "rotation" , target_rotation , 0.5).set_trans(Tween.TRANS_CUBIC)
 
 func send_liquide(id_liquide):
 	if conteneur_liquide:

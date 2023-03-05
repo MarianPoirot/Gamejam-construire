@@ -25,8 +25,10 @@ func _process(delta):
 		global_position = get_global_mouse_position() + grabbed_offset
 		if Input.is_action_pressed("rotate_left"):
 			rotation-=delta*vitesse_rotation
+			rotation = fmod(rotation , 2 * PI)
 		if Input.is_action_pressed("rotate_right"):
 			rotation+=delta*vitesse_rotation
+			rotation = fmod(rotation , 2 * PI)
 		
 		if not just_grabbed and ((Input.is_action_just_released("pick") and release_pick_to_release) or Input.is_action_just_pressed("pick")):
 			release()
