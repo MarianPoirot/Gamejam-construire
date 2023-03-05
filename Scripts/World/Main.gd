@@ -2,6 +2,10 @@ extends Node2D
 	
 func _on_meche_just_snapped():
 	$Explosion.play()
+	$Coque_inf_avant_l/ZoneAsouderDroite.fondre_les_soudures()
+	$Coque_inf_avant_l/ZoneAsouderGauche.fondre_les_soudures()
+	$Coque_inf_avant_l/ZoneAsouderHorizontal.fondre_les_soudures()
+	$Coque_inf_avant_l/ZoneAsouderVertical.fondre_les_soudures()
 	$Timer.start()
 	await $Timer.timeout
 	$explosion.emitting=true
