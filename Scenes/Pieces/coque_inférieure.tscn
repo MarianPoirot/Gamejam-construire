@@ -56,10 +56,6 @@ position = Vector2(0, 24)
 scale = Vector2(2, 2)
 id = 8
 
-[node name="ancreMeche" parent="recepteurAncre" index="6" instance=ExtResource("3_bm6tj")]
-position = Vector2(-40, 26)
-id = 28
-
 [node name="ZoneAsouder" type="Area2D" parent="." index="5"]
 position = Vector2(-1.42109e-14, -40)
 scale = Vector2(10, 10)

@@ -1,16 +1,14 @@
 extends RigidBody2D
 
-var bob_ombardement = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	
-
-
-func _on_button_bob_omb_button_down():
-	bob_ombardement = true
-	
+func _process(delta):
+	if linear_velocity.y < -20:
+		linear_velocity.y = -20
+	if linear_velocity.x > 20:
+		linear_velocity.x = 20

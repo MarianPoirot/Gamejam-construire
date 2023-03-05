@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bo4sdbefqrswu"]
+[gd_scene load_steps=4 format=3 uid="uid://d02bidq434llt"]
 
 [ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_tfx0f"]
 [ext_resource type="Texture2D" uid="uid://ct5mnqydvy2jj" path="res://Assets/Sprites/Mèche.png" id="2_juesf"]
