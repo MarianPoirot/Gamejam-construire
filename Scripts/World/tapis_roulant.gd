@@ -29,3 +29,18 @@ func _on_haut_area_entered(area):
 
 func _on_bas_area_entered(area):
 	area.position.y-=($CollisionShape2D.shape.size.y)*scale.y
+
+
+var area_diminuees:Array[Node2D] = []
+
+func _on_area_exited(area:Node2D):
+	if area_diminuees.has(area):
+		area.scale*=2
+		area_diminuees.erase(area)
+
+
+func _on_grossissement_area_entered(area):
+	if area_diminuees.has(area):
+		return
+	area_diminuees.push_back(area)
+	area.scale*=0.5
