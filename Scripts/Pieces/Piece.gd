@@ -24,7 +24,6 @@ func try_snap():
 	if not depandancies_metted():
 		return
 	
-	print("Self: ", self)
 	for area in $Ancre.get_overlapping_areas():
 		if area is Ancre and area.id==self.id and abs(angle_difference(area.rotation, rotation))<PI/6.0:
 			snap(area)
