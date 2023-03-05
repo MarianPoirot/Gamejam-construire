@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bdumuji0t582t" path="res://Assets/Sprites/Water.png" id="2_7801j"]
 
 [node name="Eau" instance=ExtResource("1_jptgn")]
+texture_filter = 1
 id = 9
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="1"]

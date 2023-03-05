@@ -25,18 +25,20 @@ scale = Vector2(0.5, 0.5)
 id = 7
 disable = false
 
-[node name="ancre_pique1" parent="recepteurAncre" index="1" instance=ExtResource("3_msov2")]
-position = Vector2(64, -16)
-id = 16
-disable = false
-
-[node name="ancre_pique2" parent="recepteurAncre" index="2" instance=ExtResource("3_msov2")]
-position = Vector2(-64, -16)
-id = 16
-disable = false
-
-[node name="ancre_turbine" parent="recepteurAncre" index="3" instance=ExtResource("3_msov2")]
+[node name="ancre_turbine" parent="recepteurAncre" index="1" instance=ExtResource("3_msov2")]
 texture_filter = 1
 position = Vector2(-1, -26)
 id = 22
+disable = false
+
+[node name="ancreCoqueSupL" parent="recepteurAncre" index="2" instance=ExtResource("3_msov2")]
+position = Vector2(-31, -4)
+scale = Vector2(2, 2)
+id = 24
+disable = false
+
+[node name="ancreCoqueSupR" parent="recepteurAncre" index="3" instance=ExtResource("3_msov2")]
+position = Vector2(32, -4)
+scale = Vector2(2, 2)
+id = 25
 disable = false

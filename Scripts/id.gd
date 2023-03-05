@@ -1,5 +1,6 @@
 extends Node
 
+
 enum id_pieces{
 	ballon=0,
 	bouchon=1,
@@ -23,7 +24,13 @@ enum id_pieces{
 	sodium=19,
 	sodium2=20,
 	sodium3=21,
-	turbine=22
+	turbine=22,
+	chaudiere_ouverte=23,
+	coque_avant_sup_l=24,
+	coque_avant_sup_r=25,
+	coque_avant_inf_l=26,
+	coque_avant_inf_r=27,
+	meche=28
 }
 
 var dependancies = {
@@ -33,19 +40,24 @@ var dependancies = {
 	id_pieces.bouchon: [id_pieces.sodium3],
 	id_pieces.cable: [id_pieces.moteur,id_pieces.turbine],
 	id_pieces.chaudiere: [id_pieces.coque_inf],
-	id_pieces.combustible: [id_pieces.chaudiere],
+	id_pieces.combustible: [id_pieces.chaudiere_ouverte],
 	id_pieces.conduitVapeur: [id_pieces.eau3,id_pieces.turbine],
-	id_pieces.coque_avant: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.resistance,id_pieces.combustible],
+	id_pieces.coque_avant: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.combustible],
 	id_pieces.eau: [id_pieces.reservoir],
 	id_pieces.goupille: [id_pieces.bouchon],
 	id_pieces.moteur: [id_pieces.coque_inf],
-	id_pieces.piques: [id_pieces.coque_sup, id_pieces.coque_inf],
+	id_pieces.piques: [id_pieces.coque_avant_sup_l, id_pieces.coque_avant_inf_l,id_pieces.coque_avant_sup_r, id_pieces.coque_avant_inf_r, id_pieces.coque_avant],
 	id_pieces.reservoir: [id_pieces.chaudiere],
 	id_pieces.resistance: [id_pieces.cable],
 	id_pieces.sodium: [id_pieces.entonnoir],
 	id_pieces.sodium2: [id_pieces.sodium],
 	id_pieces.sodium3: [id_pieces.sodium2],
-	id_pieces.turbine: [id_pieces.coque_inf]
+	id_pieces.turbine: [id_pieces.coque_inf],
+	id_pieces.coque_avant_sup_l: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.combustible],
+	id_pieces.coque_avant_sup_r: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.combustible],
+	id_pieces.coque_avant_inf_l: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.combustible],
+	id_pieces.coque_avant_inf_r: [id_pieces.conduitVapeur,id_pieces.goupille,id_pieces.combustible],
+	id_pieces.meche: [id_pieces.coque_avant_inf_r,id_pieces.coque_avant_inf_l,id_pieces.coque_avant_sup_r,id_pieces.coque_avant_sup_l]
 }
 
 var state_dependencies = {
@@ -70,7 +82,16 @@ var state_dependencies = {
 	id_pieces.sodium: false,
 	id_pieces.sodium2: false,
 	id_pieces.sodium3: false,
-	id_pieces.turbine: false
+	id_pieces.turbine: false,
+	id_pieces.chaudiere_ouverte: false,
+	id_pieces.coque_avant_sup_l: false,
+	id_pieces.coque_avant_sup_r: false,
+	id_pieces.coque_avant_inf_l: false,
+	id_pieces.coque_avant_inf_r: false,
+	id_pieces.meche: false
 }
 
 var drag_and_drop_taken := false
+
+signal tapis_roulant_descendre
+signal tapis_roulant_monter

@@ -13,7 +13,6 @@ scale = Vector2(0.33, 0.33)
 
 [node name="Ancre" parent="." index="1"]
 position = Vector2(0, 14)
-collision_layer = 0
 metadata/_edit_group_ = true
 
 [node name="ancre-bouchon" parent="recepteurAncre" index="0" instance=ExtResource("2_airq1")]
@@ -28,6 +27,7 @@ hframes = 4
 region_rect = Rect2(0, 0, 51.7001, 43.3088)
 
 [node name="HookLiquide" parent="." index="4" instance=ExtResource("4_6opw1")]
-position = Vector2(13, -16)
+position = Vector2(13, -15)
+rotation = 2.32325
 id_liquides = Array[int]([19, 20, 21])
 sprite_path = NodePath("../Sprite2D")

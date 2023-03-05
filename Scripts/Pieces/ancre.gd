@@ -1,4 +1,5 @@
 extends Area2D
+class_name Ancre
 
 @export var id:Id_pieces.id_pieces
 @export var disable:=true
@@ -8,3 +9,6 @@ func _ready():
 
 func activate():
 	$CollisionShape2D.disabled=false
+
+func desactivate():
+	$CollisionShape2D.disabled=true

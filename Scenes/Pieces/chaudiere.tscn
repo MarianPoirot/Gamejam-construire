@@ -14,7 +14,7 @@ id = 3
 [node name="Chaudière" type="Sprite2D" parent="." index="0"]
 texture_filter = 1
 texture = ExtResource("2_waueg")
-region_enabled = true
+hframes = 4
 region_rect = Rect2(0, 0, 29, 45.1065)
 
 [node name="DragDropCollision" parent="." index="1"]
@@ -23,11 +23,14 @@ shape = SubResource("CapsuleShape2D_p42fv")
 [node name="Ancre" parent="." index="2"]
 texture_filter = 1
 position = Vector2(0.5, 1)
+collision_layer = 0
 
 [node name="ancreReservoir" parent="recepteurAncre" index="0" instance=ExtResource("2_1yoif")]
-position = Vector2(-1, -14)
+position = Vector2(-2, -14)
 id = 17
 
 [node name="ancreCombustible" parent="recepteurAncre" index="1" instance=ExtResource("2_1yoif")]
 position = Vector2(0, 5)
 id = 4
+
+[connection signal="input_event" from="recepteurAncre/ancreCombustible" to="." method="_on_ancre_combustible_input_event"]

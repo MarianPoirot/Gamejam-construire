@@ -3,13 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_u3wiq"]
 [ext_resource type="Texture2D" uid="uid://cdb4jpmdwbv3s" path="res://Assets/Sprites/Coque_arrière_inférieur.png" id="2_sygsr"]
 [ext_resource type="PackedScene" uid="uid://dgicsyqpftdlt" path="res://Scenes/Pieces/ancre.tscn" id="3_bm6tj"]
-[ext_resource type="PackedScene" uid="uid://bna53aaw6urio" path="res://Scenes/Pieces/zoneAsouder.tscn" id="4_erv1l"]
+[ext_resource type="Script" path="res://Scripts/Pieces/zoneAsouder.gd" id="4_vl7kn"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_pjbpw"]
 
 [node name="Coque_inf" instance=ExtResource("1_u3wiq")]
 texture_filter = 1
 id = 7
+can_activate_ancre = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="0"]
 scale = Vector2(5, 5)
@@ -27,33 +28,48 @@ metadata/_edit_group_ = true
 [node name="Sprite2D" type="Sprite2D" parent="." index="3"]
 texture = ExtResource("2_sygsr")
 
-[node name="ancre_pique1" parent="recepteurAncre" index="0" instance=ExtResource("3_bm6tj")]
-position = Vector2(72, 16)
-id = 16
-
-[node name="ancre_pique2" parent="recepteurAncre" index="1" instance=ExtResource("3_bm6tj")]
-position = Vector2(0, 59)
-id = 14
-
-[node name="ancre_pique3" parent="recepteurAncre" index="2" instance=ExtResource("3_bm6tj")]
-position = Vector2(-72, 16)
-id = 14
-
-[node name="ancre_ballon" parent="recepteurAncre" index="3" instance=ExtResource("3_bm6tj")]
+[node name="ancre_ballon" parent="recepteurAncre" index="0" instance=ExtResource("3_bm6tj")]
 position = Vector2(0, -7)
 scale = Vector2(0.5, 0.5)
 
-[node name="ancreChaudiere" parent="recepteurAncre" index="4" instance=ExtResource("3_bm6tj")]
-position = Vector2(-39, 5)
+[node name="ancreChaudiere" parent="recepteurAncre" index="1" instance=ExtResource("3_bm6tj")]
+position = Vector2(-37, 5)
 id = 3
 
-[node name="ancreMoteur" parent="recepteurAncre" index="5" instance=ExtResource("3_bm6tj")]
+[node name="ancreMoteur" parent="recepteurAncre" index="2" instance=ExtResource("3_bm6tj")]
 position = Vector2(39.5, 11.5)
 scale = Vector2(0.5, 0.5)
 id = 15
 
-[node name="ZoneAsouder" parent="." index="5" instance=ExtResource("4_erv1l")]
-position = Vector2(-141, 121)
+[node name="ancreCoqueAvantL" parent="recepteurAncre" index="3" instance=ExtResource("3_bm6tj")]
+position = Vector2(-37, 3)
+scale = Vector2(2, 2)
+id = 26
+
+[node name="ancreCoqueAvantInfR" parent="recepteurAncre" index="4" instance=ExtResource("3_bm6tj")]
+position = Vector2(40, -7)
+scale = Vector2(2, 2)
+id = 27
+
+[node name="ancreCoqueAvantInf" parent="recepteurAncre" index="5" instance=ExtResource("3_bm6tj")]
+position = Vector2(0, 24)
+scale = Vector2(2, 2)
+id = 8
+
+[node name="ancreMeche" parent="recepteurAncre" index="6" instance=ExtResource("3_bm6tj")]
+position = Vector2(-40, 26)
+id = 28
+
+[node name="ZoneAsouder" type="Area2D" parent="." index="5"]
+position = Vector2(-1.42109e-14, -40)
+scale = Vector2(10, 10)
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("4_vl7kn")
 maxSoudures = 50
+
+[node name="zone" type="CollisionPolygon2D" parent="ZoneAsouder" index="0"]
+position = Vector2(1.6, 0.2)
+polygon = PackedVector2Array(-6.7, -0.7, -1.8, -1.1, 3.3, -0.7, 6.6, 0.7, 5.8, 1.3, 2.7, 0.3, -1.8, -0.1, -5.8, 0.2, -9.2, 1.1, -9.8, 0.4)
 
 [connection signal="c_est_bon_c_est_soude" from="ZoneAsouder" to="." method="_on_zone_asouder_c_est_bon_c_est_soude"]

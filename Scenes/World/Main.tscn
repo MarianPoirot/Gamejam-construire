@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://b3wbxtbbacebh"]
+[gd_scene load_steps=29 format=3 uid="uid://b3wbxtbbacebh"]
 
 [ext_resource type="Script" path="res://Scripts/World/Main.gd" id="1_vn17v"]
 [ext_resource type="Texture2D" uid="uid://s8t8nfhx3gns" path="res://Assets/Sprites/Background.png" id="2_kno67"]
 [ext_resource type="PackedScene" uid="uid://cdhyln0aitcji" path="res://Scenes/Pieces/ballon.tscn" id="2_y7w6m"]
 [ext_resource type="PackedScene" uid="uid://nulgtes263rk" path="res://Scenes/Pieces/coque_inférieure.tscn" id="3_k3jia"]
 [ext_resource type="PackedScene" uid="uid://ksyhx6uwk1rr" path="res://Scenes/Pieces/coque_supérieure.tscn" id="4_ccyxp"]
+[ext_resource type="PackedScene" uid="uid://cft22sb687osq" path="res://Scenes/Pieces/combustible.tscn" id="5_6g2yp"]
 [ext_resource type="PackedScene" uid="uid://buyqii003lxp7" path="res://Scenes/Pieces/conduit-vapeur.tscn" id="6_bnl4o"]
 [ext_resource type="PackedScene" uid="uid://b7g4do0pyfl23" path="res://Scenes/Pieces/reservoir.tscn" id="6_g1jcb"]
 [ext_resource type="PackedScene" uid="uid://b2dfvrvgwbnae" path="res://Scenes/Pieces/chaudiere.tscn" id="6_ncykg"]
@@ -13,10 +14,20 @@
 [ext_resource type="PackedScene" uid="uid://c01csw6ryydmw" path="res://Scenes/Pieces/moteur.tscn" id="11_mkq26"]
 [ext_resource type="PackedScene" uid="uid://dnhgpm6x2k2c2" path="res://Scenes/Pieces/bouchon.tscn" id="12_6p58o"]
 [ext_resource type="PackedScene" uid="uid://cv1dso1cy3a1p" path="res://Scenes/liquide/entonoire.tscn" id="13_nxo70"]
-[ext_resource type="PackedScene" path="res://Scenes/liquide/eau.tscn" id="15_dup0a"]
-[ext_resource type="PackedScene" path="res://Scenes/liquide/sodium.tscn" id="16_2xrmh"]
+[ext_resource type="PackedScene" uid="uid://bl7mre7gm07oi" path="res://Scenes/liquide/eau.tscn" id="15_dup0a"]
+[ext_resource type="PackedScene" uid="uid://r65bwof7ejvk" path="res://Scenes/liquide/sodium.tscn" id="16_2xrmh"]
 [ext_resource type="PackedScene" uid="uid://bprpu8fe22nhe" path="res://Scenes/Pieces/ferAsouder.tscn" id="16_mju8g"]
 [ext_resource type="PackedScene" uid="uid://bvmk1lo1hl4ea" path="res://Scenes/Pieces/goupille.tscn" id="16_vplyf"]
+[ext_resource type="PackedScene" uid="uid://dpw714oplylju" path="res://Scenes/World/tapis_roulant.tscn" id="17_hyrnp"]
+[ext_resource type="PackedScene" uid="uid://5n2yjrnh0lvi" path="res://Scenes/Pieces/coque_avant_inf_L.tscn" id="20_nb4rh"]
+[ext_resource type="PackedScene" uid="uid://bo4sdbefqrswu" path="res://Scenes/Pieces/meche.tscn" id="20_tepf3"]
+[ext_resource type="PackedScene" uid="uid://dobe78ei8mmn1" path="res://Scenes/Pieces/coque_avant_inf.tscn" id="21_gvekx"]
+[ext_resource type="PackedScene" uid="uid://ddce3absi6w14" path="res://Scenes/Pieces/coque_avant_inf_R.tscn" id="22_t6vc2"]
+[ext_resource type="PackedScene" uid="uid://be0d3psb00c0b" path="res://Scenes/Pieces/coque_avant_sup_L.tscn" id="23_4volp"]
+[ext_resource type="PackedScene" uid="uid://dqxfa0eotji3k" path="res://Scenes/Pieces/coque_avant_sup_R.tscn" id="24_my6qh"]
+[ext_resource type="PackedScene" path="res://Scenes/Pieces/pique.tscn" id="26_8ndhy"]
+[ext_resource type="AudioStream" uid="uid://6xo8b5qcmskn" path="res://Assets/Musics/bomb csgo.ogg" id="27_535mk"]
+[ext_resource type="PackedScene" uid="uid://cedibmcqfyv6m" path="res://Scenes/Explosion/explosion.tscn" id="28_n3qye"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_vn17v")
@@ -26,70 +37,144 @@ position = Vector2(512, 300)
 texture = ExtResource("2_kno67")
 
 [node name="Coque_inf" parent="." instance=ExtResource("3_k3jia")]
-position = Vector2(1064, 464)
+position = Vector2(974, 322)
 scale = Vector2(3, 3)
 
 [node name="Coque_sup" parent="." instance=ExtResource("4_ccyxp")]
 texture_filter = 1
 position = Vector2(512, 176)
 scale = Vector2(3, 3)
+can_activate_ancre = true
 
 [node name="Chaudiere" parent="." instance=ExtResource("6_ncykg")]
 texture_filter = 1
-position = Vector2(159, 479)
+position = Vector2(963, -522)
 scale = Vector2(3, 3)
+can_activate_ancre = true
 
 [node name="Cable" parent="." instance=ExtResource("10_scpqc")]
 texture_filter = 1
-position = Vector2(32, 550)
+position = Vector2(958, 1165)
 scale = Vector2(3, 3)
-
-[node name="Turbine" parent="." instance=ExtResource("7_pxymf")]
-position = Vector2(141, 53)
-scale = Vector2(3, 3)
-
-[node name="Moteur" parent="." instance=ExtResource("11_mkq26")]
-texture_filter = 1
-position = Vector2(479, 554)
-scale = Vector2(3, 3)
-
-[node name="goupille" parent="." instance=ExtResource("16_vplyf")]
-texture_filter = 1
-position = Vector2(256, 552)
-scale = Vector2(3, 3)
-
-[node name="ballon" parent="." instance=ExtResource("2_y7w6m")]
-position = Vector2(912, 536)
-scale = Vector2(3, 3)
+can_activate_ancre = true
 
 [node name="reservoir" parent="." instance=ExtResource("6_g1jcb")]
 texture_filter = 1
-position = Vector2(154, 242)
+position = Vector2(962, 943)
 scale = Vector2(3, 3)
+can_activate_ancre = true
 
 [node name="ConduitVapeur" parent="." instance=ExtResource("6_bnl4o")]
 position = Vector2(951, 43)
 scale = Vector2(3, 3)
+can_activate_ancre = true
+
+[node name="Turbine" parent="." instance=ExtResource("7_pxymf")]
+position = Vector2(960, 740)
+scale = Vector2(3, 3)
+can_activate_ancre = true
+
+[node name="Moteur" parent="." instance=ExtResource("11_mkq26")]
+texture_filter = 1
+position = Vector2(955, -100)
+scale = Vector2(3, 3)
+can_activate_ancre = true
+
+[node name="goupille" parent="." instance=ExtResource("16_vplyf")]
+texture_filter = 1
+position = Vector2(961, -313)
+scale = Vector2(3, 3)
+can_activate_ancre = true
+
+[node name="ballon" parent="." instance=ExtResource("2_y7w6m")]
+position = Vector2(958, 572)
+scale = Vector2(3, 3)
+id = 0
+can_activate_ancre = true
 
 [node name="bouchon" parent="." instance=ExtResource("12_6p58o")]
 texture_filter = 1
-position = Vector2(81, 322)
+position = Vector2(958, 1273)
 scale = Vector2(3, 3)
+can_activate_ancre = true
 
 [node name="Area2D" parent="." instance=ExtResource("13_nxo70")]
 texture_filter = 1
-position = Vector2(466, 423)
+position = Vector2(241, 524)
+rotation = 0.719196
 
 [node name="Eau" parent="." instance=ExtResource("15_dup0a")]
-texture_filter = 1
-position = Vector2(968, 152)
+position = Vector2(135, 188)
 scale = Vector2(3, 3)
 
 [node name="Sodium" parent="." instance=ExtResource("16_2xrmh")]
 texture_filter = 1
-position = Vector2(726, 39)
+position = Vector2(118, 77)
 scale = Vector2(3, 3)
 
+[node name="tapis_roulant" parent="." instance=ExtResource("17_hyrnp")]
+position = Vector2(961, 314)
+metadata/_edit_lock_ = true
+
 [node name="ferAsouder" parent="." instance=ExtResource("16_mju8g")]
-position = Vector2(615, 406)
+position = Vector2(100, 298)
 scale = Vector2(3, 3)
+
+[node name="combustible" parent="." instance=ExtResource("5_6g2yp")]
+position = Vector2(50, 164)
+scale = Vector2(3, 3)
+can_activate_ancre = true
+
+[node name="Meche" parent="." instance=ExtResource("20_tepf3")]
+position = Vector2(961, -660)
+scale = Vector2(3, 3)
+
+[node name="Coque_inf_avant_l3" parent="." instance=ExtResource("22_t6vc2")]
+position = Vector2(702, 536)
+scale = Vector2(3, 3)
+
+[node name="Coque_inf_avant_l" parent="." instance=ExtResource("20_nb4rh")]
+position = Vector2(98, 524)
+scale = Vector2(3, 3)
+
+[node name="Coque_inf_avant_l2" parent="." instance=ExtResource("21_gvekx")]
+position = Vector2(255, 23)
+scale = Vector2(3, 3)
+
+[node name="Coque_inf_avant_l4" parent="." instance=ExtResource("23_4volp")]
+position = Vector2(262, 517)
+scale = Vector2(3, 3)
+
+[node name="Coque_inf_avant_l5" parent="." instance=ExtResource("24_my6qh")]
+position = Vector2(495, 543)
+scale = Vector2(3, 3)
+
+[node name="Pique" parent="." instance=ExtResource("26_8ndhy")]
+position = Vector2(804, 59)
+
+[node name="Pique2" parent="." instance=ExtResource("26_8ndhy")]
+position = Vector2(713, 59)
+
+[node name="Pique3" parent="." instance=ExtResource("26_8ndhy")]
+position = Vector2(620, 55)
+
+[node name="Pique4" parent="." instance=ExtResource("26_8ndhy")]
+position = Vector2(525, 54)
+
+[node name="Pique5" parent="." instance=ExtResource("26_8ndhy")]
+position = Vector2(429, 55)
+
+[node name="Pique6" parent="." instance=ExtResource("26_8ndhy")]
+position = Vector2(801, 55)
+
+[node name="Explosion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("27_535mk")
+
+[node name="explosion" parent="." instance=ExtResource("28_n3qye")]
+position = Vector2(510, 300)
+amount = 20000
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="just_snapped" from="Meche" to="." method="_on_meche_just_snapped"]
+[connection signal="finished" from="Explosion" to="." method="_on_audio_stream_player_finished"]
