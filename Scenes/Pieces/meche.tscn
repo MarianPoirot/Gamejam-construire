@@ -9,6 +9,7 @@ height = 43.8406
 
 [node name="Meche" instance=ExtResource("1_tfx0f")]
 id = 28
+can_activate_ancre = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="0"]
 polygon = PackedVector2Array(-23.5, -17.4, -13.3, 5, -3, 11, 6.2, 11, 13.5, 8.6, 29.6, -11, 32.1, -11, 41.5, -13.1, 41.5, -4, 33.5, 0.1, 33.5, 0.799999, 17.2, 19, -14.5, 19, -25.5, 11, -25.5, 8.5, -31.5, 0, -32.7, 0, -41.5, -2, -41.5, -16, -37.5, -19, -23.5, -19)
