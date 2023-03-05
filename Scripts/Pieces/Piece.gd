@@ -10,6 +10,8 @@ signal just_snapped
 			activate_ancre()
 			
 var is_snapped := false
+var nbSoudure := 0
+var maxSoudure := 4
 
 func _ready():
 	if not Id_pieces.state_dependencies[id]:
@@ -65,3 +67,43 @@ func _on_ancre_combustible_input_event(_viewport, event, _shape_idx):
 func angle_difference(angle1, angle2):
 	var diff = angle2 - angle1
 	return diff if abs(diff) < PI else diff + (2*PI * -sign(diff))
+
+func souder():
+	nbSoudure += 1
+	if nbSoudure >= maxSoudure:
+		can_activate_ancre = true
+
+func _on_zone_asouder_1_c_est_bon_c_est_soude():
+	souder()
+func _on_zone_asouder_2_c_est_bon_c_est_soude():
+	souder()
+func _on_zone_asouder_3_c_est_bon_c_est_soude():
+	souder()
+func _on_zone_asouder_4_c_est_bon_c_est_soude():
+	souder()
+
+
+func update_zas_enablility(idZAS):
+	if id == Id_pieces.id_pieces.coque_avant_inf_l:
+		match idZAS:
+			1:
+				pass
+			2:
+				$ZoneAsouderDroite/zone.disabled = false
+			3:
+				$ZoneAsouderGauche/zone.disabled = false
+			4:
+				$ZoneAsouderHorizontale/zone.disabled = false
+			5:
+				$ZoneAsouderVerticale/zone.disabled = false
+
+func _on_just_snapped():
+	update_zas_enablility(1) # coque bas gauche
+func _on_coque_inf_avant_l_3_just_snapped():
+	update_zas_enablility(2) # coque milieu
+func _on_coque_inf_avant_l_2_just_snapped():
+	update_zas_enablility(3)  # coque bas droite
+func _on_coque_inf_avant_l_4_just_snapped():
+	update_zas_enablility(4) # coque haut gauche
+func _on_coque_inf_avant_l_5_just_snapped():
+	update_zas_enablility(5) # coque haut droite

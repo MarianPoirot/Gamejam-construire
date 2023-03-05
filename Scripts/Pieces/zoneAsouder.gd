@@ -6,6 +6,7 @@ signal c_est_bon_c_est_soude
 var weldCounter :=0
 
 @export var weldSpeed := 0.5
+@export var top := true
 var nbSoudures : int
 var completed := false
 var texture = load("res://Assets/Sprites/Soudure.png")
@@ -32,6 +33,8 @@ func souder(pos):
 func createSoudure(pos):
 	var newSoudure = Soudure.instantiate()
 	nbSoudures += 1
+	if top:
+		newSoudure.z_index = 1
 	self.add_child(newSoudure)
 	newSoudure.global_position = pos
 	if nbSoudures >= maxSoudures :

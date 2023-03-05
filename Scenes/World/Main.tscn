@@ -1,7 +1,7 @@
 [gd_scene load_steps=28 format=3 uid="uid://b3wbxtbbacebh"]
 
 [ext_resource type="Script" path="res://Scripts/World/Main.gd" id="1_vn17v"]
-[ext_resource type="Texture2D" uid="uid://s8t8nfhx3gns" path="res://Assets/Sprites/Background.png" id="2_kno67"]
+[ext_resource type="Texture2D" uid="uid://b5vd0wq6m3rpi" path="res://Assets/Sprites/Background.png" id="2_kno67"]
 [ext_resource type="PackedScene" uid="uid://cdhyln0aitcji" path="res://Scenes/Pieces/ballon.tscn" id="2_y7w6m"]
 [ext_resource type="PackedScene" uid="uid://nulgtes263rk" path="res://Scenes/Pieces/coque_inférieure.tscn" id="3_k3jia"]
 [ext_resource type="PackedScene" uid="uid://ksyhx6uwk1rr" path="res://Scenes/Pieces/coque_supérieure.tscn" id="4_ccyxp"]
@@ -20,12 +20,12 @@
 [ext_resource type="PackedScene" uid="uid://bvmk1lo1hl4ea" path="res://Scenes/Pieces/goupille.tscn" id="16_vplyf"]
 [ext_resource type="PackedScene" uid="uid://dpw714oplylju" path="res://Scenes/World/tapis_roulant.tscn" id="17_hyrnp"]
 [ext_resource type="PackedScene" uid="uid://5n2yjrnh0lvi" path="res://Scenes/Pieces/coque_avant_inf_L.tscn" id="20_nb4rh"]
-[ext_resource type="PackedScene" uid="uid://bo4sdbefqrswu" path="res://Scenes/Pieces/meche.tscn" id="20_tepf3"]
+[ext_resource type="PackedScene" path="res://Scenes/Pieces/meche.tscn" id="20_tepf3"]
 [ext_resource type="PackedScene" uid="uid://dobe78ei8mmn1" path="res://Scenes/Pieces/coque_avant_inf.tscn" id="21_gvekx"]
 [ext_resource type="PackedScene" uid="uid://ddce3absi6w14" path="res://Scenes/Pieces/coque_avant_inf_R.tscn" id="22_t6vc2"]
 [ext_resource type="PackedScene" uid="uid://be0d3psb00c0b" path="res://Scenes/Pieces/coque_avant_sup_L.tscn" id="23_4volp"]
 [ext_resource type="PackedScene" uid="uid://dqxfa0eotji3k" path="res://Scenes/Pieces/coque_avant_sup_R.tscn" id="24_my6qh"]
-[ext_resource type="PackedScene" path="res://Scenes/Pieces/pique.tscn" id="26_8ndhy"]
+[ext_resource type="PackedScene" uid="uid://bvw3bc0ql6jkw" path="res://Scenes/Pieces/pique.tscn" id="26_8ndhy"]
 [ext_resource type="AudioStream" uid="uid://6xo8b5qcmskn" path="res://Assets/Musics/bomb csgo.ogg" id="27_535mk"]
 
 [node name="Main" type="Node2D"]
@@ -125,8 +125,8 @@ scale = Vector2(3, 3)
 can_activate_ancre = true
 
 [node name="Meche" parent="." instance=ExtResource("20_tepf3")]
+texture_filter = 1
 scale = Vector2(3, 3)
-can_activate_ancre = true
 
 [node name="Coque_inf_avant_l3" parent="." instance=ExtResource("22_t6vc2")]
 position = Vector2(702, 536)
@@ -170,4 +170,9 @@ position = Vector2(801, 55)
 stream = ExtResource("27_535mk")
 
 [connection signal="just_snapped" from="Meche" to="." method="_on_meche_just_snapped"]
+[connection signal="just_snapped" from="Coque_inf_avant_l3" to="Coque_inf_avant_l" method="_on_coque_inf_avant_l_3_just_snapped"]
+[connection signal="just_snapped" from="Coque_inf_avant_l" to="Coque_inf_avant_l" method="_on_just_snapped"]
+[connection signal="just_snapped" from="Coque_inf_avant_l2" to="Coque_inf_avant_l" method="_on_coque_inf_avant_l_2_just_snapped"]
+[connection signal="just_snapped" from="Coque_inf_avant_l4" to="Coque_inf_avant_l" method="_on_coque_inf_avant_l_4_just_snapped"]
+[connection signal="just_snapped" from="Coque_inf_avant_l5" to="Coque_inf_avant_l" method="_on_coque_inf_avant_l_5_just_snapped"]
 [connection signal="finished" from="Explosion" to="." method="_on_audio_stream_player_finished"]
