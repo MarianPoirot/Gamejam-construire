@@ -93,5 +93,3 @@ var state_dependencies = {
 
 var drag_and_drop_taken := false
 
-signal tapis_roulant_descendre
-signal tapis_roulant_monter

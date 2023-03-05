@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3f2rfu3sm00d"]
+
+[ext_resource type="Script" path="res://Scripts/World/ui.gd" id="1_nlicb"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nlicb")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Up" type="Button" parent="UI/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+keep_pressed_outside = true
+text = "Up"
+
+[node name="Down" type="Button" parent="UI/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "Down"
+
+[connection signal="button_down" from="UI/MarginContainer/Up" to="UI" method="_on_up_button_down"]
+[connection signal="button_up" from="UI/MarginContainer/Up" to="UI" method="_on_move_button_up"]
+[connection signal="button_down" from="UI/MarginContainer/Down" to="UI" method="_on_down_button_down"]
+[connection signal="button_up" from="UI/MarginContainer/Down" to="UI" method="_on_move_button_up"]

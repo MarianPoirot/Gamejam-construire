@@ -3,8 +3,8 @@ extends Area2D
 const vitesse:=3.5
 
 func _ready():
-	Id_pieces.connect("tapis_roulant_descendre", descendre)
-	Id_pieces.connect("tapis_roulant_monter", monter)
+	EventBus.connect("tapis_roulant_descendre", descendre)
+	EventBus.connect("tapis_roulant_monter", monter)
 
 func _process(_delta):
 	if Input.is_action_pressed("descendre_tapis"):
