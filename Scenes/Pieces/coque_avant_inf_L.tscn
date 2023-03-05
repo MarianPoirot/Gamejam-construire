@@ -30,8 +30,13 @@ z_index = 60
 texture = ExtResource("2_gqgq5")
 
 [node name="ancre" parent="recepteurAncre" index="0" instance=ExtResource("3_ybxxl")]
-position = Vector2(-12, 16)
+position = Vector2(8, 16)
 id = 28
+
+[node name="ancrePique" parent="recepteurAncre" index="1" instance=ExtResource("3_ybxxl")]
+position = Vector2(-9, 21)
+rotation = 3.83972
+id = 16
 
 [node name="ZoneAsouderGauche" type="Area2D" parent="." index="5"]
 position = Vector2(-1, -36)
