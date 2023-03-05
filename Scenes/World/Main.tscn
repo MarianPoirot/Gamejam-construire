@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://b3wbxtbbacebh"]
+[gd_scene load_steps=32 format=3 uid="uid://b3wbxtbbacebh"]
 
 [ext_resource type="Script" path="res://Scripts/World/Main.gd" id="1_vn17v"]
 [ext_resource type="Texture2D" uid="uid://s8t8nfhx3gns" path="res://Assets/Sprites/Background.png" id="2_kno67"]
@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://d1b8hvnywnb72" path="res://Scenes/World/on_snapped_audio_player.tscn" id="28_kifyh"]
 [ext_resource type="PackedScene" uid="uid://cedibmcqfyv6m" path="res://Scenes/Explosion/explosion.tscn" id="28_n3qye"]
 [ext_resource type="PackedScene" uid="uid://c3f2rfu3sm00d" path="res://Scenes/World/ui.tscn" id="30_glgul"]
+[ext_resource type="AudioStream" uid="uid://62ghhx2gmxgx" path="res://Assets/Musics/Whistle Stop.ogg" id="31_43ojd"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_vn17v")
@@ -180,6 +181,9 @@ amount = 20000
 
 [node name="Centre" type="Marker2D" parent="."]
 position = Vector2(510, 300)
+
+[node name="WhistleStop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("31_43ojd")
 
 [connection signal="just_snapped" from="Meche" to="." method="_on_meche_just_snapped"]
 [connection signal="just_snapped" from="Coque_inf_avant_l3" to="Coque_inf_avant_l" method="_on_coque_inf_avant_l_3_just_snapped"]

@@ -1,6 +1,10 @@
 extends Node2D
 	
+func _ready():
+	$WhistleStop.play()
+
 func _on_meche_just_snapped():
+	$WhistleStop.stop()
 	$Explosion.play()
 	
 	$Timer.start()

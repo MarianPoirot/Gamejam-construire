@@ -34,7 +34,7 @@ func launch_snap_tween(area):
 	tween.parallel().tween_property(self , "rotation" , target_rotation , 0.5).set_trans(Tween.TRANS_CUBIC)
 
 func send_liquide(id_liquide):
-	if conteneur_liquide.sprite:
+	if conteneur_liquide and conteneur_liquide.sprite:
 		conteneur_liquide.add_liquide(id_liquide)
 	else :
 		$Sprite2D.frame = 1
