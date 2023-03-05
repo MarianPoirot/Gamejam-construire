@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvw3bc0ql6jkw"]
+[gd_scene load_steps=3 format=3 uid="uid://crhpxe1wia0ow"]
 
 [ext_resource type="PackedScene" uid="uid://dfk32paob4qpa" path="res://Scenes/Pieces/Piece.tscn" id="1_5gx7v"]
 [ext_resource type="Texture2D" uid="uid://bf5bmg2jv1ksp" path="res://Assets/Sprites/Pique.png" id="2_6wggt"]
@@ -22,6 +22,7 @@ polygon = PackedVector2Array(15, 9.4, 15, 16, 11.8, 19, -11.2, 19, -15, 16.4, -1
 position = Vector2(0, -57)
 
 [node name="Pique" type="Sprite2D" parent="." index="4"]
+z_index = 90
 texture_filter = 1
 position = Vector2(0, -57)
 scale = Vector2(3, 3)

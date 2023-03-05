@@ -5,7 +5,7 @@
 [node name="explosion" type="CPUParticles2D"]
 emitting = false
 amount = 2000
-lifetime = 3.0
+lifetime = 5.0
 one_shot = true
 preprocess = 1.0
 texture = ExtResource("1_7evqu")

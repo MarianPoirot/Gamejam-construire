@@ -16,11 +16,12 @@ position = Vector2(0, 14)
 metadata/_edit_group_ = true
 
 [node name="ancre-bouchon" parent="recepteurAncre" index="0" instance=ExtResource("2_airq1")]
-position = Vector2(13, -16)
+position = Vector2(15.5, -18)
 scale = Vector2(0.8, 0.8)
 id = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="3"]
+z_index = 20
 texture_filter = 1
 texture = ExtResource("2_7xcas")
 hframes = 4

@@ -12,6 +12,7 @@ height = 42.0
 id = 3
 
 [node name="Chaudière" type="Sprite2D" parent="." index="0"]
+z_index = 20
 texture_filter = 1
 texture = ExtResource("2_waueg")
 hframes = 4

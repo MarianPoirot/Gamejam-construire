@@ -19,4 +19,5 @@ shape = SubResource("CapsuleShape2D_o46fb")
 position = Vector2(-19, 10)
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="3"]
+z_index = 40
 texture = ExtResource("2_fypeb")

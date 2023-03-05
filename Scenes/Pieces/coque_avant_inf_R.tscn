@@ -25,9 +25,10 @@ position = Vector2(-2, -21)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="3"]
+z_index = 60
 texture = ExtResource("2_apml3")
 
 [node name="ancre" parent="recepteurAncre" index="0" instance=ExtResource("3_difkv")]
-position = Vector2(14, 15)
+position = Vector2(10, 13)
 rotation = 2.50611
 id = 16

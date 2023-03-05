@@ -16,6 +16,8 @@ var maxSoudure := 4
 func _ready():
 	if not Id_pieces.state_dependencies[id]:
 		rotation = randf_range(0, 2*PI)
+	
+	connect("just_snapped", func(): EventBus.emit_signal("piece_got_snapped", id))
 
 func release():
 	super.release()
@@ -38,12 +40,24 @@ func snap(area):
 	is_snapped = true
 	emit_signal("just_snapped")
 	can_grab = false
-	self.global_position=area.global_position-$Ancre.position*scale.x
-	self.rotation = area.rotation
+	launch_snap_tween(area)
 	if can_activate_ancre:
 		activate_ancre()
 	Id_pieces.state_dependencies[id] = true
 	area.desactivate()
+
+func launch_snap_tween(area):
+	var tween = create_tween()
+
+	var target_position : Vector2 = area.global_position-$Ancre.position*scale.x
+	tween.tween_property(self , "global_position" , target_position , 0.5).set_trans(Tween.TRANS_CUBIC)
+	
+	var target_rotation = area.rotation
+	
+	if(rotation > PI):
+		target_rotation += 2 * PI
+	
+	tween.parallel().tween_property(self , "rotation" , target_rotation , 0.5).set_trans(Tween.TRANS_CUBIC)
 
 func activate_ancre():
 	for ancre in $recepteurAncre.get_children():

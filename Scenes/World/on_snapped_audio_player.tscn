@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1b8hvnywnb72"]
+
+[ext_resource type="Script" path="res://Scripts/World/on_snapped_audio_player.gd" id="1_8w4cq"]
+[ext_resource type="AudioStream" uid="uid://c88ddgps5m20p" path="res://Assets/son/a.wav" id="1_22f4g"]
+
+[node name="OnSnappedAudioPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_22f4g")
+max_polyphony = 3
+script = ExtResource("1_8w4cq")
