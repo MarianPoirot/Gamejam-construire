@@ -8,6 +8,7 @@ radius = 16.9706
 height = 43.8406
 
 [node name="Meche" instance=ExtResource("1_tfx0f")]
+texture_filter = 1
 id = 28
 can_activate_ancre = true
 

@@ -16,30 +16,31 @@ disabled = true
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="2"]
+z_index = 10
 texture_filter = 1
 position = Vector2(0, 1)
 texture = ExtResource("2_mr4iu")
 
 [node name="ancre_coque_inf" parent="recepteurAncre" index="0" instance=ExtResource("3_msov2")]
-position = Vector2(0, 16)
+position = Vector2(0, 21)
 scale = Vector2(0.5, 0.5)
 id = 7
 disable = false
 
 [node name="ancre_turbine" parent="recepteurAncre" index="1" instance=ExtResource("3_msov2")]
 texture_filter = 1
-position = Vector2(-1, -26)
+position = Vector2(-0.5, -22)
 id = 22
 disable = false
 
 [node name="ancreCoqueSupL" parent="recepteurAncre" index="2" instance=ExtResource("3_msov2")]
-position = Vector2(-31, -4)
+position = Vector2(-31, -1)
 scale = Vector2(2, 2)
 id = 24
 disable = false
 
 [node name="ancreCoqueSupR" parent="recepteurAncre" index="3" instance=ExtResource("3_msov2")]
-position = Vector2(32, -4)
+position = Vector2(32, -1)
 scale = Vector2(2, 2)
 id = 25
 disable = false

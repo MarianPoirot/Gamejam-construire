@@ -1,6 +1,6 @@
 extends Area2D
 
-const vitesse:=1.0
+const vitesse:=3.5
 
 func _ready():
 	Id_pieces.connect("tapis_roulant_descendre", descendre)

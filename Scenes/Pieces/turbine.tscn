@@ -16,6 +16,7 @@ id = 22
 shape = SubResource("CapsuleShape2D_pct4w")
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="2"]
+z_index = 50
 texture = ExtResource("2_qrs14")
 
 [node name="ancreConduit" parent="recepteurAncre" index="0" instance=ExtResource("2_bidjm")]
@@ -23,5 +24,5 @@ position = Vector2(0, 26)
 id = 5
 
 [node name="ancreCable" parent="recepteurAncre" index="1" instance=ExtResource("2_bidjm")]
-position = Vector2(16, 11)
+position = Vector2(18, 10.5)
 id = 2

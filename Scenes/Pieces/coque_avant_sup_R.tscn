@@ -25,9 +25,15 @@ position = Vector2(-10, -20)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="3"]
+z_index = 80
 texture = ExtResource("3_qs6on")
 hframes = 2
 frame = 1
+
+[node name="Sprite2D2" type="Sprite2D" parent="." index="4"]
+z_index = 49
+texture = ExtResource("3_qs6on")
+hframes = 2
 
 [node name="ancre" parent="recepteurAncre" index="0" instance=ExtResource("3_oyx3c")]
 position = Vector2(38, 22)

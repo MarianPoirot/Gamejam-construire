@@ -20,8 +20,10 @@ position = Vector2(17, -4)
 id = 2
 
 [node name="ancreGoupille" parent="recepteurAncre" index="1" instance=ExtResource("2_8rpkq")]
-position = Vector2(-13, -13)
+position = Vector2(-9.5, -8.5)
 id = 14
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="3"]
+z_index = 20
+texture_filter = 1
 texture = ExtResource("3_sn6le")
