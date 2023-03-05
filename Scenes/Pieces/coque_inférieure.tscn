@@ -68,6 +68,10 @@ position = Vector2(0, 24)
 scale = Vector2(2, 2)
 id = 8
 
+[node name="ancreMeche" parent="recepteurAncre" index="9" instance=ExtResource("3_bm6tj")]
+position = Vector2(-40, 26)
+id = 28
+
 [node name="ZoneAsouder" parent="." index="5" instance=ExtResource("4_erv1l")]
 position = Vector2(-1.42109e-14, -40)
 maxSoudures = 50
