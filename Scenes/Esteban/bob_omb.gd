@@ -8,7 +8,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	
+	if (bob_ombardement == true):
+		move_local_y(1)
 
 
 func _on_button_bob_omb_button_down():
