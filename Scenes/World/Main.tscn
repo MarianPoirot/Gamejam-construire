@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://bvmk1lo1hl4ea" path="res://Scenes/Pieces/goupille.tscn" id="16_vplyf"]
 [ext_resource type="PackedScene" uid="uid://dpw714oplylju" path="res://Scenes/World/tapis_roulant.tscn" id="17_hyrnp"]
 [ext_resource type="PackedScene" uid="uid://5n2yjrnh0lvi" path="res://Scenes/Pieces/coque_avant_inf_L.tscn" id="20_nb4rh"]
-[ext_resource type="PackedScene" uid="uid://d02bidq434llt" path="res://Scenes/Pieces/meche.tscn" id="20_tepf3"]
+[ext_resource type="PackedScene" uid="uid://bo4sdbefqrswu" path="res://Scenes/Pieces/meche.tscn" id="20_tepf3"]
 [ext_resource type="PackedScene" uid="uid://dobe78ei8mmn1" path="res://Scenes/Pieces/coque_avant_inf.tscn" id="21_gvekx"]
 [ext_resource type="PackedScene" uid="uid://ddce3absi6w14" path="res://Scenes/Pieces/coque_avant_inf_R.tscn" id="22_t6vc2"]
 [ext_resource type="PackedScene" uid="uid://be0d3psb00c0b" path="res://Scenes/Pieces/coque_avant_sup_L.tscn" id="23_4volp"]
@@ -164,9 +164,6 @@ position = Vector2(996, -20)
 
 [node name="Pique5" parent="." instance=ExtResource("26_8ndhy")]
 position = Vector2(996, 1)
-
-[node name="Pique6" parent="." instance=ExtResource("26_8ndhy")]
-position = Vector2(1001, -169)
 
 [node name="Explosion" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("27_535mk")
