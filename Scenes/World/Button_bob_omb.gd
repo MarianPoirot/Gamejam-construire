@@ -7,7 +7,6 @@ var flipper_exist = false
 func _ready():
 	pass # Replace with function body.
 func spawn():
-	print("ça marche")
 	var new_bob_omb = bob_omb.instantiate()
 	new_bob_omb.position = Vector2(-300,-500)
 	self.add_child(new_bob_omb)
@@ -23,6 +22,7 @@ func _process(_delta):
 
 
 func _on_button_down():
-	print("ça marche")
+	if not $"../../VordtOfTheBorealMeme".playing:
+		$"../../VordtOfTheBorealMeme".play()
 	spawn()
 

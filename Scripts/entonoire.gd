@@ -6,6 +6,7 @@ var conteneur_liquide:Hook=null
 func grab():
 	super.grab()
 	conteneur_liquide = null
+	$Sprite2D.frame = 0
 
 func release():
 	super.release()
@@ -33,5 +34,7 @@ func launch_snap_tween(area):
 	tween.parallel().tween_property(self , "rotation" , target_rotation , 0.5).set_trans(Tween.TRANS_CUBIC)
 
 func send_liquide(id_liquide):
-	if conteneur_liquide:
+	if conteneur_liquide.sprite:
 		conteneur_liquide.add_liquide(id_liquide)
+	else :
+		$Sprite2D.frame = 1
